@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" width="1200" height="850" role="img">
+
+  <defs>
+    <linearGradient id="bgj" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0616"/><stop offset="1" stop-color="#07040f"/>
+    </linearGradient>
+    <radialGradient id="glj" cx=".5" cy=".18" r=".85">
+      <stop offset="0" stop-color="#f59e0b" stop-opacity=".38"/>
+      <stop offset=".55" stop-color="#f59e0b" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2j" cx=".88" cy=".9" r=".7">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="acj" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f59e0b"/><stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="850" fill="url(#bgj)"/>
+  <rect width="1200" height="850" fill="url(#glj)"/>
+  <rect width="1200" height="850" fill="url(#g2j)"/>
+  <g font-family="'Plus Jakarta Sans',system-ui,sans-serif">
+
+    <text x="600" y="300" font-size="150" font-weight="700" fill="#f5f3ff" text-anchor="middle">1605</text>
+    <text text-anchor="middle" x="600" y="350" font-size="17" fill="rgba(255,255,255,.4)" font-weight="600">CONTEST RATING</text>
+    <path d="M300 420h600" stroke="rgba(255,255,255,.1)"/>
+    <text x="600" y="530" font-size="82" font-weight="700" fill="#f5f3ff" text-anchor="middle">450+</text>
+    <text text-anchor="middle" x="600" y="578" font-size="17" fill="rgba(255,255,255,.4)" font-weight="600">PROBLEMS SOLVED</text>
+    <rect x="317" y="650" width="62" height="44" rx="22" fill="rgba(139,92,246,.12)" stroke="rgba(139,92,246,.38)"/>
+    <text x="337" y="678" font-size="15" fill="#c4b5fd" font-weight="600">DP</text><rect x="425" y="650" width="95" height="44" rx="22" fill="rgba(139,92,246,.12)" stroke="rgba(139,92,246,.38)"/>
+    <text x="445" y="678" font-size="15" fill="#c4b5fd" font-weight="600">Trees</text><rect x="535" y="650" width="106" height="44" rx="22" fill="rgba(139,92,246,.12)" stroke="rgba(139,92,246,.38)"/>
+    <text x="555" y="678" font-size="15" fill="#c4b5fd" font-weight="600">Graphs</text><rect x="663" y="650" width="183" height="44" rx="22" fill="rgba(139,92,246,.12)" stroke="rgba(139,92,246,.38)"/>
+    <text x="683" y="678" font-size="15" fill="#c4b5fd" font-weight="600">Segment trees</text><rect x="825" y="650" width="73" height="44" rx="22" fill="rgba(139,92,246,.12)" stroke="rgba(139,92,246,.38)"/>
+    <text x="845" y="678" font-size="15" fill="#c4b5fd" font-weight="600">SQL</text>
+
+  </g>
+</svg>

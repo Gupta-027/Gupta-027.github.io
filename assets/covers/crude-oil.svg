@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" role="img">
+
+  <defs>
+    <linearGradient id="bgi" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0616"/><stop offset="1" stop-color="#07040f"/>
+    </linearGradient>
+    <radialGradient id="gli" cx=".5" cy=".18" r=".85">
+      <stop offset="0" stop-color="#f59e0b" stop-opacity=".38"/>
+      <stop offset=".55" stop-color="#f59e0b" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2i" cx=".88" cy=".9" r=".7">
+      <stop offset="0" stop-color="#6366f1" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="aci" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f59e0b"/><stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="600" fill="url(#bgi)"/>
+  <rect width="900" height="600" fill="url(#gli)"/>
+  <rect width="900" height="600" fill="url(#g2i)"/>
+  <g font-family="'Plus Jakarta Sans',system-ui,sans-serif">
+
+
+    <rect x="60" y="60" width="780" height="480" rx="16" fill="#0f0a1d" stroke="rgba(255,255,255,.10)"/>
+    <path d="M60 106h780" stroke="rgba(255,255,255,.08)"/>
+    <circle cx="84" cy="83" r="5" fill="rgba(255,255,255,.16)"/>
+    <circle cx="102" cy="83" r="5" fill="rgba(255,255,255,.16)"/>
+    <circle cx="120" cy="83" r="5" fill="#f59e0b" opacity=".7"/>
+    <text x="144" y="88" font-size="15" fill="rgba(255,255,255,.42)" font-weight="500">Crude oil futures · term structure</text>
+    <text x="92" y="172" font-size="12" fill="rgba(255,255,255,.4)" font-weight="600">BRENT — FORWARD CURVE</text>
+    <g stroke="rgba(255,255,255,.07)">
+      <path d="M100 240h700"/><path d="M100 300h700"/><path d="M100 360h700"/><path d="M100 420h700"/>
+    </g>
+    <path d="M110 400C190 372 250 342 320 336C400 328 460 300 540 292C620 284 700 268 780 258"
+          stroke="#f59e0b" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+    <path d="M110 424C190 408 250 396 320 392C400 388 460 376 540 372C620 368 700 362 780 358"
+          stroke="rgba(99,102,241,.75)" stroke-width="2.6" fill="none" stroke-dasharray="7 6" stroke-linecap="round"/>
+    <circle cx="110" cy="400" r="5" fill="#0f0a1d" stroke="#f59e0b" stroke-width="2.6"/><circle cx="320" cy="336" r="5" fill="#0f0a1d" stroke="#f59e0b" stroke-width="2.6"/><circle cx="540" cy="292" r="5" fill="#0f0a1d" stroke="#f59e0b" stroke-width="2.6"/><circle cx="780" cy="258" r="5" fill="#0f0a1d" stroke="#f59e0b" stroke-width="2.6"/>
+    <rect x="100" y="452" width="140" height="30" rx="15" fill="rgba(245,158,11,.14)" stroke="rgba(251,191,36,.42)"/>
+    <text x="120" y="472" font-size="12" fill="#fcd34d" font-weight="600">Backwardation</text>
+    <text x="264" y="472" font-size="12" fill="rgba(255,255,255,.34)" font-weight="500">Spot premium over 12M forward</text>
+
+  </g>
+</svg>

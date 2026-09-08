@@ -1,0 +1,229 @@
+/* ==========================================================================
+   CASE STUDY PAGE — layers on top of style.css, reusing its tokens.
+   The page accent (--a / --b) is set per project by case-study.js, so one
+   stylesheet serves every study without a per-project override anywhere.
+   ========================================================================== */
+
+.csp{padding-top:calc(var(--nav-h) + clamp(2.5rem,6vw,5rem))}
+.csp__wrap{
+  width:100%;max-width:calc(1080px + var(--page-gutter) * 2);
+  margin-inline:auto;padding-inline:var(--page-gutter);
+}
+
+/* ── Hero ─────────────────────────────────────────────────────────── */
+.csp__hero{position:relative;padding-bottom:clamp(2.5rem,5vw,4rem)}
+.csp__back{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-size:.85rem;font-weight:600;color:var(--text-3);
+  transition:color var(--t-s),gap var(--t-s);
+}
+.csp__back:hover{color:var(--a,var(--acc-3));gap:.75rem}
+.csp__back svg{width:15px;height:15px}
+
+.csp__kicker{
+  margin-top:clamp(1.75rem,4vw,2.75rem);
+  font-size:var(--fs-meta);font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--a,var(--acc-3));
+}
+.csp__t{
+  margin-top:.9rem;
+  font-size:clamp(2.5rem,1.7rem + 3.4vw,4.5rem);font-weight:700;
+  letter-spacing:-.035em;line-height:1.03;text-wrap:balance;
+}
+.csp__tag{
+  margin-top:1.35rem;max-width:60ch;color:var(--text-2);
+  font-size:clamp(1.05rem,.98rem + .4vw,1.3rem);line-height:1.55;
+}
+
+.csp__meta{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:1.5rem 2rem;margin-top:clamp(2rem,4vw,3rem);
+  padding-top:clamp(1.75rem,3vw,2.25rem);border-top:1px solid var(--line);
+}
+.csp__meta dt{
+  font-size:var(--fs-meta);font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--text-3);margin-bottom:.45rem;
+}
+.csp__meta dd{font-size:.95rem;color:var(--text-2);line-height:1.5}
+
+.csp__links{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:clamp(1.75rem,3vw,2.25rem)}
+
+/* ── Hero image ───────────────────────────────────────────────────── */
+.csp__shot{
+  position:relative;margin-top:clamp(2.5rem,5vw,4rem);
+  border-radius:var(--r);overflow:hidden;
+  border:1px solid var(--line);background:var(--bg-2);
+  box-shadow:var(--shadow),0 0 90px -40px var(--a,var(--acc));
+}
+.csp__shot img{width:100%;height:auto;display:block}
+.csp__shot::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  box-shadow:inset 0 0 90px rgba(0,0,0,.35);
+}
+
+/* ── Section rhythm ───────────────────────────────────────────────── */
+.csp__sec{
+  padding-block:clamp(3rem,6vw,5rem);
+  border-top:1px solid var(--line);
+  content-visibility:auto;contain-intrinsic-size:auto 520px;
+}
+.csp__sec:first-of-type{border-top:0}
+.csp__k{
+  display:flex;align-items:center;gap:.75rem;
+  font-size:var(--fs-meta);font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--text-3);margin-bottom:1.5rem;
+}
+.csp__k::before{
+  content:"";width:24px;height:1px;background:var(--a,var(--acc));flex:none;
+}
+.csp__h{
+  font-size:clamp(1.6rem,1.3rem + 1.3vw,2.4rem);font-weight:600;
+  letter-spacing:-.025em;line-height:1.12;max-width:22ch;margin-bottom:1.5rem;
+}
+.csp__p{color:var(--text-2);max-width:70ch;line-height:1.75;font-size:1.05rem}
+.csp__p + .csp__p{margin-top:1.1rem}
+
+/* ── Generic card grid ────────────────────────────────────────────── */
+.csp__grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));
+  gap:clamp(1rem,2vw,1.5rem);margin-top:2rem;
+}
+.csp__card{
+  padding:clamp(1.5rem,2.5vw,1.9rem);border-radius:var(--r-s);
+  border:1px solid var(--line);background:var(--glass);
+  transition:border-color var(--t),transform var(--t),box-shadow var(--t);
+}
+.csp__card:hover{
+  border-color:var(--a,var(--line-hi));transform:translateY(-4px);
+  box-shadow:0 20px 50px -30px var(--a,var(--acc));
+}
+.csp__card h4{font-size:1.08rem;font-weight:600;letter-spacing:-.01em;margin-bottom:.6rem}
+.csp__card p{color:var(--text-2);font-size:.94rem;line-height:1.6}
+.csp__card--n{counter-increment:csn;position:relative;padding-top:3.4rem}
+.csp__card--n::before{
+  content:counter(csn,decimal-leading-zero);
+  position:absolute;top:1.35rem;left:clamp(1.5rem,2.5vw,1.9rem);
+  font-size:.82rem;font-weight:700;letter-spacing:.1em;color:var(--a,var(--acc-3));
+  font-variant-numeric:tabular-nums;
+}
+.csp__grid--n{counter-reset:csn}
+
+/* ── Bullet list ──────────────────────────────────────────────────── */
+.csp__list{display:flex;flex-direction:column;gap:.85rem;margin-top:1.5rem;max-width:72ch}
+.csp__list li{position:relative;padding-left:1.6rem;color:var(--text-2);line-height:1.65}
+.csp__list li::before{
+  content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;
+  background:var(--a,var(--acc));box-shadow:0 0 12px var(--a,var(--acc));
+}
+
+/* ── Persona ──────────────────────────────────────────────────────── */
+.csp__persona{
+  border:1px solid var(--line);border-radius:var(--r);
+  background:var(--glass);padding:clamp(1.6rem,3vw,2.25rem);
+}
+.csp__persona + .csp__persona{margin-top:1.25rem}
+.csp__persona h4{font-size:1.2rem;font-weight:600;letter-spacing:-.015em}
+.csp__persona > p{margin-top:.6rem;color:var(--text-2);font-size:.95rem;line-height:1.6;max-width:66ch}
+.csp__pcols{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:1.5rem;margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid var(--line-2);
+}
+.csp__pcols h5{
+  font-size:var(--fs-meta);font-weight:600;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--text-3);margin-bottom:.7rem;
+}
+.csp__pcols ul{display:flex;flex-direction:column;gap:.5rem}
+.csp__pcols li{
+  position:relative;padding-left:1.1rem;color:var(--text-2);font-size:.9rem;line-height:1.5;
+}
+.csp__pcols li::before{
+  content:"";position:absolute;left:0;top:.6em;width:5px;height:5px;border-radius:50%;
+  background:var(--b,var(--acc-2));
+}
+
+/* ── Need → insight → decision chain ──────────────────────────────── */
+.csp__chain{display:flex;flex-direction:column;gap:1rem;margin-top:2rem}
+.csp__link{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;
+  border:1px solid var(--line);border-radius:var(--r-s);overflow:hidden;
+}
+.csp__link > div{padding:1.4rem 1.5rem;background:var(--glass)}
+.csp__link > div + div{border-left:1px solid var(--line)}
+.csp__link > div:last-child{background:rgba(139,92,246,.07)}
+.csp__link h5{
+  font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text-3);margin-bottom:.6rem;
+}
+.csp__link > div:last-child h5{color:var(--a,var(--acc-3))}
+.csp__link p{color:var(--text-2);font-size:.92rem;line-height:1.6}
+
+/* ── Flow ─────────────────────────────────────────────────────────── */
+.csp__flow{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-top:2rem}
+.csp__flow li{
+  display:flex;align-items:center;gap:.6rem;
+  font-size:.92rem;font-weight:600;color:var(--text-2);
+  padding:.7rem 1.2rem;border-radius:99px;
+  border:1px solid var(--line);background:var(--glass);
+}
+.csp__flow li::after{
+  content:"→";color:var(--a,var(--acc-3));font-weight:400;margin-left:.3rem;
+}
+.csp__flow li:last-child{border-color:var(--a,var(--line-hi));background:rgba(139,92,246,.1)}
+.csp__flow li:last-child::after{content:none}
+
+/* ── Metrics ──────────────────────────────────────────────────────── */
+.csp__stats{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:clamp(1rem,2vw,1.5rem);margin-top:2rem;
+}
+.csp__stat{
+  padding:1.6rem;border-radius:var(--r-s);
+  border:1px solid var(--line);background:var(--glass);
+  border-left:3px solid var(--a,var(--acc));
+}
+.csp__stat b{
+  display:block;font-size:clamp(1.9rem,1.6rem + 1vw,2.5rem);font-weight:700;
+  letter-spacing:-.03em;line-height:1;color:var(--text);
+  font-variant-numeric:tabular-nums;
+}
+.csp__stat span{display:block;margin-top:.6rem;font-size:.88rem;color:var(--text-2);line-height:1.45}
+
+/* ── Quote ────────────────────────────────────────────────────────── */
+.csp__quote{
+  margin-top:2rem;padding:clamp(1.75rem,3.5vw,2.5rem);
+  border-radius:var(--r);border:1px solid var(--line);
+  background:
+    radial-gradient(ellipse 70% 120% at 0% 0%, rgba(139,92,246,.12), transparent 62%),
+    var(--glass);
+}
+.csp__quote p{
+  font-size:clamp(1.15rem,1rem + .7vw,1.5rem);font-weight:500;
+  line-height:1.5;letter-spacing:-.015em;color:var(--text);max-width:44ch;
+}
+.csp__quote cite{
+  display:block;margin-top:1.1rem;font-style:normal;
+  font-size:var(--fs-meta);font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--a,var(--acc-3));
+}
+
+/* ── Next project ─────────────────────────────────────────────────── */
+.csp__next{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;
+  margin-top:clamp(3rem,6vw,5rem);padding:clamp(1.75rem,3.5vw,2.5rem);
+  border-radius:var(--r);border:1px solid var(--line);background:var(--glass);
+  transition:border-color var(--t),background var(--t);
+}
+.csp__next:hover{border-color:var(--line-hi);background:rgba(255,255,255,.05)}
+.csp__next p{font-size:var(--fs-meta);font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--text-3);margin-bottom:.5rem}
+.csp__next h3{font-size:clamp(1.4rem,1.2rem + .8vw,1.9rem);letter-spacing:-.02em}
+
+/* ── Not found ────────────────────────────────────────────────────── */
+.csp__miss{padding:clamp(4rem,10vw,8rem) 0;text-align:center}
+.csp__miss h1{font-size:clamp(1.8rem,1.4rem + 1.6vw,2.6rem);margin-bottom:1rem}
+.csp__miss p{color:var(--text-2);max-width:46ch;margin:0 auto 2rem}
+
+@media (max-width:760px){
+  .csp__link{grid-template-columns:1fr}
+  .csp__link > div + div{border-left:0;border-top:1px solid var(--line)}
+}

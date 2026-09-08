@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#070410" />
+<meta name="color-scheme" content="dark" />
+
+<title>Case Study — Gupta Prasad Adhikari</title>
+<meta name="description" content="A case study by Gupta Prasad Adhikari, UI/UX and product designer." />
+<meta name="author" content="Gupta Prasad Adhikari" />
+<link rel="canonical" href="https://gupta-027.github.io/case-study.html" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Case Study — Gupta Prasad Adhikari" />
+<meta property="og:url" content="https://gupta-027.github.io/case-study.html" />
+<meta property="og:image" content="https://gupta-027.github.io/assets/og-cover.svg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="robots" content="noindex" />
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="manifest" href="site.webmanifest" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="case-study.css" />
+<link rel="stylesheet" href="chatbot.css" />
+<script>document.documentElement.className = 'js';</script>
+</head>
+
+<body>
+
+<div class="amb" aria-hidden="true">
+  <div class="amb__field"></div>
+  <span class="orb orb--1"></span>
+  <span class="orb orb--2"></span>
+  <span class="orb orb--3"></span>
+  <div class="amb__dust" id="dust"></div>
+</div>
+
+<div class="cur" id="cur" aria-hidden="true"><span id="curTxt"></span></div>
+<div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav__in">
+    <a href="index.html#top" class="brand" aria-label="Gupta Prasad Adhikari — home">Gupta Prasad Adhikari</a>
+
+    <nav class="menu" id="menu" aria-label="Primary">
+      <ul class="menu__list">
+        <li><a href="index.html#work"       class="menu__link">Work</a></li>
+        <li><a href="index.html#about"      class="menu__link">About</a></li>
+        <li><a href="index.html#experience" class="menu__link">Experience</a></li>
+        <li><a href="index.html#contact"    class="menu__link">Contact</a></li>
+      </ul>
+      <a class="menu__cta" href="mailto:guptaprasadadhikari@gmail.com">Let's talk <span aria-hidden="true">↗</span></a>
+    </nav>
+
+    <div class="nav__end">
+      <a class="nav__link" href="assets/gupta-prasad-adhikari-resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <button class="ai-btn" id="aiBtn" type="button" data-cursor="btn"
+              aria-haspopup="dialog" aria-expanded="false" aria-controls="aiPanel"
+              aria-label="Ask the portfolio AI assistant">
+        <span class="ai-btn__glow" aria-hidden="true"></span>
+        <svg class="ai-btn__spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.6 5.4L19 10l-5.4 1.6L12 17l-1.6-5.4L5 10l5.4-1.6L12 3Z"/></svg>
+        <span class="ai-btn__label">Ask AI</span>
+      </button>
+      <a class="nav__cta" href="mailto:guptaprasadadhikari@gmail.com" data-cursor="btn">Let's talk <span aria-hidden="true">↗</span></a>
+      <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="csp" id="cspRoot"></div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p class="foot__name">Gupta Prasad Adhikari</p>
+    <p class="foot__time"><i class="dot"></i> <span id="localTime">Rourkela, India</span></p>
+    <p class="foot__c">© <span id="year">2026</span> Gupta Prasad Adhikari</p>
+  </div>
+</footer>
+
+<button class="top" id="toTop" type="button" aria-label="Back to top" data-cursor="btn">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+  <div class="lb__scrim" data-close></div>
+  <button class="lb__x" type="button" data-close aria-label="Close preview" data-cursor="btn">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <img id="lbImg" src="" alt="" />
+</div>
+
+<div class="aic" id="aiPanel" hidden>
+  <div class="aic__scrim" data-ai-close></div>
+  <div class="aic__win" role="dialog" aria-modal="true" aria-labelledby="aicTitle">
+    <header class="aic__head">
+      <span class="aic__head-ic" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3l1.6 5.4L19 10l-5.4 1.6L12 17l-1.6-5.4L5 10l5.4-1.6L12 3Z"/></svg>
+      </span>
+      <div class="aic__head-copy">
+        <p class="aic__t" id="aicTitle">Portfolio AI Assistant</p>
+        <p class="aic__sub">Your guide to Gupta's work</p>
+        <span class="aic__status"><i class="aic__dot" aria-hidden="true"></i>Online</span>
+      </div>
+      <button class="aic__x" type="button" data-ai-close aria-label="Close chat" data-cursor="btn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+    <div class="aic__body" id="aicBody" role="log" aria-live="polite" aria-label="Conversation"></div>
+    <form class="aic__inputbar" id="aicForm">
+      <textarea class="aic__input" id="aicInput" rows="1" placeholder="Ask me about Gupta's work..." aria-label="Message"></textarea>
+      <button class="aic__send" id="aicSend" type="submit" disabled aria-label="Send message">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+      </button>
+    </form>
+  </div>
+</div>
+
+<script src="case-study.js"></script>
+<script src="script.js" defer></script>
+<script src="data/portfolio-data.js" defer></script>
+<script src="chatbot.js" defer></script>
+</body>
+</html>

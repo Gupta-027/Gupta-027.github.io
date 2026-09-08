@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#070410" />
+<meta name="color-scheme" content="dark" />
+
+<title>Gupta Prasad Adhikari — UI/UX &amp; Product Designer</title>
+<meta name="description" content="Gupta Prasad Adhikari designs AI-powered products that feel simple, trusted and human — BFSI Risk Intelligence, YatraAI, Vidyapeeth360, aayiq." />
+<meta name="author" content="Gupta Prasad Adhikari" />
+<link rel="canonical" href="https://gupta-027.github.io/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Gupta Prasad Adhikari — UI/UX &amp; Product Designer" />
+<meta property="og:description" content="I design AI products that feel simple, trusted and human." />
+<meta property="og:url" content="https://gupta-027.github.io/" />
+<meta property="og:image" content="https://gupta-027.github.io/assets/og-cover.svg" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="manifest" href="site.webmanifest" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="chatbot.css" />
+<!-- Content stays visible if JavaScript never runs -->
+<script>document.documentElement.className = 'js';</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"Person","name":"Gupta Prasad Adhikari",
+  "url":"https://gupta-027.github.io/",
+  "jobTitle":"UI/UX & Product Designer",
+  "email":"guptaprasadadhikari@gmail.com",
+  "description":"UI/UX and product designer working on AI-powered products — research, interface design, and the frontend that ships them.",
+  "alumniOf":"National Institute of Technology, Rourkela",
+  "knowsAbout":["UI/UX Design","Product Design","AI Interface Design","Design Systems","Data Visualisation","Frontend Development"]
+}
+</script>
+</head>
+
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     AMBIENT ATMOSPHERE — cinematic gradients, drifting light, dust
+     ══════════════════════════════════════════════════════════════ -->
+<div class="amb" aria-hidden="true">
+  <div class="amb__field"></div>
+  <span class="orb orb--1"></span>
+  <span class="orb orb--2"></span>
+  <span class="orb orb--3"></span>
+  <div class="amb__dust" id="dust"></div>
+</div>
+
+<!-- Intro -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro__stack">
+    <span class="intro__name" id="introName">GUPTA PRASAD ADHIKARI</span>
+    <span class="intro__tag" id="introTag">UI/UX &amp; Product Designer</span>
+  </div>
+  <span class="intro__bar" id="introBar"></span>
+</div>
+
+<!-- Cursor (desktop only) -->
+<div class="cur" id="cur" aria-hidden="true"><span id="curTxt"></span></div>
+
+<!-- Scroll progress -->
+<div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     NAV — hides on scroll down, returns on scroll up
+     ══════════════════════════════════════════════════════════════ -->
+<header class="nav" id="nav">
+  <div class="nav__in">
+    <a href="#top" class="brand" aria-label="Gupta Prasad Adhikari — home">Gupta Prasad Adhikari</a>
+
+    <nav class="menu" id="menu" aria-label="Primary">
+      <ul class="menu__list">
+        <li><a href="#work"       class="menu__link">Work</a></li>
+        <li><a href="#about"      class="menu__link">About</a></li>
+        <li><a href="#experience" class="menu__link">Experience</a></li>
+        <li><a href="#contact"    class="menu__link">Contact</a></li>
+      </ul>
+      <a class="menu__cta" href="mailto:guptaprasadadhikari@gmail.com">Let's talk <span aria-hidden="true">↗</span></a>
+    </nav>
+
+    <div class="nav__end">
+      <a class="nav__link" href="assets/gupta-prasad-adhikari-resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <button class="ai-btn" id="aiBtn" type="button" data-cursor="btn"
+              aria-haspopup="dialog" aria-expanded="false" aria-controls="aiPanel"
+              aria-label="Ask the portfolio AI assistant">
+        <span class="ai-btn__glow" aria-hidden="true"></span>
+        <svg class="ai-btn__spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.6 5.4L19 10l-5.4 1.6L12 17l-1.6-5.4L5 10l5.4-1.6L12 3Z"/></svg>
+        <span class="ai-btn__label">Ask AI</span>
+      </button>
+      <a class="nav__cta" href="mailto:guptaprasadadhikari@gmail.com" data-cursor="btn">Let's talk <span aria-hidden="true">↗</span></a>
+      <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     HERO
+     ══════════════════════════════════════════════════════════════ -->
+<section class="hero" aria-labelledby="heroTitle">
+
+  <div class="hero__light" id="heroLight" aria-hidden="true">
+    <span class="hero__grid"></span>
+    <span class="hero__glow hero__glow--a"></span>
+    <span class="hero__glow hero__glow--b"></span>
+    <span class="hero__glow hero__glow--c"></span>
+    <span class="hero__ground"></span>
+    <div class="hero__beams" id="heroBeams"></div>
+  </div>
+
+  <div class="wrap hero__in">
+
+    <p class="hero__badge reveal">
+      <i aria-hidden="true">✦</i> UI/UX Designer · Product Designer · AI Interfaces
+    </p>
+
+    <h1 class="hero__title" id="heroTitle">
+      <span class="ln"><span>I design <em class="hl">AI experiences</em></span></span>
+      <span class="ln"><span>that feel simple, trusted and human.</span></span>
+    </h1>
+
+    <p class="hero__lede reveal" data-delay="120">
+      Industrial Design at NIT Rourkela, applied AI engineering at HelpRevX. I take products
+      from research and wireframes through to the interface that actually ships.
+    </p>
+
+    <div class="hero__cta reveal" data-delay="200">
+      <a href="#work" class="btn btn--fill btn--hero mag" data-cursor="btn">
+        View selected work
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#contact" class="btn btn--out btn--hero mag" data-cursor="btn">Let's talk</a>
+    </div>
+
+  </div>
+
+  <a href="#work" class="hero__scroll" aria-label="Scroll to explore">
+    <span>Scroll to explore</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+  </a>
+</section>
+
+<!-- Icon sprite — each mark defined once, referenced twice below via <use>
+     so the seamless-loop duplication doesn't double the SVG payload. -->
+<svg aria-hidden="true" style="display:none" width="0" height="0">
+  <defs>
+    <symbol id="ico-figma" viewBox="0 0 128 128">
+      <path fill="#0acf83" d="M45.5 129c11.9 0 21.5-9.6 21.5-21.5V86H45.5C33.6 86 24 95.6 24 107.5S33.6 129 45.5 129zm0 0"/>
+      <path fill="#a259ff" d="M24 64.5C24 52.6 33.6 43 45.5 43H67v43H45.5C33.6 86 24 76.4 24 64.5zm0 0"/>
+      <path fill="#f24e1e" d="M24 21.5C24 9.6 33.6 0 45.5 0H67v43H45.5C33.6 43 24 33.4 24 21.5zm0 0"/>
+      <path fill="#ff7262" d="M67 0h21.5C100.4 0 110 9.6 110 21.5S100.4 43 88.5 43H67zm0 0"/>
+      <path fill="#1abcfe" d="M110 64.5c0 11.9-9.6 21.5-21.5 21.5S67 76.4 67 64.5 76.6 43 88.5 43 110 52.6 110 64.5zm0 0"/>
+    </symbol>
+    <symbol id="ico-figjam" viewBox="0 0 100 100">
+      <path fill="#ff7a1a" d="M52.7,10.6c14.5,1.4,25.9,13.6,28.7,27.9c2.8,14.3-2.5,30-13.6,39.3c-11.1,9.3-27.6,12.1-40.8,6.3 C14,78.3,4.7,64.8,4.4,50.4C4.1,36,12.8,21.4,26,14.5C34.6,10,43.7,9.7,52.7,10.6z"/>
+      <path fill="#ffc93c" opacity=".9" d="M46.5,24c8,0.8,14.6,7.1,16.4,14.9c1.7,7.7-1.1,16.1-6.9,21.1c-5.8,5-14.1,6.7-21.3,3.9 c-6.7-2.6-11.7-9-12.1-16.1c-0.4-7.4,3.6-14.9,10.1-18.7C37.3,25.6,42,23.6,46.5,24z"/>
+    </symbol>
+    <symbol id="ico-html" viewBox="0 0 128 128">
+      <path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"/>
+      <path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"/>
+      <path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"/>
+      <path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"/>
+    </symbol>
+    <symbol id="ico-css" viewBox="0 0 128 128">
+      <path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"/>
+      <path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z"/>
+      <path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z"/>
+      <path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018v-14.39z"/>
+      <path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881H81.127z"/>
+      <path fill="#EBEBEB" d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711h34.646zm-.047 27.996v13.831H48.792l-.277-3.108-.631-7.012-.33-3.711h16.447z"/>
+    </symbol>
+    <symbol id="ico-js" viewBox="0 0 128 128">
+      <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"/>
+      <path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"/>
+    </symbol>
+    <symbol id="ico-ts" viewBox="0 0 128 128">
+      <rect width="128" height="128" rx="6" fill="#3178c6"/>
+      <path fill="#fff" d="M74.6 96.7v13.3c2.2 1.1 4.7 2 7.7 2.5 3 .6 6.1.9 9.4.9 3.2 0 6.3-.3 9.2-.9 2.9-.6 5.5-1.6 7.7-3 2.2-1.4 3.9-3.3 5.2-5.6 1.3-2.3 1.9-5.2 1.9-8.6 0-2.5-.4-4.7-1.1-6.5-.7-1.9-1.8-3.5-3.2-5-1.4-1.5-3.1-2.8-5-4-1.9-1.2-4.1-2.3-6.5-3.3-1.8-.7-3.3-1.4-4.7-2.1-1.4-.7-2.6-1.4-3.6-2.1-1-.7-1.7-1.5-2.3-2.3-.5-.8-.8-1.7-.8-2.8 0-.9.2-1.8.7-2.5.5-.8 1.1-1.4 2-2 .9-.6 1.9-1 3.2-1.3 1.3-.3 2.7-.5 4.3-.5 1.1 0 2.3.1 3.6.3 1.3.2 2.5.4 3.8.8 1.3.4 2.5.8 3.7 1.4 1.2.6 2.3 1.2 3.3 2V52.3c-2.1-.8-4.3-1.4-6.8-1.8-2.5-.4-5.3-.6-8.5-.6-3.2 0-6.3.3-9.1 1-2.9.7-5.4 1.8-7.6 3.2-2.2 1.5-3.9 3.4-5.2 5.7-1.3 2.3-1.9 5.1-1.9 8.3 0 4.1 1.2 7.6 3.6 10.5 2.4 2.9 6 5.4 10.8 7.4 1.9.8 3.7 1.5 5.3 2.3 1.6.7 3 1.5 4.2 2.3 1.2.8 2.1 1.7 2.8 2.6.7.9 1 2 1 3.2 0 .9-.2 1.7-.6 2.5-.4.8-1.1 1.4-1.9 2-.9.6-1.9 1-3.2 1.3-1.3.3-2.8.5-4.6.5-3 0-5.9-.5-8.8-1.6-2.9-1-5.6-2.6-8-4.7zM56.2 63.7h17V52.9H25.5v10.8h16.9v48.6h13.8z"/>
+    </symbol>
+    <symbol id="ico-python" viewBox="0 0 128 128">
+      <path fill="#3776ab" d="M63.4 1.5c-5.3 0-10.3.5-14.7 1.3-13 2.3-15.4 7.1-15.4 16v11.8h30.8v3.9H21.7c-8.9 0-16.8 5.4-19.2 15.6-2.9 11.7-3 19 0 31.2 2.2 9.1 7.4 15.6 16.3 15.6h10.6V82.7c0-10.1 8.8-19.1 19.2-19.1h30.7c8.6 0 15.4-7 15.4-15.6V18.8c0-8.3-7-14.6-15.4-16-5.3-.9-10.8-1.3-16-1.3zM46.8 10.9c3.2 0 5.8 2.7 5.8 5.9 0 3.2-2.6 5.8-5.8 5.8-3.2 0-5.8-2.6-5.8-5.8 0-3.3 2.6-5.9 5.8-5.9z"/>
+      <path fill="#ffd43b" d="M97.9 34.6v11.5c0 10.6-9 19.4-19.2 19.4H48c-8.4 0-15.4 7.2-15.4 15.6v29.3c0 8.3 7.3 13.2 15.4 15.6 9.7 2.9 19 3.4 30.7 0 7.7-2.2 15.4-6.7 15.4-15.6V98.6H63.4v-3.9h46.1c8.9 0 12.3-6.2 15.4-15.6 3.2-9.6 3.1-18.9 0-31.2-2.2-8.9-6.5-15.6-15.4-15.6h-11.6zM80.6 105.3c3.2 0 5.8 2.6 5.8 5.8 0 3.3-2.6 5.9-5.8 5.9-3.2 0-5.8-2.6-5.8-5.9 0-3.2 2.6-5.8 5.8-5.8z"/>
+    </symbol>
+    <symbol id="ico-react" viewBox="0 0 128 128">
+      <circle cx="64" cy="64" r="11.4" fill="#61dafb"/>
+      <g stroke="#61dafb" stroke-width="5" fill="none">
+        <ellipse cx="64" cy="64" rx="48" ry="18.5"/>
+        <ellipse cx="64" cy="64" rx="48" ry="18.5" transform="rotate(60 64 64)"/>
+        <ellipse cx="64" cy="64" rx="48" ry="18.5" transform="rotate(120 64 64)"/>
+      </g>
+    </symbol>
+    <symbol id="ico-postgres" viewBox="0 0 128 128">
+      <path fill="#336791" d="M93.8 5.3c-6.6 0-12.4 1.6-16.5 3.1-3.8-.7-7.9-1-12.2-.9-8.7.1-16.4 2.2-22.5 6C36.4 10.6 22 5.4 13.2 12 7.6 16.3 5.6 24.7 7.4 37c.6 4.1 4 20.1 9.4 32.5 2.7 6.2 5.6 10.6 8.6 13.1 1.5 1.2 3.9 2.8 7.2 2 2.3-.6 4.2-2.2 5.9-4.2.9 1.6 1.9 2.5 2.6 3.1 1 .8 3.7 2.6 7.4 1.8.3-.1.6-.2 1-.3 0 1.1 0 2.3.1 3.5.1 2.1.3 4.1.5 5.6.1.4.2 1.5.6 2.7.4 1.4 1.1 3.3 2.7 5 1.9 2 4.4 2.4 6.3 2.4 1.2 0 2.4-.2 3.5-.4 4-.9 8.6-2.5 12-8 3.2-5.2 4.7-13.2 5-25.9 0-.4.1-.7.1-1.1l.2 1.9v.1c1 6 2.4 10.2 4.8 13 1.4 1.7 3.4 3.4 6.4 4 1 .2 2 .3 2.9.3 3.7 0 7.3-1.6 10-4.3 4.1-4.1 8.1-10.6 11.1-19.6 1.7-5.1 2.9-10.4 3.5-14.4.9-6.1 1.1-11.1.6-14.8-1.2-8.5-5.1-14.7-11.4-18-3.5-1.8-7.4-2.6-11.4-2.6z"/>
+      <path fill="#fff" d="M96.9 21.6c-.6 4-.4 5.5-.3 6.4l.1.7c.5 3.9.2 8.1-.8 12.4-1.2 5.2-3.1 9.5-4.8 12.3 1.8.5 3.5.7 4.6.4 1.2-.3 2-.9 2.5-1.9 1.3-2.6 1.5-8.2.4-14.9-.9-5.6-2.3-10.6-3.5-14.4-.4-1.3-.9-2.6-1.3-3.9l1.1 2.9zM56.5 25.5c-4.5 0-8.4 1.7-11.2 4.9-2.4 2.8-3.8 6.7-3.8 10.6 0 3.7 1.2 7.2 3.3 9.6 2.6 3 6.4 4.6 10.9 4.6 4.5 0 8.4-1.7 11.2-4.9 2.4-2.8 3.8-6.6 3.8-10.6 0-3.7-1.2-7.2-3.3-9.6-2.6-3-6.4-4.6-10.9-4.6z" opacity=".05"/>
+      <g fill="#fff">
+        <path d="M96.1 74.7c-3.3-.4-4.6.2-5.2.6-.2.1-.3.2-.3.2l.3-2c1.4-4.9 3.9-13 4.6-19.6.4-3.5.5-6.5.4-9 0-.5-.1-1-.1-1.4l-.1-.7c-.1-1-.3-2.7.4-7l.1-.7-2.3.1c-4.8.2-8.5-1.4-10.7-2.7-.5-.3-1-.7-1.4-1-3.7-3.1-8.2-4.8-13.4-4.8-6 0-11.3 2.4-15 6.6-3.4 3.9-5.3 9.1-5.3 14.7 0 5.2 1.6 10 4.5 13.4 1.3 1.6 2.9 2.9 4.7 3.8-1 1.3-2 2.9-2.7 4.7-.6 1.5-1.2 3.4-1.4 5.5-1.4-.4-3.1-.6-5.1-.3-2.6.4-4.6 1.7-5.9 3.7-1.4 2.2-1.7 5-.9 7.7.6 1.9 1.7 3.5 3.2 4.5 1.4 1 3.1 1.4 4.8 1.2 1.8-.2 3.4-1 4.5-2.3 0 .5.1 1 .1 1.4.2 2.8.6 5.3 1.1 7.2.5 2 1.2 3.3 2.1 4.2 1.1 1.1 2.6 1.3 3.8 1.3.9 0 1.7-.1 2.5-.3 3.3-.7 6.6-1.9 9-5.7 2.6-4.2 4-11.3 4.3-23.4l.4 3.7c.9 5.4 2 8.9 3.7 11 1 1.2 2.3 2.2 3.9 2.6.6.1 1.2.2 1.8.2 2.3 0 4.5-1 6.2-2.7 3.3-3.3 6.8-9.1 9.5-17.3.4-1.2.8-2.4 1.1-3.6-1.1.6-2.6 1.2-4.6 1z" opacity=".15"/>
+      </g>
+      <g fill="#fff" stroke="#fff" stroke-width="1.2">
+        <path d="M57.4 40.5c0 1.3-.8 2.3-1.7 2.3-1 0-1.7-1-1.7-2.3s.8-2.3 1.7-2.3c1 0 1.7 1 1.7 2.3z"/>
+        <path d="M85.9 40.5c0 1.3-.7 2.3-1.7 2.3s-1.7-1-1.7-2.3.7-2.3 1.7-2.3 1.7 1 1.7 2.3z"/>
+      </g>
+      <g fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round">
+        <path d="M46 62c4-1.5 9-2.2 14.5-2 5.5.2 10.4 1.3 14.2 3M64.5 55v27M56 96.5c8 1 14 .5 18-1.5"/>
+      </g>
+    </symbol>
+    <symbol id="ico-claude" viewBox="0 0 128 128">
+      <path fill="#d97757" d="M31.6 84.9 55.9 71l.4-1.2-.4-.6h-1.2l-4.1-.3-14-.4-12.2-.5-11.8-.6-3-.6L6.9 63l.3-1.9 2.5-1.7 3.6.3 7.9.6 11.9.8 8.6.5 12.8 1.3h2l.3-.8-.7-.5-.5-.5-12.1-8.2-13.1-8.7-6.9-5-3.7-2.5-1.9-2.4-.8-5.2 3.4-3.7 4.5.3 1.2.3 4.6 3.5 9.8 7.6 12.8 9.4.6.5.2-.2v-.6l-3-5.4-3.2-5.5-4.8-8.5-1.4-2.4-.4-3.4c-.3-2.4-.4-3.5-.4-3.5l2.5-3.4 3.4-.4 3.8 1 3.4 3.8 2.2 4.4 3.7 7.5 6.4 12.5 1 3 .6 1.9.4.2v-1.1l.5-6.4.9-7.9.9-10.2.3-2.9 1.5-3.6 3-2 2.3 1.1 1.9 2.7-.3 1.7-1.1 7.5-2.2 11.6-1.5 7.8h.9l1-1 4-5.3 6.7-8.4 3-3.3 3.4-3.7 2.2-1.7h4.2l3 4.6-1.4 4.7-4.3 5.4-3.5 4.6-5.1 6.9-3.2 5.5.3.4h.8l11.8-2.5 6.4-1.2 7.6-1.3 3.4 1.6.4 1.6-1.3 3.3-8 2-9.4 1.9L83 71.3l-.2.2.3.3 6.4.6 2.7.2h6.7l12.5.9 3.2 2.2 2 2.6-.3 2-5 2.5-6.7-1.6-15.6-3.7-5.4-1.3h-.7v.4l4.5 4.4 8.2 7.4 10.3 9.6.5 2.4-1.3 1.9-1.4-.2-9.1-6.8-3.5-3.1-7.9-6.7h-.6v.7l1.9 2.7 9.6 14.4.5 4.4-.7 1.5-2.5.8-2.8-.5-5.7-8-5.9-9-4.7-8.1-.6.3-2.8 30.1-1.3 1.5-3 1.2-2.5-2-1.4-3.1 1.3-6.1 1.6-8 1.3-6.4 1.2-7.9.7-2.6v-.2h-.6l-6 8.2-9 12.2-7.2 7.7-1.7.7-3-1.5.3-2.8 1.7-2.5 10-12.7 6-7.9 3.9-4.6-.1-.4h-.2L30.5 89l-8.3 1-3.6-.3-1.7-3.4.9-1.4 7.4-5.1z"/>
+    </symbol>
+    <symbol id="ico-github" viewBox="0 0 128 128">
+      <g fill="currentColor">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     TOOLS — animated marquee. Two identical <ul> sets sit side by side
+     in one flex rail; translating the rail by exactly -50% loops it with
+     no visible seam. The second set is aria-hidden so screen readers
+     hear the list once, not twice.
+     ══════════════════════════════════════════════════════════════ -->
+<section class="tools reveal" aria-label="Tools and technologies I use">
+  <p class="tools__label">Design &amp; build stack</p>
+  <div class="tools__viewport">
+    <div class="tools__rail" id="toolsRail">
+      <ul class="tools__set" id="toolsSet">
+        <li class="tools__item" data-tool="figma">
+          <svg class="tools__icon" aria-hidden="true"><use href="#ico-figma"></use></svg>
+          <span class="tools__name">Figma</span>
+        </li>
+        <li class="tools__item" data-tool="figjam">
+          <svg class="tools__icon" aria-hidden="true"><use href="#ico-figjam"></use></svg>
+          <span class="tools__name">FigJam</span>
+        </li>
+        <li class="tools__item" data-tool="html">
+          <svg class="tools__icon" aria-hidden="true"><use href="#ico-html"></use></svg>
+          <span class="tools__name">HTML</span>
+        </li>
+        <li class="tools__item" data-tool="css">
+          <svg class="tools__icon" aria-hidden="true"><use href="#ico-css"></use></svg>
+          <span class="tools__name">CSS</span>
+        </li>
+        <li class="tools__item" data-tool="javascript">
+          <svg class="tools__icon" aria-hidden="true"><use href="#ico-js"></use></svg>
+          <span class="tools__name">JavaScript</span>
+        </li>
+        <li class="tools__item" data-tool="typescript">
+          <svg class="tools__icon" aria-hidden="true"><use href="#ico-ts"></use></svg>
+          <span class="tools__name">TypeScript</span>
+        </li>
+        <li class="tools__item" data-tool="react">
+          <svg class="tools__icon" aria-hidden="true"><use href="#ico-react"></use></svg>
+          <span class="tools__name">React / Next.js</span>
+        </li>
+        <li class="tools__item" data-tool="python">
+          <svg class="tools__icon" aria-hidden="true"><use href="#ico-python"></use></svg>
+          <span class="tools__name">Python</span>
+        </li>
+        <li class="tools__item" data-tool="postgres">
+          <svg class="tools__icon" aria-hidden="true"><use href="#ico-postgres"></use></svg>
+          <span class="tools__name">PostgreSQL</span>
+        </li>
+        <li class="tools__item" data-tool="claude">
+          <svg class="tools__icon" aria-hidden="true"><use href="#ico-claude"></use></svg>
+          <span class="tools__name">Claude</span>
+        </li>
+        <li class="tools__item" data-tool="github">
+          <svg class="tools__icon" aria-hidden="true"><use href="#ico-github"></use></svg>
+          <span class="tools__name">GitHub</span>
+        </li>
+      </ul>
+      <!-- Duplicate set for the seamless loop — cloned by JS from the set
+           above so the two can never drift out of sync when it's edited. -->
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     01 · SELECTED WORK
+     ══════════════════════════════════════════════════════════════ -->
+<section class="sec" id="work" aria-labelledby="workTitle">
+  <div class="wrap">
+    <header class="sec__head">
+      <p class="eyebrow reveal"><span>01</span> Selected work</p>
+      <h2 class="sec__title reveal" id="workTitle" data-delay="60">
+        Products, interfaces and systems I've shaped.
+      </h2>
+    </header>
+  </div>
+
+  <!-- Scroll-driven showcase — full-bleed cinematic project sheets.
+       Base layout is a plain stacked flow (mobile, tablet, no-JS, reduced
+       motion): each <li> is its own near-fullscreen frame.
+       On desktop, JS adds .wstage--on: the inner viewport pins and each
+       project becomes a fullscreen layer that slides up from below and
+       covers the one before it as you scroll. -->
+  <div class="wstage" id="wstage">
+    <div class="wstage__pin">
+
+      <span class="wstage__tag" aria-hidden="true">Projects</span>
+      <div class="wstage__scroll" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v5l3 2"/></svg>
+        <span>Scroll</span>
+        <i></i>
+      </div>
+      <ol class="wprog2" aria-hidden="true">
+        <li><b>01</b><i></i></li>
+        <li><b>02</b><i></i></li>
+        <li><b>03</b><i></i></li>
+        <li><b>04</b><i></i></li>
+        <li><b>05</b><i></i></li>
+      </ol>
+
+      <div class="wstage__mood" aria-hidden="true">
+        <i class="mood mood--1"></i>
+        <i class="mood mood--2"></i>
+        <i class="mood mood--3"></i>
+        <i class="mood mood--4"></i>
+        <i class="mood mood--5"></i>
+      </div>
+
+      <div class="wrap wrap--wide wstage__in">
+        <ul class="slides">
+
+          <li class="slide reveal" data-project="bfsi-risk">
+            <a class="hit" href="case-study.html?p=bfsi-risk" data-cursor="view" aria-label="Open case study: BFSI Risk Intelligence Platform">Open case study</a>
+            <figure class="slide__media">
+              <div class="slide__tilt">
+                <img src="assets/covers/bfsi-risk.svg" alt="BFSI Risk Intelligence Platform — credit risk scoring interface with an explainability panel"
+                     width="1600" height="1000" fetchpriority="high" decoding="async" />
+              </div>
+              <span class="slide__scrim" aria-hidden="true"></span>
+              <span class="slide__cover" aria-hidden="true"></span>
+              <div class="slide__copy">
+                <span class="slide__n">01</span>
+                <h3 class="slide__t">BFSI Risk Intelligence</h3>
+                <p class="slide__d">Four lending-risk models behind one interface a credit officer can actually defend.</p>
+                <ul class="tags"><li>Fintech</li><li>Explainable AI</li><li>Product Design</li></ul>
+                <span class="arrow">View case study
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </figure>
+          </li>
+
+          <li class="slide reveal" data-project="yatraai">
+            <a class="hit" href="case-study.html?p=yatraai" data-cursor="view" aria-label="Open case study: YatraAI">Open case study</a>
+            <figure class="slide__media">
+              <div class="slide__tilt">
+                <img src="assets/covers/yatraai.svg"
+                     alt="YatraAI — group itinerary planner showing a day timeline and a cited AI assistant"
+                     width="1600" height="1000" loading="lazy" decoding="async" />
+              </div>
+              <span class="slide__scrim" aria-hidden="true"></span>
+              <span class="slide__cover" aria-hidden="true"></span>
+              <div class="slide__copy">
+                <span class="slide__n">02</span>
+                <h3 class="slide__t">YatraAI</h3>
+                <p class="slide__d">Group travel planning where nobody's preferences get quietly averaged away.</p>
+                <ul class="tags"><li>AI/UX</li><li>Hackathon Winner</li><li>Web App</li></ul>
+                <span class="arrow">View case study
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </figure>
+          </li>
+
+          <li class="slide reveal" data-project="vidyapeeth360">
+            <a class="hit" href="case-study.html?p=vidyapeeth360" data-cursor="view" aria-label="Open case study: Vidyapeeth360">Open case study</a>
+            <figure class="slide__media">
+              <div class="slide__tilt">
+                <img src="assets/covers/vidyapeeth360.svg"
+                     alt="Vidyapeeth360 — K-12 school ERP dashboard with role-based views"
+                     width="1600" height="1000" loading="lazy" decoding="async" />
+              </div>
+              <span class="slide__scrim" aria-hidden="true"></span>
+              <span class="slide__cover" aria-hidden="true"></span>
+              <div class="slide__copy">
+                <span class="slide__n">03</span>
+                <h3 class="slide__t">Vidyapeeth360</h3>
+                <p class="slide__d">One school ERP, four audiences — and a different first screen for each.</p>
+                <ul class="tags"><li>SaaS</li><li>Information Architecture</li><li>EdTech</li></ul>
+                <span class="arrow">View case study
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </figure>
+          </li>
+
+          <li class="slide reveal" data-project="aayiq">
+            <a class="hit" href="case-study.html?p=aayiq" data-cursor="view" aria-label="Open case study: aayiq">Open case study</a>
+            <figure class="slide__media">
+              <div class="slide__tilt">
+                <img src="assets/covers/aayiq.svg" alt="aayiq — omnichannel agent console showing an AI-to-human handoff"
+                     width="1600" height="1000" loading="lazy" decoding="async" />
+              </div>
+              <span class="slide__scrim" aria-hidden="true"></span>
+              <span class="slide__cover" aria-hidden="true"></span>
+              <div class="slide__copy">
+                <span class="slide__n">04</span>
+                <h3 class="slide__t">aayiq</h3>
+                <p class="slide__d">Designing the moment an AI agent admits it's stuck and hands you to a human.</p>
+                <ul class="tags"><li>Omnichannel CX</li><li>AI Handoff</li><li>Enterprise</li></ul>
+                <span class="arrow">View case study
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </figure>
+          </li>
+
+          <li class="slide reveal" data-project="sleuth">
+            <a class="hit" href="case-study.html?p=sleuth" data-cursor="view" aria-label="Open case study: Sleuth">Open case study</a>
+            <figure class="slide__media">
+              <div class="slide__tilt">
+                <img src="assets/covers/sleuth.svg" alt="Sleuth — multi-agent research console showing agents working in parallel"
+                     width="1600" height="1000" loading="lazy" decoding="async" />
+              </div>
+              <span class="slide__scrim" aria-hidden="true"></span>
+              <span class="slide__cover" aria-hidden="true"></span>
+              <div class="slide__copy">
+                <span class="slide__n">05</span>
+                <h3 class="slide__t">Sleuth</h3>
+                <p class="slide__d">Making nine agents thinking at once legible to one person waiting on an answer.</p>
+                <ul class="tags"><li>Multi-agent UX</li><li>Research Tool</li><li>Next.js</li></ul>
+                <span class="arrow">View case study
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </figure>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="wprog" aria-label="Selected work progress">
+        <span class="wprog__n"><b id="wprogCur">01</b><i>/</i><b>05</b></span>
+        <span class="wprog__track"><i class="wprog__fill" id="wprogFill"></i></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Explorations — analysis and research work, kept to four -->
+  <div class="wrap wrap--wide">
+    <section class="expl reveal" aria-labelledby="explTitle">
+      <header class="expl__head">
+        <p class="eyebrow">Explorations</p>
+        <h3 class="expl__k" id="explTitle">Research &amp; Analysis</h3>
+        <p class="expl__sub">Projects built to sharpen the half of design that happens before Figma —
+           understanding a business, interrogating its data, and turning the answer into something
+           a decision-maker can act on.</p>
+      </header>
+
+      <ul class="expl__g">
+        <li class="expl__i">
+          <a class="hit" href="case-study.html?p=novaretail" data-cursor="view" aria-label="Open project: AI Business Intelligence Platform">Open</a>
+          <figure><img src="assets/covers/novaretail.svg" alt="AI Business Intelligence Platform dashboard"
+                       width="900" height="600" loading="lazy" decoding="async" /></figure>
+          <div class="expl__copy">
+            <h4>AI Business Intelligence</h4>
+            <p>Decision-support platform</p>
+          </div>
+        </li>
+        <li class="expl__i">
+          <a class="hit" href="case-study.html?p=rag-policy" data-cursor="view" aria-label="Open project: RAG Policy Assistant">Open</a>
+          <figure><img src="assets/covers/rag-policy.svg" alt="RAG Policy Assistant interface with cited answers"
+                       width="900" height="600" loading="lazy" decoding="async" /></figure>
+          <div class="expl__copy">
+            <h4>RAG Policy Assistant</h4>
+            <p>Grounded answers, cited</p>
+          </div>
+        </li>
+        <li class="expl__i">
+          <a class="hit" href="case-study.html?p=coca-cola" data-cursor="view" aria-label="Open project: Coca-Cola India strategic assessment">Open</a>
+          <figure><img src="assets/covers/coca-cola.svg" alt="Coca-Cola India strategic business assessment"
+                       width="900" height="600" loading="lazy" decoding="async" /></figure>
+          <div class="expl__copy">
+            <h4>Coca-Cola India</h4>
+            <p>Strategic assessment</p>
+          </div>
+        </li>
+        <li class="expl__i">
+          <a class="hit" href="case-study.html?p=crude-oil" data-cursor="view" aria-label="Open project: Crude oil futures research">Open</a>
+          <figure><img src="assets/covers/crude-oil.svg" alt="Crude oil futures research and analysis"
+                       width="900" height="600" loading="lazy" decoding="async" /></figure>
+          <div class="expl__copy">
+            <h4>Crude Oil Futures</h4>
+            <p>Market research</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     02 · CAPABILITIES
+     ══════════════════════════════════════════════════════════════ -->
+<section class="sec sec--defer" id="services" aria-labelledby="servicesTitle">
+  <div class="wrap">
+    <header class="sec__head">
+      <p class="eyebrow reveal"><span>02</span> Capabilities</p>
+      <h2 class="sec__title reveal" id="servicesTitle" data-delay="60">Discovery to delivery, end to end.</h2>
+    </header>
+
+    <ul class="svc__grid reveal" data-delay="100">
+      <li class="svc__card">
+        <button class="hit" type="button" data-service="research" data-cursor="view" aria-label="Explore UX Research">Open</button>
+        <span class="svc__ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.3 15.3 20 20"/></svg>
+        </span>
+        <h3 class="svc__t">UX Research</h3>
+        <p class="svc__d">Personas, journey mapping and competitive benchmarking — decisions I can defend with evidence.</p>
+        <span class="svc__go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </li>
+      <li class="svc__card">
+        <button class="hit" type="button" data-service="uiux" data-cursor="view" aria-label="Explore UI/UX Design">Open</button>
+        <span class="svc__ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M6 3.5 18.5 12l-5.6 1.4L11.4 19 6 3.5Z"/><path d="M12.8 13.4 18 19"/></svg>
+        </span>
+        <h3 class="svc__t">UI/UX Design</h3>
+        <p class="svc__d">Wireframes through high-fidelity flows and prototypes in Figma, built for developer hand-off.</p>
+        <span class="svc__go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </li>
+      <li class="svc__card">
+        <button class="hit" type="button" data-service="ai" data-cursor="view" aria-label="Explore AI Interface Design">Open</button>
+        <span class="svc__ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 3l1.6 5.4L19 10l-5.4 1.6L12 17l-1.6-5.4L5 10l5.4-1.6L12 3Z"/><path d="M18.5 16.5l.7 2.3 2.3.7-2.3.7-.7 2.3-.7-2.3-2.3-.7 2.3-.7Z"/></svg>
+        </span>
+        <h3 class="svc__t">AI Interface Design</h3>
+        <p class="svc__d">Designing how a model shows its working, admits uncertainty, and hands control back to a person.</p>
+        <span class="svc__go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </li>
+      <li class="svc__card">
+        <button class="hit" type="button" data-service="systems" data-cursor="view" aria-label="Explore Design Systems">Open</button>
+        <span class="svc__ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="3.5" y="4" width="8" height="7.5" rx="1.5"/><rect x="12.5" y="4" width="8" height="4.5" rx="1.5"/><rect x="12.5" y="10.5" width="8" height="9.5" rx="1.5"/><rect x="3.5" y="13.5" width="8" height="6.5" rx="1.5"/></svg>
+        </span>
+        <h3 class="svc__t">Design Systems</h3>
+        <p class="svc__d">Tokens, components and states documented once so the tenth screen costs less than the first.</p>
+        <span class="svc__go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </li>
+      <li class="svc__card">
+        <button class="hit" type="button" data-service="dataviz" data-cursor="view" aria-label="Explore Data Visualisation">Open</button>
+        <span class="svc__ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 20V4"/><path d="M4 20h16"/><path d="M8 20v-6M13 20V9M18 20v-9"/></svg>
+        </span>
+        <h3 class="svc__t">Data Visualisation</h3>
+        <p class="svc__d">Dashboards where the number a person came for is the first thing they see, not the fifth.</p>
+        <span class="svc__go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </li>
+      <li class="svc__card">
+        <button class="hit" type="button" data-service="frontend" data-cursor="view" aria-label="Explore Frontend Development">Open</button>
+        <span class="svc__ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg>
+        </span>
+        <h3 class="svc__t">Frontend Development</h3>
+        <p class="svc__d">Responsive, accessible, fast — I ship the design rather than handing over a picture of it.</p>
+        <span class="svc__go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     03 · ABOUT
+     ══════════════════════════════════════════════════════════════ -->
+<section class="sec sec--defer" id="about" aria-labelledby="aboutTitle">
+  <div class="wrap">
+    <p class="eyebrow reveal"><span>03</span> About</p>
+
+    <div class="about">
+      <div class="about__top">
+        <p class="about__name">
+          <span class="about__glow" aria-hidden="true"></span>
+          <span class="about__name-w reveal" data-delay="60">Gupta</span>
+          <span class="about__name-w reveal" data-delay="90">Prasad</span>
+          <span class="about__name-w reveal" data-delay="120">Adhikari</span>
+        </p>
+        <h2 class="sec__title about__statement" id="aboutTitle">Design decisions I can explain, in products that ship.</h2>
+      </div>
+
+      <figure class="about__pic reveal" data-delay="200" data-parallax="0.025">
+        <span class="about__pic-glow-2" aria-hidden="true"></span>
+        <span class="about__pic-glow" aria-hidden="true"></span>
+        <span class="about__pic-dot about__pic-dot--1" aria-hidden="true"></span>
+        <span class="about__pic-dot about__pic-dot--2" aria-hidden="true"></span>
+        <span class="about__pic-dot about__pic-dot--3" aria-hidden="true"></span>
+        <span class="about__pic-frame">
+          <img src="assets/portrait.svg" alt="Portrait of Gupta Prasad Adhikari"
+               width="800" height="1000" loading="lazy" decoding="async" />
+        </span>
+      </figure>
+
+      <div class="about__bottom">
+        <div class="about__bio">
+          <p class="reveal" data-delay="240">I study <strong class="about__kw">Industrial Design Engineering</strong> at NIT Rourkela —
+             a degree that spends as much time on why a person reaches for something as on what it looks like.
+             That framing is what pulled me toward <strong class="about__kw">product and interface design</strong>,
+             and it's still how I open every project: understand the user's pain before opening Figma.</p>
+          <p class="reveal" data-delay="320">At <strong class="about__kw">HelpRevX</strong> I work as an Applied AI Engineer Intern
+             on two products. On <strong class="about__kw">aayiq</strong>, an omnichannel customer-experience platform, I built the
+             LLM workflows behind intent classification, knowledge retrieval and escalation to a human agent —
+             which meant designing what the customer sees at each of those moments, not just what the model returns.
+             On <strong class="about__kw">Vidyapeeth360</strong> I designed an end-to-end K-12 school ERP and specified
+             its AI capabilities alongside its database architecture and API contracts.</p>
+          <p class="reveal" data-delay="400">I'm most interested in <strong class="about__kw">AI as a design material</strong> —
+             how a model explains itself, how it signals uncertainty, and how it supports a decision instead of
+             replacing the person making it. That question runs through everything above, and it's the one
+             I want to keep working on.</p>
+        </div>
+
+        <div class="about__divider reveal" data-delay="440" aria-hidden="true"></div>
+
+        <dl class="about__facts reveal" data-delay="480">
+          <div><dt>Education</dt><dd>B.Tech Industrial Design · NIT Rourkela</dd></div>
+          <div><dt>Based in</dt><dd>Rourkela, India</dd></div>
+          <div><dt>Design</dt><dd>Figma · FigJam · Prototyping</dd></div>
+          <div><dt>Build</dt><dd>TypeScript · Python · Next.js</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     04 · PROCESS
+     ══════════════════════════════════════════════════════════════ -->
+<section class="sec sec--proc sec--defer" id="process" aria-labelledby="processTitle">
+  <div class="wrap">
+    <header class="sec__head sec__head--proc">
+      <p class="eyebrow reveal"><span>04</span> Process</p>
+      <h2 class="sec__title reveal" id="processTitle" data-delay="60">From problem to <em class="hl">shipped</em> product.</h2>
+    </header>
+
+    <ol class="proc reveal" id="proc" data-delay="100">
+      <li class="proc__i" data-step="1">
+        <span class="proc__node" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.3 15.3 20 20"/></svg>
+        </span>
+        <div class="proc__copy">
+          <span class="proc__n">01</span>
+          <h3 class="proc__t">Discover</h3>
+          <p class="proc__d">Talk to the people who'll use it. Map the journey, name the pain, agree what success looks like.</p>
+        </div>
+      </li>
+      <li class="proc__i" data-step="2">
+        <span class="proc__node" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M6 3.5 18.5 12l-5.6 1.4L11.4 19 6 3.5Z"/></svg>
+        </span>
+        <div class="proc__copy">
+          <span class="proc__n">02</span>
+          <h3 class="proc__t">Design</h3>
+          <p class="proc__d">Wireframes, then a system — components, states, and the empty and error cases nobody demos.</p>
+        </div>
+      </li>
+      <li class="proc__i" data-step="3">
+        <span class="proc__node" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg>
+        </span>
+        <div class="proc__copy">
+          <span class="proc__n">03</span>
+          <h3 class="proc__t">Build</h3>
+          <p class="proc__d">Prototype in code. A design I can run is a design I can test, and I catch what static mocks hide.</p>
+        </div>
+      </li>
+      <li class="proc__i" data-step="4">
+        <span class="proc__node" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4.5 12.5 9 17l10.5-11"/></svg>
+        </span>
+        <div class="proc__copy">
+          <span class="proc__n">04</span>
+          <h3 class="proc__t">Measure</h3>
+          <p class="proc__d">Instrument it, watch real usage, and let the numbers decide what changes in the next pass.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     05 · EXPERIENCE
+     ══════════════════════════════════════════════════════════════ -->
+<section class="sec sec--defer" id="experience" aria-labelledby="expTitle">
+  <div class="wrap">
+    <header class="sec__head">
+      <p class="eyebrow reveal"><span>05</span> Experience &amp; Journey</p>
+      <h2 class="sec__title reveal" id="expTitle" data-delay="60">Where I've designed, built and led.</h2>
+      <p class="sec__lede reveal" data-delay="90">A timeline of product work, applied AI engineering and student leadership —
+         from campus clubs to shipping features on a live platform.</p>
+    </header>
+
+    <ol class="exp">
+      <li class="exp__i reveal">
+        <div class="exp__lead">
+          <h3>HelpRevX Software Pvt. Ltd.</h3>
+          <p class="exp__role">Applied AI Engineer Intern</p>
+        </div>
+        <p class="exp__txt">Designing and building AI product surfaces on aayiq (omnichannel CX) and Vidyapeeth360
+           (K-12 school ERP) — LLM workflows for intent, retrieval and human escalation, plus the ERP's information
+           architecture, database design and API specification.</p>
+        <time class="exp__y">May 2026 — Present</time>
+      </li>
+
+      <li class="exp__i reveal">
+        <div class="exp__lead">
+          <h3>April Cohort Hackathon</h3>
+          <p class="exp__role">Winner — YatraAI</p>
+        </div>
+        <p class="exp__txt">Built and won with a constraint-based group itinerary planner and a cited RAG assistant,
+           taking it from problem framing to a working demo inside the cohort window.</p>
+        <time class="exp__y">Apr 2026</time>
+      </li>
+
+      <li class="exp__i reveal">
+        <div class="exp__lead">
+          <h3>AXIOM — Mathematics Club, NIT Rourkela</h3>
+          <p class="exp__role">Secretary</p>
+        </div>
+        <p class="exp__txt">Ran problem-solving events for 500+ participants — scoping the format, coordinating the
+           team behind it, and handling everything from promotion to running the day itself.</p>
+        <time class="exp__y">2024 — Present</time>
+      </li>
+
+      <li class="exp__i reveal">
+        <div class="exp__lead">
+          <h3>LEO Club</h3>
+          <p class="exp__role">President</p>
+        </div>
+        <p class="exp__txt">Led donation drives and community awareness campaigns, coordinating volunteers and
+           the communication that got people to show up.</p>
+        <time class="exp__y">2024 — Present</time>
+      </li>
+
+      <li class="exp__i reveal">
+        <div class="exp__lead">
+          <h3>National Institute of Technology, Rourkela</h3>
+          <p class="exp__role">B.Tech, Industrial Design Engineering</p>
+        </div>
+        <p class="exp__txt">Design-led engineering degree covering human factors, prototyping and manufacturing,
+           alongside machine learning, statistics, DSA and databases. CGPA 7.30.</p>
+        <time class="exp__y">Sep 2023 — Present</time>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     06 · RECOGNITION
+     ----------------------------------------------------------------
+     Two-column sticky-scroll: the right frame stays pinned while the
+     left list scrolls; JS tracks which item sits at the viewport centre
+     and swaps the active text + framed image. To add or replace an
+     entry, edit one <li class="certs__item"> and its matching
+     <img class="certs__img" data-cert="n"> — the data-cert values on
+     both sides must match.
+     ══════════════════════════════════════════════════════════════ -->
+<section class="sec certs sec--defer" id="certifications" aria-labelledby="certsTitle">
+  <div class="wrap">
+    <header class="sec__head">
+      <p class="eyebrow reveal"><span>06</span> Recognition</p>
+      <h2 class="sec__title reveal" id="certsTitle" data-delay="60">
+        Where the work has been recognised.
+      </h2>
+    </header>
+
+    <div class="certs__grid">
+      <ol class="certs__list" id="certsList">
+
+        <li class="certs__item is-on" data-cert="1">
+          <span class="certs__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="4.5"/><path d="M9 12.6 7.2 21l4.8-2.7L16.8 21l-1.8-8.4"/></svg>
+          </span>
+          <h3 class="certs__t">Applied AI Engineer Intern — HelpRevX</h3>
+          <p class="certs__d">Internship at HelpRevX Software Private Limited, working across two live products —
+             building LLM workflows for the aayiq customer-experience platform and specifying the design,
+             data model and AI capabilities of the Vidyapeeth360 school ERP.</p>
+          <p class="certs__meta">HelpRevX Software Pvt. Ltd. · 2026</p>
+          <button type="button" class="certs__view" data-cursor="btn"
+                  data-lightbox="assets/certificates/helprevx-certificate.jpg"
+                  data-lightbox-alt="HelpRevX internship certificate">
+            View certificate
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <figure class="certs__shot">
+            <img src="assets/certificates/helprevx-certificate.jpg" alt="HelpRevX internship certificate" loading="lazy" />
+          </figure>
+        </li>
+
+        <li class="certs__item" data-cert="2">
+          <span class="certs__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 6.9 3.9 11.4v6.2l8.1 4.9 8.1-4.9v-6.2L12 6.9Z"/><path d="M3.9 11.4 12 16.3l8.1-4.9"/><path d="M12 16.3v5.1"/></svg>
+          </span>
+          <h3 class="certs__t">Winner — April Cohort Hackathon</h3>
+          <p class="certs__d">First place for YatraAI, a constraint-based group itinerary planner with a cited RAG
+             assistant. Judged on the working product: a fair-selection algorithm that lifts the least-satisfied
+             traveller rather than optimising the group average, and a retrieval layer that abstains instead of
+             guessing when the knowledge base can't answer.</p>
+          <p class="certs__meta">April Cohort Hackathon · 2026</p>
+          <a class="certs__view" href="case-study.html?p=yatraai" data-cursor="btn">
+            Read the case study
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </li>
+
+        <li class="certs__item" data-cert="3">
+          <span class="certs__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="M4.5 12 12 16l7.5-4"/></svg>
+          </span>
+          <h3 class="certs__t">LeetCode — 1605 rating, 450+ problems</h3>
+          <p class="certs__d">Sustained algorithmic practice across dynamic programming, trees, graphs, segment
+             trees and SQL. It's the habit behind the part of my work that isn't visual — being able to reason
+             about what a design costs to build before I hand it over.</p>
+          <p class="certs__meta">LeetCode · Ongoing</p>
+        </li>
+
+      </ol>
+
+      <div class="certs__stage" aria-hidden="true">
+        <div class="certs__frame">
+          <img class="certs__img is-on" data-cert="1" src="assets/certificates/helprevx-certificate.jpg" alt="" loading="lazy" />
+          <img class="certs__img" data-cert="2" src="assets/covers/yatraai.svg" alt="" loading="lazy" />
+          <img class="certs__img" data-cert="3" src="assets/covers/leetcode.svg" alt="" loading="lazy" />
+          <p class="certs__idx"><span id="certsIdx">01</span> / 03</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     07 · CONTACT
+     ══════════════════════════════════════════════════════════════ -->
+<section class="contact" id="contact" aria-labelledby="contactTitle">
+  <div class="contact__bg reveal" data-delay="0" aria-hidden="true"></div>
+
+  <!-- Flowing waves — three bands of the same tiled path, each duplicated
+       via <use> and looped with a pure-CSS translateX animation (seamless:
+       shifting by exactly one tile is indistinguishable from the start).
+       Transform-only, so it's GPU-composited and cheap to leave running. -->
+  <div class="contact__waves reveal" data-delay="40" aria-hidden="true">
+    <svg class="wave wave--1" viewBox="0 0 2400 320" preserveAspectRatio="none">
+      <defs>
+        <path id="waveTile" d="M0,160 C150,110 300,210 450,160 C600,110 750,210 900,160
+                               C1050,110 1200,210 1200,160 L1200,320 L0,320 Z"/>
+      </defs>
+      <use href="#waveTile" x="0"/>
+      <use href="#waveTile" x="1200"/>
+    </svg>
+    <svg class="wave wave--2" viewBox="0 0 2400 320" preserveAspectRatio="none">
+      <use href="#waveTile" x="0"/>
+      <use href="#waveTile" x="1200"/>
+    </svg>
+    <svg class="wave wave--3" viewBox="0 0 2400 320" preserveAspectRatio="none">
+      <use href="#waveTile" x="0"/>
+      <use href="#waveTile" x="1200"/>
+    </svg>
+  </div>
+
+  <div class="wrap contact__in">
+    <p class="eyebrow reveal" data-delay="60"><span>07</span> Contact</p>
+    <h2 class="contact__t reveal" id="contactTitle" data-delay="100">Have a problem worth designing?</h2>
+    <p class="contact__s reveal" data-delay="150">I'm looking for product and UX design roles where AI is part of the
+       interface, not just the backend. Let's talk.</p>
+
+    <div class="contact__cta">
+      <a class="btn btn--fill mag reveal" data-delay="200" href="mailto:guptaprasadadhikari@gmail.com" data-cursor="btn">
+        Let's talk
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn--out mag reveal" data-delay="240" href="https://www.linkedin.com/in/gupta-prasad-adhikari" target="_blank" rel="noopener noreferrer" data-cursor="btn">LinkedIn</a>
+      <a class="btn btn--out mag reveal" data-delay="280" href="https://github.com/Gupta-027" target="_blank" rel="noopener noreferrer" data-cursor="btn">GitHub</a>
+      <a class="btn btn--out mag reveal" data-delay="320" href="assets/gupta-prasad-adhikari-resume.pdf" target="_blank" rel="noopener" data-cursor="btn">Resume</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p class="foot__name">Gupta Prasad Adhikari</p>
+    <p class="foot__time"><i class="dot"></i> <span id="localTime">Rourkela, India</span></p>
+    <p class="foot__c">© <span id="year">2026</span> Gupta Prasad Adhikari</p>
+  </div>
+</footer>
+
+<button class="top" id="toTop" type="button" aria-label="Back to top" data-cursor="btn">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<!-- Capability panel -->
+<div class="cs" id="cs" role="dialog" aria-modal="true" aria-labelledby="csTitle" hidden>
+  <div class="cs__scrim" data-close></div>
+  <article class="cs__sheet">
+    <button class="cs__x" type="button" data-close aria-label="Close panel" data-cursor="btn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div id="csBody"></div>
+  </article>
+</div>
+
+<!-- Lightbox -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+  <div class="lb__scrim" data-close></div>
+  <button class="lb__x" type="button" data-close aria-label="Close preview" data-cursor="btn">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <img id="lbImg" src="" alt="" />
+</div>
+
+<!-- AI portfolio assistant -->
+<div class="aic" id="aiPanel" hidden>
+  <div class="aic__scrim" data-ai-close></div>
+  <div class="aic__win" role="dialog" aria-modal="true" aria-labelledby="aicTitle">
+    <header class="aic__head">
+      <span class="aic__head-ic" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3l1.6 5.4L19 10l-5.4 1.6L12 17l-1.6-5.4L5 10l5.4-1.6L12 3Z"/></svg>
+      </span>
+      <div class="aic__head-copy">
+        <p class="aic__t" id="aicTitle">Portfolio AI Assistant</p>
+        <p class="aic__sub">Your guide to Gupta's work</p>
+        <span class="aic__status"><i class="aic__dot" aria-hidden="true"></i>Online</span>
+      </div>
+      <button class="aic__x" type="button" data-ai-close aria-label="Close chat" data-cursor="btn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+
+    <div class="aic__body" id="aicBody" role="log" aria-live="polite" aria-label="Conversation"></div>
+
+    <form class="aic__inputbar" id="aicForm">
+      <textarea class="aic__input" id="aicInput" rows="1" placeholder="Ask me about Gupta's work..." aria-label="Message"></textarea>
+      <button class="aic__send" id="aicSend" type="submit" disabled aria-label="Send message">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+      </button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js" defer></script>
+<script src="data/portfolio-data.js" defer></script>
+<script src="chatbot.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="ob" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d0719"/><stop offset="1" stop-color="#070410"/>
+    </linearGradient>
+    <radialGradient id="og1" cx=".2" cy=".15" r=".8">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity=".42"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="og2" cx=".9" cy=".95" r=".7">
+      <stop offset="0" stop-color="#6366f1" stop-opacity=".34"/><stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="oh" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c084fc"/><stop offset=".55" stop-color="#8b5cf6"/><stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#ob)"/>
+  <rect width="1200" height="630" fill="url(#og1)"/>
+  <rect width="1200" height="630" fill="url(#og2)"/>
+  <g font-family="'Plus Jakarta Sans',system-ui,sans-serif">
+    <rect x="88" y="132" width="330" height="42" rx="21" fill="rgba(139,92,246,.14)" stroke="rgba(139,92,246,.42)"/>
+    <text x="112" y="160" font-size="15" font-weight="600" letter-spacing="2.4" fill="#c4b5fd">UI/UX &amp; PRODUCT DESIGNER</text>
+    <text x="88" y="284" font-size="66" font-weight="700" letter-spacing="-2" fill="#f5f3ff">Gupta Prasad Adhikari</text>
+    <text x="88" y="378" font-size="42" font-weight="600" letter-spacing="-1" fill="#a8a0b8">I design AI experiences that feel</text>
+    <text x="88" y="436" font-size="42" font-weight="600" letter-spacing="-1" fill="url(#oh)">simple, trusted and human.</text>
+    <path d="M88 500h180" stroke="url(#oh)" stroke-width="3" stroke-linecap="round"/>
+    <text x="88" y="546" font-size="19" font-weight="500" fill="rgba(255,255,255,.4)">NIT Rourkela · HelpRevX · Rourkela, India</text>
+  </g>
+</svg>

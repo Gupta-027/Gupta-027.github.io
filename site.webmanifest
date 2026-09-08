@@ -1,0 +1,12 @@
+{
+  "name": "Gupta Prasad Adhikari — UI/UX & Product Designer",
+  "short_name": "Gupta Prasad",
+  "description": "Portfolio of Gupta Prasad Adhikari — UI/UX and product design for AI-powered products.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070410",
+  "theme_color": "#070410",
+  "icons": [
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

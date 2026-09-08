@@ -1,0 +1,107 @@
+/* ==========================================================================
+   PORTFOLIO AI ASSISTANT — a local, keyword-matched guide to the work.
+   No network calls: it answers from data/portfolio-data.js.
+   ========================================================================== */
+
+.aic{position:fixed;inset:0;z-index:1300;display:flex;align-items:flex-end;justify-content:flex-end;
+  padding:clamp(0px,2vw,1.5rem)}
+.aic[hidden]{display:none}
+.aic__scrim{position:absolute;inset:0;background:rgba(3,2,6,.6);animation:fade .3s var(--e)}
+
+.aic__win{
+  position:relative;z-index:2;display:flex;flex-direction:column;
+  width:min(420px,100%);height:min(620px,100%);
+  border-radius:var(--r);overflow:hidden;
+  border:1px solid var(--line);background:var(--bg-2);
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.8),0 0 70px -30px rgba(139,92,246,.5);
+  animation:aicIn .45s var(--e);
+}
+@keyframes aicIn{from{opacity:0;transform:translateY(20px) scale(.97)}}
+
+.aic__head{
+  display:flex;align-items:flex-start;gap:.85rem;flex:none;
+  padding:1.1rem 1.2rem;border-bottom:1px solid var(--line);
+  background:radial-gradient(ellipse 80% 200% at 0% 0%, rgba(139,92,246,.16), transparent 65%);
+}
+.aic__head-ic{
+  display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:11px;
+  background:rgba(139,92,246,.14);border:1px solid rgba(139,92,246,.35);color:var(--acc-3);
+}
+.aic__head-ic svg{width:19px;height:19px;fill:currentColor;stroke:none}
+.aic__head-copy{flex:1;min-width:0}
+.aic__t{font-size:.95rem;font-weight:600;letter-spacing:-.01em}
+.aic__sub{font-size:.78rem;color:var(--text-3);margin-top:.1rem}
+.aic__status{display:inline-flex;align-items:center;gap:.35rem;margin-top:.35rem;
+  font-size:.7rem;font-weight:600;letter-spacing:.06em;color:var(--text-3)}
+.aic__dot{width:6px;height:6px;border-radius:50%;background:#4ade80;
+  box-shadow:0 0 8px rgba(74,222,128,.8);animation:aicPulse 2.4s ease-in-out infinite}
+@keyframes aicPulse{50%{opacity:.4}}
+.aic__x{
+  flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;
+  border:1px solid var(--line);color:var(--text-3);transition:var(--t-s);
+}
+.aic__x:hover{border-color:var(--line-hi);color:var(--text);transform:rotate(90deg)}
+.aic__x svg{width:14px;height:14px}
+
+.aic__body{
+  flex:1;overflow-y:auto;overscroll-behavior:contain;
+  padding:1.2rem;display:flex;flex-direction:column;gap:.85rem;
+  scrollbar-width:thin;
+}
+.aic__msg{
+  max-width:86%;padding:.75rem 1rem;border-radius:14px;
+  font-size:.9rem;line-height:1.6;animation:aicMsg .35s var(--e);
+}
+@keyframes aicMsg{from{opacity:0;transform:translateY(8px)}}
+.aic__msg--bot{
+  align-self:flex-start;background:rgba(255,255,255,.045);
+  border:1px solid var(--line);color:var(--text-2);border-bottom-left-radius:5px;
+}
+.aic__msg--me{
+  align-self:flex-end;background:var(--grad);color:#fff;
+  border-bottom-right-radius:5px;
+}
+.aic__msg strong{color:var(--text);font-weight:600}
+.aic__msg--bot a{color:var(--acc-3);text-decoration:underline;text-underline-offset:3px}
+
+.aic__typing{align-self:flex-start;display:flex;gap:4px;padding:.85rem 1rem;
+  background:rgba(255,255,255,.045);border:1px solid var(--line);border-radius:14px;
+  border-bottom-left-radius:5px}
+.aic__typing i{width:6px;height:6px;border-radius:50%;background:var(--acc-3);
+  animation:aicBounce 1.2s ease-in-out infinite}
+.aic__typing i:nth-child(2){animation-delay:.15s}
+.aic__typing i:nth-child(3){animation-delay:.3s}
+@keyframes aicBounce{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-4px)}}
+
+.aic__chips{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.3rem}
+.aic__chip{
+  padding:.5rem .85rem;border-radius:99px;font-size:.8rem;font-weight:500;
+  border:1px solid var(--line);background:var(--glass);color:var(--text-2);
+  transition:var(--t-s);
+}
+.aic__chip:hover{border-color:var(--line-hi);background:rgba(139,92,246,.12);color:var(--text)}
+
+.aic__inputbar{
+  flex:none;display:flex;gap:.6rem;align-items:flex-end;
+  padding:.9rem 1rem;border-top:1px solid var(--line);background:rgba(255,255,255,.02);
+}
+.aic__input{
+  flex:1;resize:none;max-height:110px;font:inherit;font-size:.9rem;
+  padding:.65rem .9rem;border-radius:12px;color:var(--text);
+  border:1px solid var(--line);background:rgba(255,255,255,.04);
+  line-height:1.5;
+}
+.aic__input::placeholder{color:var(--text-3)}
+.aic__input:focus{outline:none;border-color:var(--line-hi)}
+.aic__send{
+  flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:12px;
+  background:var(--grad);color:#fff;transition:var(--t-s);
+}
+.aic__send:disabled{opacity:.35;cursor:not-allowed}
+.aic__send:not(:disabled):hover{transform:translateY(-2px);box-shadow:var(--glow-s)}
+.aic__send svg{width:17px;height:17px}
+
+@media (max-width:520px){
+  .aic{padding:0}
+  .aic__win{width:100%;height:100%;border-radius:0;border:0}
+}
