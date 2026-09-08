@@ -731,25 +731,41 @@ body.cur-on .cur{opacity:1}
 /* Mood beds — gradient only, crossfaded by opacity */
 .wstage__mood{position:absolute;inset:-6% -4%;z-index:0;pointer-events:none;overflow:hidden}
 .mood{position:absolute;inset:0;opacity:0}
-.mood--1{background:
-  radial-gradient(ellipse 60% 52% at 24% 30%, rgba(139,92,246,.34), transparent 66%),
-  radial-gradient(ellipse 56% 48% at 78% 70%, rgba(59,130,246,.22), transparent 68%);
+.mood--1{background:   /* Vidyapeeth360 — blue + orange */
+  radial-gradient(ellipse 60% 52% at 24% 32%, rgba(59,130,246,.32), transparent 66%),
+  radial-gradient(ellipse 56% 48% at 78% 68%, rgba(249,115,22,.22), transparent 68%);
 }
-.mood--2{background:
-  radial-gradient(ellipse 60% 52% at 26% 32%, rgba(30,64,175,.36), transparent 66%),
-  radial-gradient(ellipse 56% 48% at 76% 66%, rgba(34,211,238,.22), transparent 68%);
+.mood--2{background:   /* BFSI — purple + blue */
+  radial-gradient(ellipse 60% 52% at 24% 32%, rgba(139,92,246,.34), transparent 66%),
+  radial-gradient(ellipse 56% 48% at 78% 68%, rgba(59,130,246,.22), transparent 68%);
 }
-.mood--3{background:
-  radial-gradient(ellipse 60% 52% at 22% 34%, rgba(249,115,22,.26), transparent 66%),
-  radial-gradient(ellipse 56% 48% at 80% 64%, rgba(239,68,68,.20), transparent 68%);
+.mood--3{background:   /* Campus Event AI — stage lights */
+  radial-gradient(ellipse 60% 52% at 24% 32%, rgba(168,85,247,.34), transparent 66%),
+  radial-gradient(ellipse 56% 48% at 78% 68%, rgba(217,70,239,.22), transparent 68%);
 }
-.mood--4{background:
-  radial-gradient(ellipse 60% 52% at 25% 30%, rgba(139,92,246,.30), transparent 66%),
-  radial-gradient(ellipse 56% 48% at 78% 70%, rgba(236,72,153,.22), transparent 68%);
+.mood--4{background:   /* HelpRevX — brand blue + yellow */
+  radial-gradient(ellipse 60% 52% at 24% 32%, rgba(44,95,249,.34), transparent 66%),
+  radial-gradient(ellipse 56% 48% at 78% 68%, rgba(255,176,0,.20), transparent 68%);
 }
-.mood--5{background:
+.mood--5{background:   /* HealthPulse — emerald + cyan */
+  radial-gradient(ellipse 60% 52% at 24% 32%, rgba(16,185,129,.28), transparent 66%),
+  radial-gradient(ellipse 56% 48% at 78% 68%, rgba(34,211,238,.20), transparent 68%);
+}
+.mood--6{background:   /* Nexus AI — cyan + indigo */
+  radial-gradient(ellipse 60% 52% at 24% 32%, rgba(34,211,238,.26), transparent 66%),
+  radial-gradient(ellipse 56% 48% at 78% 68%, rgba(99,102,241,.26), transparent 68%);
+}
+.mood--7{background:   /* YatraAI — indigo + cyan */
   radial-gradient(ellipse 60% 52% at 24% 32%, rgba(99,102,241,.32), transparent 66%),
-  radial-gradient(ellipse 56% 48% at 78% 68%, rgba(249,115,22,.20), transparent 68%);
+  radial-gradient(ellipse 56% 48% at 78% 68%, rgba(34,211,238,.20), transparent 68%);
+}
+.mood--8{background:   /* Sleuth — amber + indigo */
+  radial-gradient(ellipse 60% 52% at 24% 32%, rgba(245,158,11,.26), transparent 66%),
+  radial-gradient(ellipse 56% 48% at 78% 68%, rgba(99,102,241,.26), transparent 68%);
+}
+.mood--9{background:   /* aayiq — purple + pink */
+  radial-gradient(ellipse 60% 52% at 24% 32%, rgba(139,92,246,.30), transparent 66%),
+  radial-gradient(ellipse 56% 48% at 78% 68%, rgba(236,72,153,.22), transparent 68%);
 }
 
 /* — Progress — */

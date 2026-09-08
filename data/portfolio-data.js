@@ -9,7 +9,7 @@ window.PORTFOLIO_KB = {
   topics: [
     {
       keys: ['project', 'work', 'portfolio', 'case stud', 'built', 'made'],
-      answer: "Five flagship case studies: <strong>BFSI Risk Intelligence</strong> (lending risk with explainable scoring), <strong>YatraAI</strong> (fair group travel planning — hackathon winner), <strong>Vidyapeeth360</strong> (AI-native school ERP), <strong>aayiq</strong> (omnichannel CX with AI-to-human handoff) and <strong>Sleuth</strong> (multi-agent research console). Plus four research explorations. Each has a full write-up under <a href='index.html#work'>Work</a>."
+      answer: "Nine case studies: <strong>Vidyapeeth360</strong> (school ERP — website UI, logo, onboarding), <strong>BFSI Risk Intelligence</strong> (lending risk with explainable scoring), <strong>Campus Event AI</strong> (personalised event discovery), <strong>HelpRevX</strong> (brand identity system), <strong>HealthPulse</strong> (fitness app), <strong>Nexus AI</strong> (AI-platform dashboard), <strong>YatraAI</strong> (fair group travel — hackathon winner), <strong>Sleuth</strong> (multi-agent research console) and <strong>aayiq</strong> (omnichannel CX with AI-to-human handoff). Plus four research explorations. Each has a full write-up under <a href='index.html#work'>Work</a>."
     },
     {
       keys: ['bfsi', 'risk', 'credit', 'fraud', 'lending', 'fintech', 'bank', 'churn', 'collection'],
@@ -30,6 +30,22 @@ window.PORTFOLIO_KB = {
     {
       keys: ['sleuth', 'agent', 'multi-agent', 'langgraph', 'research', 'detective'],
       answer: "<strong>Sleuth</strong> is a nine-agent research system (LangGraph + FastAPI + Next.js) that produces cited briefings. The design problem was making a three-minute parallel run legible — an agent graph with exactly three node states, and a report that streams in with citations. <a href='case-study.html?p=sleuth'>Read the case study</a>."
+    },
+    {
+      keys: ['campus', 'event', 'discovery', 'club', 'reminder'],
+      answer: "<strong>Campus Event AI</strong> is a UX case study and interactive prototype for a personalised campus event feed — official and club events in one place, ranked by interest, with deadline alerts, four registration states and automatic reminders. Design-only; the product hasn't been built. <a href='case-study.html?p=campus-event-ai'>Read the case study</a>."
+    },
+    {
+      keys: ['brand', 'logo', 'identity', 'colour', 'color', 'wordmark'],
+      answer: "The <strong>HelpRevX</strong> identity: a circular H mark and wordmark with a four-colour system — brand blue, orange, yellow, green — plus a deep blue for dark surfaces, tested at favicon scale and on cards and mugs. The Vidyapeeth360 logo was drawn in the same family so product and company match. <a href='case-study.html?p=helprevx'>Read the case study</a>."
+    },
+    {
+      keys: ['healthpulse', 'fitness', 'workout', 'sleep', 'nutrition', 'mobile app'],
+      answer: "<strong>HealthPulse</strong> is a fitness mobile app concept — tracking, AI coaching, nutrition and sleep — built around a bento-grid dashboard and an active-workout screen that stays readable with almost no attention. Thirteen screens on a dark token system. <a href='case-study.html?p=healthpulse'>Read the case study</a>."
+    },
+    {
+      keys: ['nexus', 'dashboard', 'api', 'developer', 'saas'],
+      answer: "<strong>Nexus AI</strong> is a developer dashboard for an AI API platform — usage, models, keys and team — designed hierarchy-first: a grouped sidebar so every persona's task is one click away, KPI cards that count up on login, and key actions that are fast but never accidental. <a href='case-study.html?p=nexus-ai'>Read the case study</a>."
     },
     {
       keys: ['ai', 'llm', 'claude', 'rag', 'explain', 'trust', 'model'],

@@ -246,3 +246,9 @@
 .csp__fig figcaption b{color:var(--text);font-weight:600}
 @media (min-width:761px){.csp__gallery--2{grid-template-columns:1fr 1fr}}
 .csp__fig--wide{grid-column:1/-1}
+@media (min-width:761px){.csp__gallery--4{grid-template-columns:repeat(4,1fr)}}
+@media (min-width:480px) and (max-width:760px){.csp__gallery--4{grid-template-columns:1fr 1fr}}
+.csp__note{
+  margin-top:1.25rem;padding:.9rem 1.1rem;border-radius:var(--r-s);
+  border:1px solid var(--line);background:var(--glass);color:var(--text-2);font-size:.9rem;line-height:1.55;max-width:64ch;
+}

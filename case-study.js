@@ -11,7 +11,7 @@ const CASE_STUDIES = {
 
 /* ── 01 ─────────────────────────────────────────────────────────────── */
 'bfsi-risk': {
-  num: '01', title: 'BFSI Risk Intelligence', kicker: 'Case Study · Lending & Risk Platform',
+  num: '02', title: 'BFSI Risk Intelligence', kicker: 'Case Study · Lending & Risk Platform',
   tagline: 'Four risk models behind one interface a credit officer can actually defend to a customer.',
   a: '#8b5cf6', b: '#3b82f6',
   role: 'Product Design + ML Engineering', tools: 'Figma · Python · Scikit-learn · Streamlit',
@@ -101,7 +101,7 @@ const CASE_STUDIES = {
 
 /* ── 02 ─────────────────────────────────────────────────────────────── */
 'yatraai': {
-  num: '02', title: 'YatraAI', kicker: 'Case Study · Group Travel Intelligence',
+  num: '07', title: 'YatraAI', kicker: 'Case Study · Group Travel Intelligence',
   tagline: 'Group travel planning where the least happy person in the group is the one the system optimises for.',
   a: '#22d3ee', b: '#6366f1',
   role: 'Product Design + Engineering', tools: 'Figma · FastAPI · OR-Tools · pgvector · Next.js',
@@ -187,7 +187,7 @@ const CASE_STUDIES = {
 
 /* ── 03 ─────────────────────────────────────────────────────────────── */
 'vidyapeeth360': {
-  num: '03', title: 'Vidyapeeth360', kicker: 'Case Study · AI-Native School ERP',
+  num: '01', title: 'Vidyapeeth360', kicker: 'Case Study · AI-Native School ERP',
   tagline: 'One platform, four audiences — and a different first screen for each of them.',
   a: '#3b82f6', b: '#f97316',
   role: 'UI/UX Design · Brand · Information Architecture', tools: 'Figma · FigJam · PostgreSQL · API design',
@@ -277,7 +277,22 @@ const CASE_STUDIES = {
       caption: '<b>The closing scene.</b> The illustrated section that carries the page from the module list into the final call to action.' },
     { src: 'assets/screens/helprevx-colours.jpg',
       alt: 'HelpRevX colour system — five named roles with hex values',
-      caption: '<b>Colour system.</b> Five named roles with exact values, so every surface and accent on both products resolves to a defined token.' }
+      caption: '<b>Colour system.</b> Five named roles with exact values, so every surface and accent on both products resolves to a defined token.' },
+    { src: 'assets/screens/vidyapeeth360-3.jpg',
+      alt: 'Vidyapeeth360 logo — mark and wordmark',
+      caption: '<b>The logo.</b> Mark and wordmark, drawn in the same family as the HelpRevX identity.' },
+    { src: 'assets/screens/vidyapeeth360-4.jpg',
+      alt: 'Vidyapeeth360 website — Aira AI assistant section',
+      caption: '<b>Aira.</b> The assistant section — fee, attendance and academic questions answered in place, scoped to who is asking.' },
+    { src: 'assets/screens/vidyapeeth360-5.jpg',
+      alt: 'Vidyapeeth360 website — mobile access section',
+      caption: '<b>Mobile access.</b> Parents, students, teachers and owners, each with their own view.' },
+    { src: 'assets/screens/vidyapeeth360-6.jpg',
+      alt: 'Vidyapeeth360 website — why us section',
+      caption: '<b>Built for Indian institutions.</b> Multi-campus, role-based access, every device.' },
+    { src: 'assets/screens/vidyapeeth360-7.jpg', wide: true,
+      alt: 'Vidyapeeth360 — self-serve school registration form',
+      caption: '<b>Onboarding.</b> The self-serve registration flow — a school signs up and goes live in minutes, which is the friction that had been losing customers.' }
   ],
 
   contribution: ['Website UI — wireframes to shipped screens', 'Vidyapeeth360 and HelpRevX logos', 'School registration and onboarding flow', 'Information architecture', 'Role-based journey design', 'Database architecture and API specification', 'AI capability specification'],
@@ -287,7 +302,7 @@ const CASE_STUDIES = {
 
 /* ── 04 ─────────────────────────────────────────────────────────────── */
 'aayiq': {
-  num: '04', title: 'aayiq', kicker: 'Case Study · Omnichannel Customer Experience',
+  num: '09', title: 'aayiq', kicker: 'Case Study · Omnichannel Customer Experience',
   tagline: 'The interesting design problem was not the AI reply. It was the moment the AI gives up.',
   a: '#a855f7', b: '#ec4899',
   role: 'Applied AI Engineering + Interaction Design', tools: 'Claude · NestJS · PostgreSQL · Prisma · Redis',
@@ -374,7 +389,7 @@ const CASE_STUDIES = {
 
 /* ── 05 ─────────────────────────────────────────────────────────────── */
 'sleuth': {
-  num: '05', title: 'Sleuth', kicker: 'Case Study · Multi-Agent Research Console',
+  num: '08', title: 'Sleuth', kicker: 'Case Study · Multi-Agent Research Console',
   tagline: 'Making nine agents thinking at once legible to one person waiting on an answer.',
   a: '#f59e0b', b: '#6366f1',
   role: 'Product Design + Engineering', tools: 'Figma · LangGraph · FastAPI · Next.js',
@@ -435,6 +450,324 @@ const CASE_STUDIES = {
   contribution: ['Agent orchestration design', 'Streaming architecture', 'Waiting-state design', 'Console UI', 'Citation surfacing'],
   outcome: 'A research console where a three-minute multi-agent run feels like watching work happen rather than waiting for a page to load.',
   quote: { text: 'The design problem in agentic products is rarely the output. It is the three minutes before the output exists.', cite: 'On designing for agent latency' }
+},
+
+/* ── 03 ─────────────────────────────────────────────────────────────── */
+'campus-event-ai': {
+  num: '03', title: 'Campus Event AI', kicker: 'Case Study · Campus Event Discovery Platform',
+  tagline: 'Campus events arrive from everywhere — notices, WhatsApp groups, Instagram stories, posters on a wall. This case study designs one personalised feed instead.',
+  a: '#6d5efc', b: '#f97316',
+  role: 'UX Research · UI/UX Design', tools: 'Figma · FigJam · Figma Make', timeline: 'Self-directed · NIT Rourkela · 2026',
+  credit: 'Case study with Sahil Das (NIT Rourkela)',
+  cover: 'assets/covers/campus-event-ai.jpg',
+  links: [
+    { label: 'Open the interactive prototype ↗', href: 'https://diary-menu-14033607.figma.site', primary: true },
+    { label: 'Full case study ↗', href: 'https://buffer-layout-94586591.figma.site' }
+  ],
+  statusNote: 'Design-only: a completed UX case study and a high-fidelity interactive prototype. The product itself has not been built.',
+
+  overview: 'A personalised event-discovery platform for NIT Rourkela students. Official institute events live on the college website; club and student events are pushed through WhatsApp and Instagram. Nobody should have to check both — so the design pulls every source into one feed, ranked by each student\'s interests and behaviour, with reminders that don\'t depend on remembering a poster.',
+  problem: 'Students don\'t miss events because events aren\'t announced. They miss them because the announcement is scattered across five channels, none of which is personal, and by the time the right person sees it the registration has closed. The problem is delivery, not supply: the relevant event has to reach the relevant student while there is still time to act.',
+
+  audience: {
+    intro: 'Research came from lived campus experience plus targeted interviews — students, a club organiser, observation of how announcements actually travel on WhatsApp and Instagram. The clearest finding: the same student is often both an event-goer and an event-poster, and both run into the same discovery problem from opposite ends.',
+    personas: [
+      {
+        role: 'Arjun — Campus Student',
+        context: '"Help me find upcoming events I actually care about without searching through WhatsApp all the time."',
+        goals: ['Discover events that match his interests', 'Know about an event before registration closes', 'Save events and be reminded later'],
+        needs: ['Event information in one place, not in old posters and scrolled-past messages', 'The full venue name, not an abbreviation a newer student can\'t place'],
+        painPoints: ['Finds out too late, or not at all', 'Forgets the timing and can\'t find the original poster again', 'Can\'t tell quickly whether an event is relevant to him']
+      },
+      {
+        role: 'Riya — Student and Club Organiser',
+        context: '"Help my event reach students who are genuinely interested in the topic instead of depending on repeated promotion." The same account in a different role — not a separate one.',
+        goals: ['Post complete event information easily', 'Reach students who actually care', 'Raise registrations without spamming every channel'],
+        needs: ['A straightforward way to capture and categorise a complete event'],
+        painPoints: ['Registrations stay low despite promotion', 'Re-shares the same poster across WhatsApp, Instagram and noticeboards because someone always misses it']
+      }
+    ]
+  },
+
+  needs: [
+    { title: 'Personalised discovery', text: 'Events surfaced by interest, so nobody has to check every channel every day.' },
+    { title: 'Timely surfacing', text: 'Find the event while there is still time to register — not after the deadline.' },
+    { title: 'Memory support', text: 'Save or register, then get reminded automatically instead of relying on memory.' },
+    { title: 'Clear venues', text: 'Show exactly where an event is, in full, not an internal abbreviation.' }
+  ],
+
+  painPoints: [
+    { problem: 'Event information is fragmented', why: 'Announcements are spread across WhatsApp, Instagram, posters, event groups, friends and official pages, with no single place to check.', implication: 'Official institute events and student-posted events aggregated into one personalised feed, each labelled by source.' },
+    { problem: 'Discovery is passive and often too late', why: 'Students stumble across announcements rather than search, so a relevant event can be found after registration has closed.', implication: 'Upcoming events prioritised, with registration deadlines surfaced prominently in the feed.' },
+    { problem: 'Registering doesn\'t mean remembering', why: 'A student who registered can still forget the date, time or venue — and can\'t find the poster again.', implication: 'Automatic reminders before an event, for saved and registered events alike.' },
+    { problem: 'Not every event has the same registration', why: 'The first wireframe assumed a single "Register Now" button. Research turned up four distinct registration situations.', implication: 'A dynamic registration state — None, Offline, Online, External — each surfacing the correct next action.' }
+  ],
+
+  chains: [
+    { need: 'Announcements are scattered across channels.', insight: 'Students miss relevant events, or discover them too late.', decision: 'A personalised home feed that surfaces relevant events before they\'re missed.' },
+    { need: 'Students want relevant events; organisers want relevant students.', insight: 'Relevance matters more than volume — a flat list of everything serves neither side.', decision: 'One "All upcoming events" list replaced by "Recommended for you" and "Upcoming this week".' },
+    { need: 'Registration works differently for different events.', insight: 'A single button would be wrong for three of the four cases.', decision: 'Four registration states, each with its own action.' }
+  ],
+
+  userFlow: ['Discover', 'Evaluate', 'Save / Register', 'Remember', 'Attend'],
+
+  process: [
+    { h: 'Research', p: 'Interviewed students and a club organiser, observed the campus environment, and traced how event announcements actually move through WhatsApp and Instagram.' },
+    { h: 'Define', p: 'Personas, an empathy map and a journey map, resolved into one problem statement: students need a reliable, personalised, timely way to discover events that match their interests.' },
+    { h: 'Architect', p: 'Information architecture and flows for both sides of the same account — discovering and posting — over one data model that combines official and student-posted events.' },
+    { h: 'Wireframe and test-plan', p: 'Low-fidelity wireframes in Figma and a scenario-based usability test plan with a think-aloud protocol, covering discovery, registration clarity, saving, reminders and venue information.' },
+    { h: 'Iterate on evidence', p: 'Two wireframes changed directly because of research: the single register button became four states, and the flat event list became relevance-ranked sections.' },
+    { h: 'High-fidelity prototype', p: 'Landing page, onboarding, personalised feed, event details, search, calendar and the event-posting flow, built as an interactive Figma Make prototype.' }
+  ],
+
+  cardsHeading: 'Key features',
+  cards: [
+    { h: 'Personalised feed', p: 'AI-ranked upcoming events with interest filters and a plain-language reason for each recommendation.' },
+    { h: 'Unified sources', p: 'Official institute events and student-posted events in one feed, each labelled by source.' },
+    { h: 'Dynamic registration', p: 'None, Offline, Online, External — each surfacing the right next action instead of one generic button.' },
+    { h: 'Smart reminders', p: 'Saved and registered events get reminders automatically, whether or not registration was required.' },
+    { h: 'Post an event', p: 'A five-step flow — basics, details, registration, organiser, preview — with AI-suggested categories the organiser can still edit.' }
+  ],
+
+  screensHeading: 'The prototype.',
+  screens: [
+    { src: 'assets/screens/campus-event-ai-1.jpg', wide: true, alt: 'Campus Event AI — personalised home feed', caption: '<b>Home.</b> A feed led by "For you" recommendations, with an upcoming-deadlines alert so nothing closes unnoticed.' },
+    { src: 'assets/screens/campus-event-ai-2.jpg', alt: 'Campus Event AI — event details page', caption: '<b>Event details.</b> Venue in full, format, eligibility and the registration state together on one page.' },
+    { src: 'assets/screens/campus-event-ai-3.jpg', alt: 'Campus Event AI — discover and search', caption: '<b>Discover.</b> Full-text search with category filters and Recommended / Upcoming / Closing-soon sorting.' },
+    { src: 'assets/screens/campus-event-ai-4.jpg', alt: 'Campus Event AI — post an event form', caption: '<b>Post an event.</b> Step one of the five-step organiser flow.' },
+    { src: 'assets/screens/campus-event-ai-5.jpg', alt: 'Campus Event AI — calendar view', caption: '<b>Calendar.</b> Every event and deadline for the month, colour-coded and expandable by day.' }
+  ],
+
+  contribution: ['UX research and synthesis', 'Personas, empathy map, journey map', 'Information architecture and user flows', 'Low-fidelity wireframes and a usability-test plan', 'High-fidelity interactive prototype'],
+  outcome: 'A completed UX case study and a high-fidelity interactive prototype — not a shipped product. Usability testing and development are the next steps.',
+  quote: { text: 'Students don\'t need more event announcements. They need the right events surfaced at the right time.', cite: 'Core research insight' }
+},
+
+/* ── 04 ─────────────────────────────────────────────────────────────── */
+'helprevx': {
+  num: '04', title: 'HelpRevX', kicker: 'Case Study · Brand Identity System',
+  tagline: 'A mark that has to say AI, growth and trust at once — and survive as a favicon, a dark slide and a business card.',
+  a: '#2c5ff9', b: '#ff4102',
+  role: 'Brand & Visual Design', tools: 'Figma', timeline: 'HelpRevX · 2026',
+  credit: 'With Sahil Das — HelpRevX design team',
+  cover: 'assets/covers/helprevx.jpg',
+  links: [
+    { label: 'Visit HelpRevX ↗', href: 'https://www.helprevx.com/', primary: true }
+  ],
+
+  overview: 'HelpRevX builds AI products for customer support, automation and growth. Its identity had to establish a recognisable, flexible mark before the wider brand system grew around it — and it had to sit in the same family as Vidyapeeth360, the school ERP it ships. I designed the HelpRevX mark alongside the Vidyapeeth360 logo so the company and its product share one system: the same geometry, one four-colour palette, and rules for light, dark and compact use.',
+  problem: 'The mark needed to carry three ideas — AI and technology, business growth, trust — and hold up as a full lockup, a standalone icon and a compact app icon, on light and on dark. Most AI brands solve this with a generic gradient and a geometric glyph. That default was the thing to avoid.',
+
+  audience: {
+    intro: 'This project\'s audience is the identity\'s audience: the businesses HelpRevX sells to, and the internal team that has to apply the brand consistently across a company site, a product, decks and cards.',
+    personas: [
+      {
+        role: 'HelpRevX\'s business audience',
+        context: 'Companies evaluating an AI support and growth platform — the identity has to earn attention before the product does.',
+        goals: ['Recognise HelpRevX as a credible AI and growth-technology company', 'Trust the brand enough to evaluate the product'],
+        needs: ['A mark that signals technology, growth and trust at once', 'Consistent presentation across every touchpoint'],
+        painPoints: ['AI companies look interchangeable — a sharp glyph and a generic gradient', 'A logo that only works as a hero graphic breaks the moment it becomes a favicon']
+      }
+    ]
+  },
+
+  needs: [
+    { title: 'Technology signal', text: 'Reads as modern and AI-relevant at a glance.' },
+    { title: 'Growth energy', text: 'Colour and form feel forward-moving, not static.' },
+    { title: 'Trust', text: 'Geometry that feels deliberate and balanced.' },
+    { title: 'Scalability', text: 'Survives a favicon, a social avatar, a dark slide and a printed card equally.' }
+  ],
+
+  painPoints: [
+    { problem: 'AI brands look interchangeable', why: 'A single gradient and a geometric icon is the default look for AI start-ups, so it doesn\'t make HelpRevX feel like HelpRevX.', implication: 'A distinctive four-colour system — blue, orange, yellow, green — around a circular H mark, with a defined role for each colour.' },
+    { problem: 'Marks that only work at hero size', why: 'Real usage is mostly small: favicons, avatars, app icons, not full-width lockups.', implication: 'The icon was tested standalone and compact from the start, not as an afterthought.' },
+    { problem: 'Two products, two looks', why: 'HelpRevX and Vidyapeeth360 would have read as unrelated companies.', implication: 'Both logos designed together with shared geometry and palette logic, so the product is visibly the company\'s.' }
+  ],
+
+  chains: [
+    { need: 'Signal AI credibility to a business audience.', insight: 'A generic gradient reads as decoration, not conviction.', decision: 'A circular mark with a considered four-colour system, tested on dark and light before finalising.' },
+    { need: 'Survive far below hero size.', insight: 'Most touchpoints are small — the icon has to stand alone.', decision: 'A standalone icon finalised alongside the full lockup.' },
+    { need: 'Make the product look like the company\'s.', insight: 'Consistency is cheaper to design in than to retrofit.', decision: 'The Vidyapeeth360 logo drawn in the same family, same palette rules.' }
+  ],
+
+  process: [
+    { h: 'Direction', p: 'Four ideas to design against: AI and technology, business growth, trust, and a modern professional character.' },
+    { h: 'Explore', p: 'Logo variations, colour tuning and layout studies in Figma, reviewing symbol and wordmark combinations side by side.' },
+    { h: 'Systemise', p: 'A four-colour identity built around a circular symbol and a clear wordmark, with a named role and exact value for each colour and a brand gradient for hero surfaces.' },
+    { h: 'Test', p: 'The mark on dark and light backgrounds and in compact formats — favicon, avatar, card, mug — to confirm it holds beyond a presentation board.' }
+  ],
+
+  cardsHeading: 'Colour roles',
+  cards: [
+    { h: 'Primary Brand Blue · #2c5ff9', p: 'Trust, technology, stability — the base of every surface.' },
+    { h: 'Vibrant Orange · #ff4102', p: 'Energy, revolution, action — the accent that moves.' },
+    { h: 'Warm Yellow · #ffb000', p: 'Optimism and creativity, used sparingly.' },
+    { h: 'Growth Green · #3eb771', p: 'Help, freshness, balance — the note that keeps the palette human.' },
+    { h: 'Deep Blue · #2e0373', p: 'Modernity and premium contrast for dark surfaces.' },
+    { h: 'Brand gradient', p: 'Blue → orange → yellow → green, reserved for hero sections, banners and onboarding; never under body text.' }
+  ],
+
+  screensHeading: 'The system.',
+  screens: [
+    { src: 'assets/screens/helprevx-brand.jpg', wide: true, alt: 'HelpRevX brand direction board — mark, wordmark, colour table, gradient, cards and mug', caption: '<b>Final direction.</b> Mark and wordmark, the colour table with roles and values, the brand gradient, and applications on cards and a mug.' },
+    { src: 'assets/screens/helprevx-colours.jpg', alt: 'HelpRevX colour system table', caption: '<b>Colour system.</b> Five named roles with exact values, so every surface resolves to a defined token.' },
+    { src: 'assets/screens/helprevx-1.jpg', alt: 'HelpRevX mark tested across black, dark and full-colour variations', caption: '<b>Format exploration.</b> The mark across black, dark and full-colour treatments.' },
+    { src: 'assets/screens/helprevx-2.jpg', alt: 'HelpRevX standalone icon mark', caption: '<b>Icon mark.</b> The standalone symbol, tested at compact and favicon scale.' },
+    { src: 'assets/screens/helprevx-3.jpg', alt: 'HelpRevX full lockup on a light background', caption: '<b>Full lockup, light.</b> Icon and wordmark together on white.' }
+  ],
+
+  contribution: ['Logo mark and wordmark', 'Four-colour system with defined roles', 'Brand gradient and usage rules', 'Applications across dark, light and compact formats', 'Vidyapeeth360 logo in the same family'],
+  outcome: 'A scalable first direction for the HelpRevX identity — now carried by the company site and shared with Vidyapeeth360 — that can grow into a broader system across product, communication and marketing.',
+  quote: { text: 'A logo that only works at hero size is a poster, not an identity.', cite: 'On testing the mark small first' }
+},
+
+/* ── 05 ─────────────────────────────────────────────────────────────── */
+'healthpulse': {
+  num: '05', title: 'HealthPulse', kicker: 'Case Study · Fitness Mobile App',
+  tagline: 'Fitness tracking, AI coaching, nutrition and sleep in one mobile product — designed to stay readable when attention is lowest.',
+  a: '#22c55e', b: '#3b82f6',
+  role: 'UI/UX Design', tools: 'Figma', timeline: 'Industry project · 2026',
+  credit: 'Case study with Sahil Das (1stop.ai industry project)',
+  cover: 'assets/covers/healthpulse.jpg',
+  links: [
+    { label: 'Open the Figma prototype ↗', href: 'https://www.figma.com/proto/CeN7dDfT8hcLvVoxc4stW7/Fitness-app?node-id=1-2&t=NucdH87rw0pPbLWD-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2&show-proto-sidebar=1', primary: true }
+  ],
+
+  overview: 'HealthPulse folds fitness tracking, AI coaching, nutrition logging and sleep analytics into one mobile product — a data-rich alternative to a step counter, for health-conscious people roughly 22 to 45. Thirteen screens on a token-based dark system, with a documented interaction spec.',
+  problem: 'A fitness app has to make progress legible at a glance, stay usable mid-workout when attention and precision are both low, and serve very different people — the competitive athlete and the total beginner — through the same screens.',
+
+  audience: {
+    intro: 'The product brief names four kinds of user, each pulling the app toward a different priority.',
+    personas: [
+      { role: 'The Athlete', context: 'Active gym-goer, 25–35, tracks workouts daily.', goals: ['Stay on a structured routine'], needs: ['Structured plans', 'Live metrics during a session'], painPoints: ['Losing pace or progress mid-workout without a live view'] },
+      { role: 'The Optimiser', context: 'Tracks sleep and HRV, wants to understand recovery.', goals: ['Understand recovery, not just effort'], needs: ['Detailed analytics', 'Insights, not raw numbers'], painPoints: ['Data without interpretation is hard to act on'] },
+      { role: 'The Beginner', context: 'Starting out, needs motivation more than features.', goals: ['Build a consistent habit'], needs: ['Guided onboarding', 'Streaks'], painPoints: ['A feature-dense first screen is discouraging'] },
+      { role: 'The Wellness Seeker', context: 'Cares about stress, sleep and nutrition over performance.', goals: ['See health as a whole'], needs: ['A holistic score', 'Recommendations across sleep, nutrition and stress'], painPoints: ['Most fitness apps treat sleep and nutrition as secondary'] }
+    ]
+  },
+
+  needs: [
+    { title: 'Glanceability', text: 'A full day — steps, heart rate, sleep, water, calories — readable in one look.' },
+    { title: 'Motivation', text: 'Progress that feels visible and rewarded, not merely logged.' },
+    { title: 'Guidance', text: 'Meets people at very different fitness levels where they are.' },
+    { title: 'Calm under pressure', text: 'Mid-workout, the screen stays legible with minimal attention.' }
+  ],
+
+  painPoints: [
+    { problem: 'Four personas, one home screen', why: 'The Athlete wants live metrics; the Wellness Seeker wants a holistic score. One dashboard has to serve both without favouring either.', implication: 'A bento-grid dashboard shows steps, heart rate, sleep, water and calories side by side, so every persona\'s priority metric is visible without navigating.' },
+    { problem: 'Attention is low mid-workout', why: 'The user is looking at the exercise, not the phone.', implication: 'The active-workout screen uses a large countdown, a simple rep counter and a live heart-rate feed — nothing that has to be read.' },
+    { problem: 'A beginner can be lost on day one', why: 'The Beginner needs motivation, not a wall of options.', implication: 'Onboarding opens with a short animated preview of three headline metrics before asking for anything; a streak counter reinforces the habit early.' }
+  ],
+
+  chains: [
+    { need: 'See the whole day without digging.', insight: 'Five competing metrics need one visual language, not five widget styles.', decision: 'Uniform bento cards for steps, heart rate, sleep, water and calories.' },
+    { need: 'Motivate a beginner from the first screen.', insight: 'The first screen decides whether the app feels approachable.', decision: 'Three animated metric rings before any setup.' },
+    { need: 'Stay legible mid-workout.', insight: 'Readable at a glance, not read carefully.', decision: 'Large timer, simple rep counter, live heart rate — no dense text.' }
+  ],
+
+  userFlow: ['Onboard', 'Plan a workout', 'Train', 'Reflect and track'],
+
+  process: [
+    { h: 'Personas', p: 'Four user types — the Athlete, the Optimiser, the Beginner, the Wellness Seeker — each pulling the product a slightly different way.' },
+    { h: 'Core loop', p: 'Onboarding → dashboard → workout → active session → completion wireframed first; nutrition, sleep and coaching added as supporting screens.' },
+    { h: 'Dashboard', p: 'A bento-grid home — steps, heart rate, sleep, water, calories and a daily AI insight — so a full day reads in one glance.' },
+    { h: 'System', p: 'A reusable dark-mode component library and an interaction spec — transitions, ring progress, typing-dot AI responses — for hand-off.' }
+  ],
+
+  cardsHeading: 'Key features',
+  cards: [
+    { h: 'Dashboard', p: 'A bento grid of health metrics, a daily AI insight card and a streak counter.' },
+    { h: 'Active workout', p: 'Countdown timer, rep counter and an animated live heart-rate feed.' },
+    { h: 'AI coach', p: 'A chat with filterable topics — general, workout, nutrition, sleep, recovery.' },
+    { h: 'Sleep and nutrition', p: 'Sleep-stage breakdown and a macro-tracked logger with quick-add meals.' }
+  ],
+
+  galleryCols: 4,
+  screensHeading: 'The screens.',
+  screens: [
+    { src: 'assets/screens/healthpulse-1.jpg', alt: 'HealthPulse — onboarding', caption: '<b>Onboarding.</b> Goals set up before the first session.' },
+    { src: 'assets/screens/healthpulse-2.jpg', alt: 'HealthPulse — sleep tracking', caption: '<b>Sleep.</b> Deep, light, REM and awake time.' },
+    { src: 'assets/screens/healthpulse-3.jpg', alt: 'HealthPulse — nutrition tracking', caption: '<b>Nutrition.</b> Macros with quick-add meals.' },
+    { src: 'assets/screens/healthpulse-4.jpg', alt: 'HealthPulse — progress trends', caption: '<b>Progress.</b> Trends across every tracked metric.' }
+  ],
+
+  contribution: ['Persona mapping', 'Core-flow design', 'Bento-grid dashboard', 'Component library', 'Interaction spec'],
+  outcome: 'A complete high-fidelity Figma prototype — thirteen screens, a token-based dark system and a documented interaction spec.',
+  quote: { text: 'Mid-workout, anything that has to be read is a design failure.', cite: 'On the active-session screen' }
+},
+
+/* ── 06 ─────────────────────────────────────────────────────────────── */
+'nexus-ai': {
+  num: '06', title: 'Nexus AI', kicker: 'Case Study · AI Platform Dashboard',
+  tagline: 'A developer dashboard for an AI API platform — usage, models, keys and team in one calm, data-dense interface.',
+  a: '#22d3ee', b: '#6366f1',
+  role: 'UI/UX Design', tools: 'Figma', timeline: 'Industry project · 2026',
+  credit: 'Case study with Sahil Das (1stop.ai industry project)',
+  cover: 'assets/covers/nexus-ai.jpg',
+  links: [
+    { label: 'Open the Figma prototype ↗', href: 'https://www.figma.com/proto/0yUj5Y35NkNUyKN02YCJEh/Untitled?node-id=3-2&t=p6REn8GLBAXU8wuW-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=7%3A46', primary: true }
+  ],
+
+  overview: 'A dashboard concept for developers, ML engineers and platform teams building on an AI API: real-time usage, model management, API keys and team activity in one place. Five core views on a token-based dark system.',
+  problem: 'A platform like this surfaces a lot of state at once — revenue, live traffic, model performance, team activity — for several kinds of user. Without deliberate structure it becomes a wall of panels nobody can read quickly. It needed hierarchy before it needed decoration.',
+
+  audience: {
+    intro: 'Four groups use the same dashboard, each with a different primary task.',
+    personas: [
+      { role: 'The Developer', context: 'Individual API consumer, the most frequent user.', goals: ['Keep the integration healthy day to day'], needs: ['Usage, keys and logs', 'A KPI overview on login', 'A live call feed for debugging'], painPoints: ['Key hygiene slips without a clear rotate/revoke flow'] },
+      { role: 'The Team Lead', context: 'Engineering manager watching cost and growth.', goals: ['Track team usage and cost'], needs: ['Team usage, cost controls, model performance'], painPoints: ['Cost data scattered across views'] },
+      { role: 'The Data Analyst', context: 'Focused on the numbers behind the product.', goals: ['Understand revenue, query volume and conversion'], needs: ['Trend charts over a selectable range'], painPoints: ['Raw numbers without trend context are slow to act on'] },
+      { role: 'The Admin', context: 'Keeps access and billing under control.', goals: ['Manage users, roles and billing'], needs: ['Centralised user management and settings'], painPoints: ['Permissions buried instead of centralised'] }
+    ]
+  },
+
+  needs: [
+    { title: 'Glanceability', text: 'Revenue, users, queries and conversion readable in the first two seconds.' },
+    { title: 'One-click access', text: 'Every persona\'s core task — logs, keys, models, team — one click away.' },
+    { title: 'Trust in the data', text: 'Live and near-live data that visibly feels current.' },
+    { title: 'Deliberate control', text: 'Rotating a key is fast but never accidental.' }
+  ],
+
+  painPoints: [
+    { problem: 'Too much state, no hierarchy', why: 'Revenue, traffic, model performance and team activity competing at once is unreadable.', implication: 'Navigation and page structure first — Analytics, Models, API, Team — before any styling.' },
+    { problem: 'Security actions must stay deliberate', why: 'A mistaken key action is costly, but developers still need to act fast.', implication: 'Inline copy, rotate and revoke per row, with scoped permissions set explicitly at creation.' },
+    { problem: 'Four personas on one shell', why: 'A developer\'s daily dashboard and an admin\'s occasional settings visit are different jobs.', implication: 'A collapsible sidebar keeps daily sections close and admin areas reachable but quiet.' }
+  ],
+
+  chains: [
+    { need: 'Different primary views of one dashboard.', insight: 'A fixed layout makes every persona wade through someone else\'s screens.', decision: 'A collapsible sidebar grouped into Analytics, Models, API and Team.' },
+    { need: 'Assess platform health on login.', insight: 'The first screen should answer "is everything OK?"', decision: 'Four KPI cards that count up on load, backed by a live API feed.' },
+    { need: 'Fast but deliberate key actions.', insight: 'One click to reach, never a silent one.', decision: 'Inline actions with explicit scoped permissions.' }
+  ],
+
+  userFlow: ['Log in', 'Scan the overview', 'Explore models and analytics', 'Manage keys or team'],
+
+  process: [
+    { h: 'Personas', p: 'The individual developer, the team lead, the data analyst and the platform admin — each needing a different primary view.' },
+    { h: 'Structure', p: 'The navigation shell wireframed first — a collapsible sidebar grouped into Analytics, Models, API and Team — so every task sat one click away.' },
+    { h: 'System', p: 'A token-based dark UI: cyan and violet accents, semantic colour for success, warning and error, reusable card and table components.' },
+    { h: 'Screens', p: 'Five high-fidelity views and an interaction spec — count-up KPIs, sidebar collapse, card hover, scroll reveal — for hand-off.' }
+  ],
+
+  cardsHeading: 'Key features',
+  cards: [
+    { h: 'Overview', p: 'Four KPI cards — revenue, users, queries, conversion — with a count-up, beside a live API feed.' },
+    { h: 'Model hub', p: 'Model cards with status badges for active, beta and deprecated.' },
+    { h: 'API keys', p: 'A key table with inline copy, rotate and revoke, and scoped permissions on creation.' },
+    { h: 'Command palette', p: 'Keyboard-first navigation to any page or action.' }
+  ],
+
+  screensHeading: 'The views.',
+  screens: [
+    { src: 'assets/screens/nexus-ai-1.jpg', alt: 'Nexus AI — analytics view', caption: '<b>Analytics.</b> Usage trends, latency and error rate in one filterable view.' },
+    { src: 'assets/screens/nexus-ai-2.jpg', alt: 'Nexus AI — model hub', caption: '<b>Model hub.</b> Every model, its status and its usage at a glance.' },
+    { src: 'assets/screens/nexus-ai-3.jpg', alt: 'Nexus AI — API keys', caption: '<b>API keys.</b> Scoped permissions with inline copy, rotate and revoke.' },
+    { src: 'assets/screens/nexus-ai-4.jpg', alt: 'Nexus AI — team view', caption: '<b>Team.</b> Members, roles and recent activity.' }
+  ],
+
+  contribution: ['Persona and IA definition', 'Navigation structure', 'Token-based design system', 'High-fidelity screens', 'Interaction spec'],
+  outcome: 'A complete high-fidelity Figma prototype — five core views, a token-based system and a documented interaction spec — showing that a data-dense developer product can still feel calm.',
+  quote: { text: 'Hierarchy first. If the structure is right, the dashboard can afford to be quiet.', cite: 'On designing for four personas at once' }
 },
 
 /* ── Explorations ───────────────────────────────────────────────────── */
@@ -536,7 +869,8 @@ const CASE_STUDIES = {
 };
 
 /* Order drives the "next project" link at the foot of each study. */
-const CS_ORDER = ['bfsi-risk', 'yatraai', 'vidyapeeth360', 'aayiq', 'sleuth',
+const CS_ORDER = ['vidyapeeth360', 'bfsi-risk', 'campus-event-ai', 'helprevx', 'healthpulse', 'nexus-ai',
+                  'yatraai', 'sleuth', 'aayiq',
                   'novaretail', 'rag-policy', 'coca-cola', 'crude-oil'];
 
 
@@ -594,7 +928,9 @@ const CS_ORDER = ['bfsi-risk', 'yatraai', 'vidyapeeth360', 'aayiq', 'sleuth',
         <div><dt>Role</dt><dd>${e(cs.role)}</dd></div>
         <div><dt>Tools</dt><dd>${e(cs.tools)}</dd></div>
         <div><dt>Timeline</dt><dd>${e(cs.timeline)}</dd></div>
+        ${cs.credit ? `<div><dt>Credit</dt><dd>${e(cs.credit)}</dd></div>` : ''}
       </dl>
+      ${cs.statusNote ? `<p class="csp__note">${e(cs.statusNote)}</p>` : ''}
       ${(() => {
         const links = cs.links || (cs.live ? [cs.live] : []);
         if (!links.length) return '';
@@ -679,7 +1015,7 @@ const CS_ORDER = ['bfsi-risk', 'yatraai', 'vidyapeeth360', 'aayiq', 'sleuth',
   /* ── Screens — real product frames, each opening in the shared lightbox ── */
   if (cs.screens && cs.screens.length) out.push(sec('Screens', `
       <h2 class="csp__h">${e(cs.screensHeading || 'The product, as shipped.')}</h2>
-      <div class="csp__gallery${cs.screens.length > 1 ? ' csp__gallery--2' : ''}">
+      <div class="csp__gallery csp__gallery--${cs.galleryCols || (cs.screens.length > 1 ? 2 : 1)}">
         ${cs.screens.map((s) => `
         <figure class="csp__fig${s.wide ? ' csp__fig--wide' : ''}">
           <button type="button" class="csp__zoom" data-lightbox="${e(s.src)}" data-lightbox-alt="${e(s.alt)}" aria-label="Enlarge: ${e(s.alt)}">
