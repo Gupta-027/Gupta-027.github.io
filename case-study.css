@@ -55,7 +55,10 @@
   border:1px solid var(--line);background:var(--bg-2);
   box-shadow:var(--shadow),0 0 90px -40px var(--a,var(--acc));
 }
-.csp__shot img{width:100%;height:auto;display:block}
+/* A fixed 16:10 box: wide scenes letterbox into the same dark ground instead
+   of shifting the whole page down when they load. */
+.csp__shot{aspect-ratio:16/10}
+.csp__shot img{width:100%;height:100%;object-fit:contain;display:block}
 .csp__shot::after{
   content:"";position:absolute;inset:0;pointer-events:none;
   box-shadow:inset 0 0 90px rgba(0,0,0,.35);

@@ -167,6 +167,15 @@ const Scroll = {
     addEventListener('resize', remeasure, { passive: true });
     addEventListener('orientationchange', remeasure, { passive: true });
 
+    /* Sections below the fold use content-visibility:auto, so their real
+       height only exists once they're near the viewport. Re-measure when
+       one of them renders, or every cached offset below it is stale. */
+    for (const el of $$('.sec--defer, .csp__sec')) {
+      el.addEventListener('contentvisibilityautostatechange', () => {
+        requestAnimationFrame(() => requestAnimationFrame(() => { this.measure(); this.run(); }));
+      });
+    }
+
     this.run();
   }
 };
@@ -450,6 +459,12 @@ const Workstage = {
     stage.classList.add('wstage--on');
     stage.style.setProperty('--runway', `${(N - 1) * 100}vh`);
 
+    /* The pinned stage defeats the browser's lazy-load heuristic: every
+       sheet is technically inside the viewport but translated out of it,
+       and some covers never fetch until far too late. Eager-load them once
+       the stage is enhanced; the stacked mobile flow keeps loading="lazy". */
+    for (const img of $$('.slide img', stage)) img.loading = 'eager';   // eagerCovers
+
     const parts = slides.map((s) => ({
       el: s,
       cover: $('.slide__cover', s),
@@ -630,7 +645,7 @@ const Process = {
     });
 
     let visible = false;
-    new IntersectionObserver((e) => { visible = e[0].isIntersecting; }, { rootMargin: '20% 0px' }).observe(row);
+    new IntersectionObserver((e) => { visible = e[0].isIntersecting; if (visible) { Scroll.measure(); Scroll.run(); } }, { rootMargin: '20% 0px' }).observe(row);
 
     let lastP = -1;
     Scroll.on(({ y, vh }) => {
@@ -668,7 +683,7 @@ const AboutWords = {
     });
 
     let visible = false;
-    new IntersectionObserver((e) => { visible = e[0].isIntersecting; }, { rootMargin: '25% 0px' }).observe(el);
+    new IntersectionObserver((e) => { visible = e[0].isIntersecting; if (visible) { Scroll.measure(); Scroll.run(); } }, { rootMargin: '25% 0px' }).observe(el);
 
     let lastLit = -1;
     Scroll.on(({ y, vh }) => {
@@ -706,7 +721,10 @@ const Certs = {
     });
 
     let visible = false;
-    new IntersectionObserver((e) => { visible = e[0].isIntersecting; }, { rootMargin: '15% 0px' })
+    /* Refresh the moment the list comes into view, so a direct jump (a nav
+       link, a restored scroll position) lands on the right item instead of
+       waiting for the next scroll event. */
+    new IntersectionObserver((e) => { visible = e[0].isIntersecting; if (visible) { Scroll.measure(); Scroll.run(); } }, { rootMargin: '15% 0px' })
       .observe(list);
 
     let active = -1;
