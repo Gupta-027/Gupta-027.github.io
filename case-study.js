@@ -16,7 +16,10 @@ const CASE_STUDIES = {
   a: '#8b5cf6', b: '#3b82f6',
   role: 'Product Design + ML Engineering', tools: 'Figma · Python · Scikit-learn · Streamlit',
   timeline: 'Jan – Feb 2026', cover: 'assets/covers/bfsi-risk.svg',
-  live: { label: 'View on GitHub ↗', href: 'https://github.com/Gupta-027' },
+  links: [
+    { label: 'Open live app ↗', href: 'https://gupta-financial-risk-management.streamlit.app', primary: true },
+    { label: 'View on GitHub ↗', href: 'https://github.com/Gupta-027/BFSI_RISK_ANALYSIS_' }
+  ],
 
   overview: 'A risk platform for banks, NBFCs and fintechs covering four decisions that share a shape but not an audience: credit risk, fraud detection, churn prediction and collection prioritisation. I built the models and designed the interface that makes their output usable by the person who has to act on it.',
   problem: 'A model that outputs "0.83" is not a product. The credit officer using it has to explain a decline to a real applicant, the fraud analyst has seconds to decide, and the collections agent needs a call list, not a probability. The same underlying score had to become four different interfaces without four different systems.',
@@ -87,7 +90,10 @@ const CASE_STUDIES = {
   a: '#22d3ee', b: '#6366f1',
   role: 'Product Design + Engineering', tools: 'Figma · FastAPI · OR-Tools · pgvector · Next.js',
   timeline: 'Nov – Dec 2024 · Hackathon winner, Apr 2026', cover: 'assets/covers/yatraai.svg',
-  live: { label: 'View on GitHub ↗', href: 'https://github.com/Gupta-027' },
+  links: [
+    { label: 'Open live demo ↗', href: 'https://yatraai-chi.vercel.app', primary: true },
+    { label: 'View on GitHub ↗', href: 'https://github.com/Gupta-027/YatraAI-' }
+  ],
 
   overview: 'A trip planner for groups. It builds a day itinerary that respects travel time, opening hours and everyone\'s stated preferences, and answers questions about the destination from a cited knowledge base. It won the April cohort hackathon.',
   problem: 'Group trip planning fails in a specific way: the loudest preference wins, or the group averages itself into a compromise nobody wanted. Averaging is the intuitive default and it is exactly wrong — it optimises the mean while quietly abandoning whoever is furthest from it.',
@@ -521,9 +527,13 @@ const CS_ORDER = ['bfsi-risk', 'yatraai', 'vidyapeeth360', 'aayiq', 'sleuth',
         <div><dt>Tools</dt><dd>${e(cs.tools)}</dd></div>
         <div><dt>Timeline</dt><dd>${e(cs.timeline)}</dd></div>
       </dl>
-      ${cs.live ? `<div class="csp__links">
-        <a class="btn btn--out" href="${e(cs.live.href)}" target="_blank" rel="noopener noreferrer">${e(cs.live.label)}</a>
-      </div>` : ''}
+      ${(() => {
+        const links = cs.links || (cs.live ? [cs.live] : []);
+        if (!links.length) return '';
+        return `<div class="csp__links">${links.map((l) =>
+          `<a class="btn ${l.primary ? 'btn--fill' : 'btn--out'}" href="${e(l.href)}" target="_blank" rel="noopener noreferrer">${e(l.label)}</a>`
+        ).join('')}</div>`;
+      })()}
     </header>
 
     <figure class="csp__shot">

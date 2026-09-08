@@ -13,11 +13,11 @@ window.PORTFOLIO_KB = {
     },
     {
       keys: ['bfsi', 'risk', 'credit', 'fraud', 'lending', 'fintech', 'bank', 'churn', 'collection'],
-      answer: "<strong>BFSI Risk Intelligence</strong> covers four lending-risk decisions — credit, fraud, churn and collections — on one shared pipeline. The design centres on an explainability panel so a credit officer can defend a decision to a customer, and it reports precision, recall and ROC-AUC rather than accuracy (which flatters a useless model on a 5% fraud class). <a href='case-study.html?p=bfsi-risk'>Read the case study</a>."
+      answer: "<strong>BFSI Risk Intelligence</strong> covers four lending-risk decisions — credit, fraud, churn and collections — on one shared pipeline. The design centres on an explainability panel so a credit officer can defend a decision to a customer, and it reports precision, recall and ROC-AUC rather than accuracy (which flatters a useless model on a 5% fraud class). <a href='https://gupta-financial-risk-management.streamlit.app' target='_blank' rel='noopener'>Open the live app ↗</a> · <a href='case-study.html?p=bfsi-risk'>Read the case study</a>."
     },
     {
       keys: ['yatra', 'travel', 'trip', 'itinerary', 'hackathon', 'group', 'fair'],
-      answer: "<strong>YatraAI</strong> is a group travel planner that optimises for the least-satisfied member instead of the average — it raised that person's score from 0.481 to 0.522 and cut travel time 43% with a constraint solver. Its RAG assistant scores 0.995 faithfulness and never guesses. It won the April cohort hackathon. <a href='case-study.html?p=yatraai'>Read the case study</a>."
+      answer: "<strong>YatraAI</strong> is a group travel planner that optimises for the least-satisfied member instead of the average — it raised that person's score from 0.481 to 0.522 and cut travel time 43% with a constraint solver. Its RAG assistant scores 0.995 faithfulness and never guesses. It won the April cohort hackathon. <a href='https://yatraai-chi.vercel.app' target='_blank' rel='noopener'>Open the live demo ↗</a> · <a href='case-study.html?p=yatraai'>Read the case study</a>."
     },
     {
       keys: ['vidyapeeth', 'school', 'erp', 'education', 'k-12', 'aira'],
@@ -53,7 +53,7 @@ window.PORTFOLIO_KB = {
     },
     {
       keys: ['contact', 'email', 'reach', 'hire', 'touch', 'linkedin', 'github', 'phone'],
-      answer: "Email <a href='mailto:guptaprasadadhikari@gmail.com'>guptaprasadadhikari@gmail.com</a>, or use the links in the <a href='index.html#contact'>Contact</a> section — LinkedIn, GitHub and a downloadable resume. He's looking for product and UX design roles where AI is part of the interface."
+      answer: "Email <a href='mailto:guptaprasadadhikari@gmail.com'>guptaprasadadhikari@gmail.com</a>, or find him on <a href='https://www.linkedin.com/in/gupta-prasad-adhikari-75779a290/' target='_blank' rel='noopener'>LinkedIn</a>, <a href='https://github.com/Gupta-027' target='_blank' rel='noopener'>GitHub</a> or <a href='https://leetcode.com/u/Gupta_Prasad_Adhikari/' target='_blank' rel='noopener'>LeetCode</a>. There's a downloadable resume in the <a href='index.html#contact'>Contact</a> section. He's looking for product and UX design roles where AI is part of the interface."
     },
     {
       keys: ['about', 'who', 'background', 'yourself', 'himself', 'bio'],
