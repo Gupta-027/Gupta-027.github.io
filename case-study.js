@@ -304,20 +304,20 @@ const CASE_STUDIES = {
 'aayiq': {
   num: '09', title: 'aayiq', kicker: 'Case Study · Omnichannel Customer Experience',
   tagline: 'The interesting design problem was not the AI reply. It was the moment the AI gives up.',
-  a: '#a855f7', b: '#ec4899',
+  a: '#38bdf8', b: '#a855f7',
   role: 'Applied AI Engineering + Interaction Design', tools: 'Claude · NestJS · PostgreSQL · Prisma · Redis',
   timeline: 'HelpRevX · 2026 – present', cover: 'assets/covers/aayiq.jpg',
   links: [
     { label: 'Visit HelpRevX ↗', href: 'https://www.helprevx.com/', primary: true }
   ],
-  screensHeading: 'The platform, as presented.',
+  screensHeading: 'The product, and the platform around it.',
   screens: [
-    { src: 'assets/screens/aayiq-2.jpg', wide: true,
+    { src: 'assets/screens/aayiq-logo.jpg', wide: true,
+      alt: 'aayiq ai mark — connected nodes inside a glowing blue sphere, beside the aayiq ai wordmark',
+      caption: '<b>aayiq ai.</b> The product mark: connected nodes inside one glowing sphere — many channels, one conversation.' },
+    { src: 'assets/screens/aayiq-2.jpg',
       alt: 'HelpRevX — "AI that drives every business to grow faster" with product dashboard cards',
       caption: '<b>The platform pitch.</b> An AI CRM that thinks, voice agents and WhatsApp in one place — the omnichannel surface that aayiq\'s intent, retrieval and escalation workflows run behind.' },
-    { src: 'assets/screens/aayiq-1.jpg',
-      alt: 'HelpRevX website opening frame in the brand orange and blue',
-      caption: '<b>The company behind it.</b> The opening frame of helprevx.com, in the orange and blue of the HelpRevX mark I designed.' },
     { src: 'assets/screens/aayiq-3.jpg',
       alt: 'HelpRevX — "AI software built for how Indian businesses actually operate" with four principle cards',
       caption: '<b>Product principles.</b> AI-native from day one, built for India\'s operating layer, vertical products on a shared spine, trust-ready systems — the constraints the handoff design had to honour.' }

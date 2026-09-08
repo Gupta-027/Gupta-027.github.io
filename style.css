@@ -763,9 +763,9 @@ body.cur-on .cur{opacity:1}
   radial-gradient(ellipse 60% 52% at 24% 32%, rgba(245,158,11,.26), transparent 66%),
   radial-gradient(ellipse 56% 48% at 78% 68%, rgba(99,102,241,.26), transparent 68%);
 }
-.mood--9{background:   /* aayiq — purple + pink */
-  radial-gradient(ellipse 60% 52% at 24% 32%, rgba(139,92,246,.30), transparent 66%),
-  radial-gradient(ellipse 56% 48% at 78% 68%, rgba(236,72,153,.22), transparent 68%);
+.mood--9{background:   /* aayiq — electric blue + cyan, from the mark */
+  radial-gradient(ellipse 60% 52% at 24% 32%, rgba(37,99,235,.32), transparent 66%),
+  radial-gradient(ellipse 56% 48% at 78% 68%, rgba(34,211,238,.22), transparent 68%);
 }
 
 /* — Progress — */
