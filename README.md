@@ -14,15 +14,18 @@ case-study.css      Case-study page layout
 script.js           All behaviour (single scroll hub, pinned work stage, reveals, panels)
 case-study.js       Case-study content + renderer
 chatbot.js/.css     Local portfolio assistant (reads data/portfolio-data.js)
-assets/covers/      SVG cover art per project
+assets/covers/      Cinematic cover per project (JPEG, ~70–150 KB) — real screenshot on a laptop scene
+assets/screens/     Case-study gallery frames cut from live captures
+assets/recognition/ Recognition frames — hackathon award card, LeetCode profile
 assets/certificates Real certificates
 ```
 
 ## Editing content
 
 - **Projects:** edit `CASE_STUDIES` in `case-study.js`; the slide cards are in `index.html` under `#work`.
-- **Replace cover art:** drop real screenshots into `assets/covers/` and update the `src` on the matching `<img>` — the `.svg` files are placeholders drawn to hold the layout until real screens exist.
-- **Portrait:** replace `assets/portrait.svg` with a photo (4:5 works best).
+- **Replace a cover:** drop a 1600×1000 JPEG into `assets/covers/` with the same name. Covers are built by rendering a screenshot into a laptop scene (headless Edge), then saved as progressive JPEG.
+- **Add gallery frames:** put JPEGs in `assets/screens/` and list them in that study's `screens` array in `case-study.js` (`src`, `alt`, `caption`, optional `wide`).
+- **Portrait:** save a photo as `assets/portrait.jpg` (4:5, ~800×1000). The page falls back to `assets/portrait.svg` until it exists.
 - **Chatbot answers:** `data/portfolio-data.js`.
 
 ## Performance notes

@@ -227,3 +227,22 @@
   .csp__link{grid-template-columns:1fr}
   .csp__link > div + div{border-left:0;border-top:1px solid var(--line)}
 }
+
+/* ── Screens gallery ──────────────────────────────────────────────────
+   Real product screens. Each frame opens in the shared lightbox. */
+.csp__gallery{display:grid;gap:clamp(1.25rem,2.5vw,2rem);margin-top:1.5rem}
+.csp__fig{
+  position:relative;border-radius:var(--r);overflow:hidden;
+  border:1px solid var(--line);background:var(--bg-2);box-shadow:var(--shadow);
+  transition:border-color var(--t),box-shadow var(--t),transform var(--t);
+}
+.csp__fig:hover{border-color:var(--line-hi);box-shadow:var(--glow-m),var(--shadow);transform:translateY(-4px)}
+.csp__zoom{display:block;width:100%;padding:0;border:0;background:var(--bg-2);cursor:zoom-in}
+.csp__zoom img{width:100%;height:auto;display:block}
+.csp__fig figcaption{
+  padding:1rem 1.25rem 1.15rem;border-top:1px solid var(--line);
+  color:var(--text-2);font-size:.9rem;line-height:1.55;
+}
+.csp__fig figcaption b{color:var(--text);font-weight:600}
+@media (min-width:761px){.csp__gallery--2{grid-template-columns:1fr 1fr}}
+.csp__fig--wide{grid-column:1/-1}

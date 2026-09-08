@@ -15,7 +15,7 @@ const CASE_STUDIES = {
   tagline: 'Four risk models behind one interface a credit officer can actually defend to a customer.',
   a: '#8b5cf6', b: '#3b82f6',
   role: 'Product Design + ML Engineering', tools: 'Figma · Python · Scikit-learn · Streamlit',
-  timeline: 'Jan – Feb 2026', cover: 'assets/covers/bfsi-risk.svg',
+  timeline: 'Jan – Feb 2026', cover: 'assets/covers/bfsi-risk.jpg',
   links: [
     { label: 'Open live app ↗', href: 'https://gupta-financial-risk-management.streamlit.app', primary: true },
     { label: 'View on GitHub ↗', href: 'https://github.com/Gupta-027/BFSI_RISK_ANALYSIS_' }
@@ -78,6 +78,22 @@ const CASE_STUDIES = {
     { v: '4', l: 'Risk modules on one shared pipeline' }
   ],
 
+  screensHeading: 'The platform, as shipped.',
+  screens: [
+    { src: 'assets/screens/bfsi-risk-2.jpg', wide: true,
+      alt: 'Credit Risk Prediction — applicant form on the left, prediction result on the right: 90% confidence, low risk, recommended action approve, with the factors the model weighed',
+      caption: '<b>Credit risk, with the reasoning attached.</b> The applicant form on the left; on the right the result as a decision rather than a number — a confidence bar, the risk band, a recommended action — and beneath it the factors the model weighed: loan amount, duration, savings, checking balance, job stability and housing. That last block is what a credit officer reads aloud to an applicant.' },
+    { src: 'assets/screens/bfsi-risk-3.jpg',
+      alt: 'Fraud Detection — transaction inputs including amount, hour, balances and merchant risk score; result: 0% fraud probability, safe, allow transaction',
+      caption: '<b>Fraud, framed as an action.</b> Amount, hour, balance change, merchant risk and the behavioural flags — device change, location change, failed attempts. The output is one of three actions: allow, verify with an OTP, or block.' },
+    { src: 'assets/screens/bfsi-risk-4.jpg',
+      alt: 'Model Information — one card per module listing business use case, input features, output, evaluation metric and why it matters',
+      caption: '<b>Model information, written for the operator.</b> One card per module: the business decision it supports, the inputs, the output, the metric it is judged on — precision and recall, F1, ROC-AUC — and why that metric was chosen. Accuracy is deliberately absent.' },
+    { src: 'assets/screens/bfsi-risk-1.jpg', wide: true,
+      alt: 'BFSI Risk Intelligence Platform home — four risk modules: credit risk, fraud detection, customer churn, loan collection risk',
+      caption: '<b>One shell, four modules.</b> The home screen names each risk decision and what it returns — a lending decision, a transaction action, a retention strategy, a collection priority — so an operator lands on the module that matches their job rather than a generic dashboard.' }
+  ],
+
   contribution: ['Problem framing and role mapping', 'Preprocessing pipeline', 'Model selection and evaluation', 'Interface design', 'Explainability panel', 'Streamlit implementation'],
   outcome: 'A working platform where each of four risk decisions ends in an action an operator can take and defend. The design contribution that mattered most was not visual — it was deciding which number the interface refuses to show.',
   quote: { text: 'The hardest design decision on this project was removing a metric. Accuracy made the model look better and the operator worse.', cite: 'On designing for an imbalanced class' }
@@ -89,7 +105,7 @@ const CASE_STUDIES = {
   tagline: 'Group travel planning where the least happy person in the group is the one the system optimises for.',
   a: '#22d3ee', b: '#6366f1',
   role: 'Product Design + Engineering', tools: 'Figma · FastAPI · OR-Tools · pgvector · Next.js',
-  timeline: 'Nov – Dec 2024 · Hackathon winner, Apr 2026', cover: 'assets/covers/yatraai.svg',
+  timeline: 'Nov – Dec 2024 · Hackathon winner, Apr 2026', cover: 'assets/covers/yatraai.jpg',
   links: [
     { label: 'Open live demo ↗', href: 'https://yatraai-chi.vercel.app', primary: true },
     { label: 'View on GitHub ↗', href: 'https://github.com/Gupta-027/YatraAI-' }
@@ -155,6 +171,15 @@ const CASE_STUDIES = {
     { v: '−43%', l: 'Travel time vs greedy baseline' }
   ],
 
+  screens: [
+    { src: 'assets/screens/yatraai-1.jpg', wide: true,
+      alt: 'YatraAI landing page — "Group itineraries that are fair, explainable and feasible" with headline metrics',
+      caption: '<b>The promise, with the evidence under it.</b> The landing frame states what the product does — fair, explainable, feasible group itineraries — and immediately shows the numbers behind the claim: 57% less travel than a greedy baseline, 0.95 MRR on the assistant, 1.00 abstention accuracy, and the passing test count.' },
+    { src: 'assets/screens/yatraai-2.jpg', wide: true,
+      alt: 'YatraAI — "How a plan gets built" pipeline of five stages, the destinations grid and the trust rules',
+      caption: '<b>How a plan gets built.</b> Five stages — data, rank, solve, validate, narrate — shown in order, with the language model deliberately last: it explains a plan the solver has already validated rather than inventing one. Beneath it, the destination cards and the rules the interface commits to: answers are cited or withheld, and nothing is shown that wasn\'t verified.' }
+  ],
+
   contribution: ['Problem framing', 'Fairness model selection', 'Constraint model (CP-SAT)', 'Hybrid RAG pipeline', 'Evaluation benchmark', 'Interface design'],
   outcome: 'Winner of the April cohort hackathon. The judged differentiator was not the model stack — it was that the product optimises for the least satisfied traveller and shows you that it did.',
   quote: { text: 'Optimising the average is how you build something that works for a group and fails for a person.', cite: 'On group preference aggregation' }
@@ -165,12 +190,14 @@ const CASE_STUDIES = {
   num: '03', title: 'Vidyapeeth360', kicker: 'Case Study · AI-Native School ERP',
   tagline: 'One platform, four audiences — and a different first screen for each of them.',
   a: '#3b82f6', b: '#f97316',
-  role: 'Product Design + Systems Design', tools: 'Figma · FigJam · PostgreSQL · API design',
-  timeline: 'HelpRevX · 2026', cover: 'assets/covers/vidyapeeth360.svg',
-  live: { label: 'Visit Vidyapeeth360 ↗', href: 'https://vidyapeeth360.com' },
+  role: 'UI/UX Design · Brand · Information Architecture', tools: 'Figma · FigJam · PostgreSQL · API design',
+  timeline: 'HelpRevX · 2026', cover: 'assets/covers/vidyapeeth360.jpg',
+  links: [
+    { label: 'Visit the live site ↗', href: 'https://vidyapeeth360.com', primary: true }
+  ],
 
-  overview: 'An end-to-end K-12 school ERP covering admissions, fees, attendance, communication and reporting. I designed the product structure and specified its AI capabilities alongside the database architecture and API contracts.',
-  problem: 'A school ERP has four audiences with almost nothing in common. A principal wants aggregate health, a teacher wants today\'s class, a parent wants one child, a student wants their own timetable. Building one dashboard for all four produces a screen that serves none of them.',
+  overview: 'An end-to-end K-12 school ERP covering admissions, fees, attendance, communication and reporting. I designed the complete website UI from wireframes to shipped screens, created the logos for both Vidyapeeth360 and HelpRevX so the two products share one brand system, designed the school registration and onboarding flow, and built the product\'s information architecture — alongside its database architecture and API contracts.',
+  problem: 'A school ERP has four audiences with almost nothing in common. A principal wants aggregate health, a teacher wants today\'s class, a parent wants one child, a student wants their own timetable. Building one dashboard for all four produces a screen that serves none of them. And before any of that, a school has to get set up at all — onboarding friction was the single biggest reason schools refused to adopt an ERP in the first place.',
 
   audience: {
     intro: 'Four roles, each with a different unit of attention — the institution, the class, the child, the self. That difference drove the entire information architecture.',
@@ -221,21 +248,40 @@ const CASE_STUDIES = {
 
   process: [
     { h: 'Map', p: 'Mapped each role\'s day in FigJam and wrote the single question each arrives with. Those four questions became the four landing screens.' },
-    { h: 'Structure', p: 'Designed the information architecture across admissions, fees, attendance, communication and reporting, scoped per role.' },
-    { h: 'Specify', p: 'Wrote the database architecture and API specification alongside the designs, so structure and interface were decided together rather than in sequence.' },
-    { h: 'Extend', p: 'Specified the AI layer — intelligent search, predictive student insights and workflow automation — as permission-aware from the start.' }
+    { h: 'Brand', p: 'Designed the Vidyapeeth360 logo and, alongside it, the HelpRevX mark — one visual system across the company and the product, tested on dark, light and compact surfaces.' },
+    { h: 'Design', p: 'Wireframed the website, then took it to high-fidelity screens and shipped it: hero, modules, product preview, pricing, and a self-serve trial flow.' },
+    { h: 'Onboard', p: 'Wireframed and designed the end-to-end school registration and onboarding flow, cutting the time a school needs to get set up — the friction that had been losing customers before they saw the product.' },
+    { h: 'Specify', p: 'Wrote the database architecture and API specification alongside the designs, and specified the AI layer — search, predictive insights, automation — as permission-aware from the start.' }
   ],
 
-  cardsHeading: 'System decisions',
+  cardsHeading: 'Design decisions',
   cards: [
+    { h: 'One brand system', p: 'Vidyapeeth360 and HelpRevX logos designed together — orange and blue, shared geometry, one family.' },
+    { h: 'Onboarding first', p: 'A school registers and goes live in minutes, because setup friction was the reason schools said no.' },
     { h: 'Role-based views', p: 'Four landing screens over one data model, with access enforced in the API.' },
     { h: 'Mobile-first', p: 'Parent and teacher journeys designed on the phone frame first, then widened.' },
     { h: 'Aira assistant', p: 'Natural-language answers scoped to the asker\'s permissions.' },
     { h: 'Multi-campus schema', p: 'Campus modelled as a first-class entity so growth is not a rewrite.' }
   ],
 
-  contribution: ['Information architecture', 'Role-based journey design', 'Database architecture', 'API specification', 'AI capability specification'],
-  outcome: 'A specified, structured K-12 ERP where the design work and the data model were decided together — which is what made four genuinely different role views affordable rather than four separate products.',
+  screensHeading: 'Live site, and the brand it carries.',
+  screens: [
+    { src: 'assets/screens/vidyapeeth360-1.jpg', wide: true,
+      alt: 'Vidyapeeth360 live website hero — "The connected school ERP. AI, governed by people."',
+      caption: '<b>The live site.</b> The hero as shipped — the product claim, the trial and demo actions, and the plan-transparency line under them that answers the cost question before a school has to ask it.' },
+    { src: 'assets/screens/helprevx-brand.jpg', wide: true,
+      alt: 'HelpRevX brand direction board — logo mark, wordmark, colour system and applications on cards and a mug',
+      caption: '<b>Brand direction.</b> The HelpRevX mark and wordmark with its colour system and applications — designed alongside the Vidyapeeth360 logo so the company and its product read as one family.' },
+    { src: 'assets/screens/vidyapeeth360-2.jpg',
+      alt: 'Vidyapeeth360 website — closing illustration section',
+      caption: '<b>The closing scene.</b> The illustrated section that carries the page from the module list into the final call to action.' },
+    { src: 'assets/screens/helprevx-colours.jpg',
+      alt: 'HelpRevX colour system — five named roles with hex values',
+      caption: '<b>Colour system.</b> Five named roles with exact values, so every surface and accent on both products resolves to a defined token.' }
+  ],
+
+  contribution: ['Website UI — wireframes to shipped screens', 'Vidyapeeth360 and HelpRevX logos', 'School registration and onboarding flow', 'Information architecture', 'Role-based journey design', 'Database architecture and API specification', 'AI capability specification'],
+  outcome: 'A live product: the Vidyapeeth360 website is shipped and the brand it carries is one I designed. Underneath it, a structured K-12 ERP where the design work and the data model were decided together — which is what made four genuinely different role views affordable rather than four separate products.',
   quote: { text: 'Designing the schema and the screens in the same week is what made four different first screens cheap instead of expensive.', cite: 'On designing structure and interface together' }
 },
 
@@ -245,8 +291,22 @@ const CASE_STUDIES = {
   tagline: 'The interesting design problem was not the AI reply. It was the moment the AI gives up.',
   a: '#a855f7', b: '#ec4899',
   role: 'Applied AI Engineering + Interaction Design', tools: 'Claude · NestJS · PostgreSQL · Prisma · Redis',
-  timeline: 'HelpRevX · 2026 – present', cover: 'assets/covers/aayiq.svg',
-  live: { label: 'Visit HelpRevX ↗', href: 'https://www.helprevx.com/' },
+  timeline: 'HelpRevX · 2026 – present', cover: 'assets/covers/aayiq.jpg',
+  links: [
+    { label: 'Visit HelpRevX ↗', href: 'https://www.helprevx.com/', primary: true }
+  ],
+  screensHeading: 'The platform, as presented.',
+  screens: [
+    { src: 'assets/screens/aayiq-2.jpg', wide: true,
+      alt: 'HelpRevX — "AI that drives every business to grow faster" with product dashboard cards',
+      caption: '<b>The platform pitch.</b> An AI CRM that thinks, voice agents and WhatsApp in one place — the omnichannel surface that aayiq\'s intent, retrieval and escalation workflows run behind.' },
+    { src: 'assets/screens/aayiq-1.jpg',
+      alt: 'HelpRevX website opening frame in the brand orange and blue',
+      caption: '<b>The company behind it.</b> The opening frame of helprevx.com, in the orange and blue of the HelpRevX mark I designed.' },
+    { src: 'assets/screens/aayiq-3.jpg',
+      alt: 'HelpRevX — "AI software built for how Indian businesses actually operate" with four principle cards',
+      caption: '<b>Product principles.</b> AI-native from day one, built for India\'s operating layer, vertical products on a shared spine, trust-ready systems — the constraints the handoff design had to honour.' }
+  ],
 
   overview: 'An AI-powered customer experience platform spanning WhatsApp, WebChat, Email, SMS and Voice. I built the LLM workflows behind intent classification, knowledge retrieval, automated replies and escalation to a human agent — which meant designing what happens at each of those moments, not just what the model returns.',
   problem: 'Most AI support experiences fail at the handoff. The bot loops, the customer repeats themselves, and when a human finally arrives they ask for the account number that was given three messages ago. The escalation is where trust is won or lost, and it is usually the least designed part of the system.',
@@ -318,8 +378,16 @@ const CASE_STUDIES = {
   tagline: 'Making nine agents thinking at once legible to one person waiting on an answer.',
   a: '#f59e0b', b: '#6366f1',
   role: 'Product Design + Engineering', tools: 'Figma · LangGraph · FastAPI · Next.js',
-  timeline: '2026', cover: 'assets/covers/sleuth.svg',
-  live: { label: 'View on GitHub ↗', href: 'https://github.com/Gupta-027' },
+  timeline: '2026', cover: 'assets/covers/sleuth.jpg',
+  links: [
+    { label: 'View on GitHub ↗', href: 'https://github.com/Gupta-027', primary: true }
+  ],
+  screensHeading: 'The console, as designed.',
+  screens: [
+    { src: 'assets/screens/sleuth-1.jpg', wide: true,
+      alt: 'Sleuth console concept — agent rail on the left, streaming report with citations in the centre, sources on the right',
+      caption: '<b>Console concept.</b> Nine agents and their state in the left rail, the report filling in section by section with a citation on every claim, the sources it drew on at the right — and a guardrail that holds back anything without a matching source until the fact-checker clears it.' }
+  ],
 
   overview: 'An autonomous multi-agent system that investigates companies, products, industries and markets, and produces consultant-grade reports with citations, SWOT analysis, competitive landscapes and market sizing. Nine specialised agents in LangGraph, a streaming FastAPI layer, and a Next.js console.',
   problem: 'Multi-agent systems create a specific interface problem: the work is genuinely parallel and genuinely slow, but the user experiences it as a spinner. Hide the process and a three-minute wait feels broken; show all of it and you have a debug log, not a product.',
@@ -375,7 +443,7 @@ const CASE_STUDIES = {
   tagline: 'An end-to-end analytics and decision-support platform, built as a consulting engagement for an omnichannel European retailer.',
   a: '#8b5cf6', b: '#22d3ee',
   role: 'Analysis + Dashboard Design', tools: 'Python · SQL · Power BI · LLM analytics',
-  timeline: '2026', cover: 'assets/covers/novaretail.svg',
+  timeline: '2026', cover: 'assets/covers/novaretail.jpg',
 
   overview: 'A sixteen-stage engagement for NovaRetail Analytics, a fictional omnichannel retailer — running from business understanding through data engineering, SQL analysis, statistics, machine learning and LLM analytics to a backend API, dashboard, reporting and deployment.',
   problem: 'Analytics projects usually stop at the model. The gap between "the model is accurate" and "someone changed a decision because of it" is where most of the value is lost, and it is almost entirely an interface problem.',
@@ -399,7 +467,7 @@ const CASE_STUDIES = {
   tagline: 'A locked, company-specific policy assistant that cites every answer and refuses to guess.',
   a: '#22d3ee', b: '#8b5cf6',
   role: 'Design + Engineering', tools: 'Python · Vector search · LLM',
-  timeline: '2026', cover: 'assets/covers/rag-policy.svg',
+  timeline: '2026', cover: 'assets/covers/rag-policy.jpg',
 
   overview: 'A password-locked retrieval-augmented generation app. Public policy documents are uploaded ahead of a session, and questions are answered live — grounded, cited and resistant to hallucination. Locked when not in use, so nobody can drain the API budget.',
   problem: 'A policy assistant that sounds confident and is wrong is worse than no assistant. Anyone reading the answer has to be able to check it in seconds, which makes citation a primary interface element rather than a footnote.',
@@ -423,7 +491,7 @@ const CASE_STUDIES = {
   tagline: 'A board-level strategic assessment written for a CEO and board audience.',
   a: '#ef4444', b: '#f59e0b',
   role: 'Business Analysis', tools: 'Market research · Competitive analysis · Reporting',
-  timeline: 'July 2026', cover: 'assets/covers/coca-cola.svg',
+  timeline: 'July 2026', cover: 'assets/covers/coca-cola.jpg',
 
   overview: 'A complete strategic assessment of Coca-Cola India prepared for a CEO, board and executive leadership audience — market position, competitive landscape, SWOT and strategic options, with integrity checks across the analysis.',
   problem: 'Executive audiences read for decisions, not for completeness. Structuring the same research for a board rather than an analyst changes the order of everything and cuts most of it.',
@@ -447,7 +515,7 @@ const CASE_STUDIES = {
   tagline: 'Term structure research on crude oil futures, and what the curve implies for the physical market.',
   a: '#f59e0b', b: '#6366f1',
   role: 'Research + Data Visualisation', tools: 'Python · Market data · Presentation design',
-  timeline: '2026', cover: 'assets/covers/crude-oil.svg',
+  timeline: '2026', cover: 'assets/covers/crude-oil.jpg',
 
   overview: 'Research into crude oil futures — the shape of the forward curve, what backwardation and contango imply about physical supply, and how that reads against spot market conditions.',
   problem: 'Term structure is a genuinely visual idea that is almost always presented as a table. The shape of the curve carries the entire insight, and a table hides it.',
@@ -537,7 +605,7 @@ const CS_ORDER = ['bfsi-risk', 'yatraai', 'vidyapeeth360', 'aayiq', 'sleuth',
     </header>
 
     <figure class="csp__shot">
-      <img src="${e(cs.cover)}" alt="${e(cs.title)} — interface concept" width="1600" height="1000" fetchpriority="high" />
+      <img src="${e(cs.cover)}" alt="${e(cs.title)} — cover" width="1600" height="1000" fetchpriority="high" />
     </figure>`);
 
   /* ── Overview / problem ── */
@@ -606,6 +674,19 @@ const CS_ORDER = ['bfsi-risk', 'yatraai', 'vidyapeeth360', 'aayiq', 'sleuth',
   if (cs.cards) out.push(sec(cs.cardsHeading || 'Decisions', `
       <div class="csp__grid">
         ${cs.cards.map((c) => `<div class="csp__card"><h4>${e(c.h)}</h4><p>${e(c.p)}</p></div>`).join('')}
+      </div>`));
+
+  /* ── Screens — real product frames, each opening in the shared lightbox ── */
+  if (cs.screens && cs.screens.length) out.push(sec('Screens', `
+      <h2 class="csp__h">${e(cs.screensHeading || 'The product, as shipped.')}</h2>
+      <div class="csp__gallery${cs.screens.length > 1 ? ' csp__gallery--2' : ''}">
+        ${cs.screens.map((s) => `
+        <figure class="csp__fig${s.wide ? ' csp__fig--wide' : ''}">
+          <button type="button" class="csp__zoom" data-lightbox="${e(s.src)}" data-lightbox-alt="${e(s.alt)}" aria-label="Enlarge: ${e(s.alt)}">
+            <img src="${e(s.src)}" alt="${e(s.alt)}" loading="lazy" decoding="async" />
+          </button>
+          ${s.caption ? `<figcaption>${s.caption}</figcaption>` : ''}
+        </figure>`).join('')}
       </div>`));
 
   /* ── Stats ── */

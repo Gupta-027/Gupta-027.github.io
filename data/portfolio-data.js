@@ -21,7 +21,7 @@ window.PORTFOLIO_KB = {
     },
     {
       keys: ['vidyapeeth', 'school', 'erp', 'education', 'k-12', 'aira'],
-      answer: "<strong>Vidyapeeth360</strong> is a K-12 school ERP Gupta designed end to end at HelpRevX — information architecture, database design and API spec, plus its AI layer. The core idea: four audiences (principal, teacher, parent, student) get four different first screens over one data model. <a href='case-study.html?p=vidyapeeth360'>Read the case study</a>."
+      answer: "<strong>Vidyapeeth360</strong> is a K-12 school ERP at HelpRevX. Gupta designed the complete website UI from wireframes to shipped screens, created the logos for both Vidyapeeth360 and HelpRevX (one shared brand system), designed the school registration and onboarding flow, and built the information architecture, database design and API spec. The core idea: four audiences (principal, teacher, parent, student) get four different first screens over one data model. <a href='https://vidyapeeth360.com' target='_blank' rel='noopener'>See the live site ↗</a>. <a href='case-study.html?p=vidyapeeth360'>Read the case study</a>."
     },
     {
       keys: ['aayiq', 'omnichannel', 'customer', 'support', 'whatsapp', 'handoff', 'escalat', 'chat'],
@@ -41,15 +41,15 @@ window.PORTFOLIO_KB = {
     },
     {
       keys: ['experience', 'intern', 'helprevx', 'job', 'role', 'company'],
-      answer: "Gupta is an <strong>Applied AI Engineer Intern at HelpRevX</strong> (May 2026 – present), working on aayiq and Vidyapeeth360. Before that: winner of the April cohort hackathon with YatraAI, Secretary of AXIOM (Mathematics Club, 500+ participant events) and President of LEO Club at NIT Rourkela."
+      answer: "Gupta is an <strong>Applied AI Engineer Intern — Product &amp; UI/UX at HelpRevX</strong> (May 2026 – present). On Vidyapeeth360 he designed the complete website UI from wireframes to shipped screens, created the logos for both Vidyapeeth360 and HelpRevX, and designed the school onboarding flow; on aayiq he designed the AI-to-human handoff. Alongside that: winner of the April cohort hackathon with YatraAI, Secretary of AXIOM (Mathematics Club, 500+ participant events) and President of LEO Club at NIT Rourkela."
     },
     {
       keys: ['education', 'college', 'university', 'nit', 'rourkela', 'degree', 'study', 'cgpa'],
-      answer: "B.Tech in <strong>Industrial Design Engineering</strong> at <strong>NIT Rourkela</strong> (2023 – present, CGPA 7.30). Coursework spans machine learning, probability and statistics, DSA, SQL/DBMS, OOP and generative AI — alongside the design core."
+      answer: "B.Tech in <strong>Industrial Design Engineering</strong> at <strong>NIT Rourkela</strong> (Sept 2023 – May 2027 expected, CGPA 7.30). Coursework: UI/UX design principles, human-centred design, interaction design, wireframing and prototyping, user research and design thinking — with machine learning, statistics, DSA and databases alongside."
     },
     {
       keys: ['leetcode', 'dsa', 'algorithm', 'competitive', 'problem'],
-      answer: "LeetCode rating <strong>1605</strong>, <strong>450+ problems</strong> across dynamic programming, trees, graphs, segment trees and SQL. He treats it as the habit behind being able to reason about what a design costs to build."
+      answer: "<strong>LeetCode:</strong> 1,605 contest rating (top 23.6% globally, 12 contests), 462 problems solved — 167 easy, 247 medium, 48 hard — 719 submissions in the past year with an 81-day max streak, mostly in Python and SQL. It's the habit behind knowing what a design costs to build. <a href='https://leetcode.com/u/Gupta_Prasad_Adhikari/' target='_blank' rel='noopener'>Open the profile ↗</a>."
     },
     {
       keys: ['contact', 'email', 'reach', 'hire', 'touch', 'linkedin', 'github', 'phone'],

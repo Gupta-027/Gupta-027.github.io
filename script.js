@@ -448,10 +448,8 @@ const Workstage = {
     if (!DESKTOP() || REDUCED) { moods[0]?.style.setProperty('opacity', '1'); return; }
 
     stage.classList.add('wstage--on');
-    stage.style.setProperty('--runway', `${(N - 1) * 78}vh`);
+    stage.style.setProperty('--runway', `${(N - 1) * 100}vh`);
 
-    /* Cache each sheet's moving parts once — cheaper than re-querying,
-       and it keeps the render loop free of DOM lookups. */
     const parts = slides.map((s) => ({
       el: s,
       cover: $('.slide__cover', s),
@@ -465,87 +463,130 @@ const Workstage = {
       runway = Math.max(1, stage.offsetHeight - innerHeight);
     });
 
-    let target = 0, val = 0, raf = null, visible = false;
+    /* ── Hold, then change ─────────────────────────────────────────────
+       One viewport-height of scroll is one project. The switch from
+       project i to i+1 happens only inside the middle band of that unit
+       (T0→T1); either side of it the sheet holds perfectly still. So for
+       most of its scroll distance a project is unmistakably *the* current
+       one, and the change, when it comes, is a distinct event — not a
+       constant half-crossfade. */
+    const T0 = 0.30, T1 = 0.70;
+    const easeIO = (t) => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    const rawAt = (y) => clamp((y - top) / runway, 0, 1) * (N - 1);
+    const shape = (raw) => {
+      const i = Math.floor(raw), t = raw - i;
+      if (i >= N - 1) return N - 1;
+      return i + easeIO(clamp((t - T0) / (T1 - T0), 0, 1));
+    };
 
-    /* Stacked sheets, not a crossfade: each sheet sits at translateY(0)
-       once settled. d = val - i is negative while a sheet is still
-       climbing in from below, positive once the next one covers it — the
-       two phases meet at d = 0 with matching values, so there's no seam. */
+    let target = 0, val = 0, raf = null, visible = false, lastAct = -1;
+
+    const setActive = (act) => {
+      if (act === lastAct) return;
+      lastAct = act;
+      stage.dataset.active = String(act);
+      if (curEl) {
+        curEl.textContent = String(act + 1).padStart(2, '0');
+        curEl.classList.remove('flip');
+        void curEl.offsetWidth;            // restart the flip
+        curEl.classList.add('flip');
+      }
+      for (let i = 0; i < rail.length; i++) rail[i].classList.toggle('on', i === act);
+    };
+
+    /* Stacked sheets, not a crossfade. d = v - i is negative while a sheet
+       is still climbing in from below, positive once the next one covers
+       it. The outgoing sheet shrinks, lifts and darkens hard, so the eye
+       reads "that one is leaving" before the new one has fully landed. */
     const render = (v) => {
       for (let i = 0; i < N; i++) {
         const { el, cover, kids } = parts[i];
         const d = v - i;
-        const entry = clamp(1 + d, 0, 1);      // 0→1 as it arrives
-        const coverAmt = clamp(d, 0, 1);       // 0→1 as the next covers it
+        const entry = clamp(1 + d, 0, 1);
+        const coverAmt = clamp(d, 0, 1);
 
-        el.style.visibility = d <= -1.02 ? 'hidden' : 'visible';
+        el.style.visibility = d <= -1.02 || d >= 1.02 ? 'hidden' : 'visible';
         el.style.pointerEvents = Math.abs(d) < .5 ? 'auto' : 'none';
 
-        const ty = (1 - entry) * 100;
-        const scale = d < 0 ? 0.98 + entry * 0.02 : 1 - coverAmt * 0.03;
+        const ty = d < 0 ? (1 - entry) * 100 : -coverAmt * 6;
+        const scale = d < 0 ? 0.96 + entry * 0.04 : 1 - coverAmt * 0.07;
         el.style.transform = `translate3d(0, ${ty.toFixed(2)}%, 0) scale(${scale.toFixed(4)})`;
-
-        /* Ramped faster than linear so the outgoing sheet is deep into
-           near-black well before the incoming edge fully lands over it. */
-        if (cover) cover.style.opacity = (Math.sqrt(coverAmt) * .85).toFixed(3);
+        if (cover) cover.style.opacity = (Math.sqrt(coverAmt) * .92).toFixed(3);
 
         for (let ci = 0; ci < kids.length; ci++) {
-          const e2 = clamp(entry - ci * .05, 0, 1);
+          const e2 = clamp(entry - ci * .07, 0, 1);
           const k = kids[ci];
           k.style.opacity = e2.toFixed(3);
-          k.style.transform = `translate3d(0, ${((1 - e2) * 18).toFixed(1)}px, 0)`;
+          k.style.transform = `translate3d(0, ${((1 - e2) * 22).toFixed(1)}px, 0)`;
         }
       }
-
       for (let i = 0; i < moods.length; i++) {
-        moods[i].style.opacity = Math.max(0, 1 - Math.abs(v - i) * 1.5).toFixed(3);
+        moods[i].style.opacity = Math.max(0, 1 - Math.abs(v - i) * 1.6).toFixed(3);
       }
-
-      const act = clamp(Math.round(v), 0, N - 1);
-      if (curEl) curEl.textContent = String(act + 1).padStart(2, '0');
       if (fillEl) fillEl.style.setProperty('--p', (v / (N - 1)).toFixed(3));
-      for (let i = 0; i < rail.length; i++) rail[i].classList.toggle('on', i === act);
+      setActive(clamp(Math.round(v), 0, N - 1));
     };
 
-    /* Lerp toward the scroll-derived target, then park. `will-change` is
-       raised only for the duration of the motion — leaving it on
-       permanently would keep five fullscreen layers promoted and pinned
-       in GPU memory for the whole session. */
     const tick = () => {
       const diff = target - val;
       if (Math.abs(diff) < 0.0005) {
-        val = target;
-        render(val);
-        raf = null;
+        val = target; render(val); raf = null;
         for (const p of parts) p.el.style.willChange = '';
         return;
       }
-      val += diff * 0.18;
+      val += diff * 0.2;
       render(val);
       raf = requestAnimationFrame(tick);
     };
-
     const kick = () => {
       if (raf) return;
       for (const p of parts) p.el.style.willChange = 'transform';
       raf = requestAnimationFrame(tick);
     };
 
+    /* ── Snap ──────────────────────────────────────────────────────────
+       If scrolling stops inside a change band, finish the change: glide
+       to whichever project is nearer so the stage never rests half-way
+       between two. Resting anywhere in a hold band is left alone. */
+    const goTo = (i) => scrollTo({
+      top: Math.round(top + (clamp(i, 0, N - 1) / (N - 1)) * runway),
+      behavior: 'smooth'
+    });
+    let idleT = 0;
+    const snap = () => {
+      const y = scrollY;
+      if (y < top || y > top + runway) return;
+      const raw = rawAt(y), i = Math.floor(raw), t = raw - i;
+      if (i >= N - 1 || t <= T0 + 0.02 || t >= T1 - 0.02) return;
+      goTo(t < 0.5 ? i : i + 1);
+    };
+
     Scroll.on(({ y }) => {
       if (!visible) return;
-      target = clamp((y - top) / runway, 0, 1) * (N - 1);
+      target = shape(rawAt(y));
       kick();
+      clearTimeout(idleT);
+      idleT = setTimeout(snap, 160);
     });
 
-    /* Off-screen, the stage does nothing at all. */
     new IntersectionObserver((e) => {
       visible = e[0].isIntersecting;
-      if (visible) { target = clamp((scrollY - top) / runway, 0, 1) * (N - 1); kick(); }
+      if (visible) { target = shape(rawAt(scrollY)); kick(); }
     }, { rootMargin: '10% 0px' }).observe(stage);
+
+    /* Keyboard: one press, one project — only while the stage is pinned. */
+    addEventListener('keydown', (e) => {
+      if (!visible || e.altKey || e.ctrlKey || e.metaKey) return;
+      if (e.target.closest('input, textarea, [contenteditable]') || document.body.classList.contains('lock')) return;
+      const y = scrollY;
+      if (y < top - 4 || y > top + runway + 4) return;
+      const cur = Math.round(rawAt(y));
+      if (['ArrowDown', 'ArrowRight', 'PageDown'].includes(e.key) && cur < N - 1) { e.preventDefault(); goTo(cur + 1); }
+      else if (['ArrowUp', 'ArrowLeft', 'PageUp'].includes(e.key) && cur > 0) { e.preventDefault(); goTo(cur - 1); }
+    });
 
     render(0);
 
-    /* Tilt — one cached rect per sheet, refreshed on enter only. */
     if (FINE) {
       slides.forEach((s) => {
         const media = $('.slide__media', s), tilt = $('.slide__tilt', s);
@@ -650,7 +691,7 @@ const Certs = {
     const list = $('#certsList');
     if (!list) return;
     const items = $$('.certs__item', list);
-    const shots = $$('.certs__img');
+    const shots = $$('.certs__img, .certs__open');   // image + its outbound link swap together
     const idx = $('#certsIdx');
     if (!items.length) return;
 
