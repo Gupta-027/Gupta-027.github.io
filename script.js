@@ -22,49 +22,49 @@
    01. CONTENT — capability panel
    ══════════════════════════════════════════════════════════════════════ */
 const CAPABILITIES = {
-  research: {
-    title: 'UX Research',
-    lede: 'Understanding the problem before proposing a solution — and being able to show why the solution follows from it.',
+  software: {
+    title: 'Software Engineering',
+    lede: 'Full-stack systems that hold up under concurrent users — built, tested and deployed, not just demoed.',
     what: [
-      'Stakeholder and user interviews, written up as personas grounded in what people actually said',
-      'Journey and service mapping to find where the friction really sits, not where it is easiest to fix',
-      'Competitive benchmarking — what the category has trained users to expect, and where breaking that is worth it',
-      'Usability testing on clickable prototypes, with findings ranked by severity rather than by ease of fixing'
+      'TypeScript and Python services: REST APIs, WebSockets, background jobs (Redis BullMQ), auth (JWT, OAuth)',
+      'Real-time collaboration with CRDTs (Yjs) and Socket.IO — conflict-free by construction, not by luck',
+      'PostgreSQL and MongoDB data models with migrations; Prisma, Mongoose, Alembic',
+      'Validation (Zod), rate limiting, automated tests, Docker, Git — the boring parts that make the rest shippable'
     ],
-    proof: 'On BFSI Risk Intelligence I mapped four distinct operator roles — credit officer, fraud analyst, retention manager, collections agent — and found each needed the same model output framed as a different decision. That finding reshaped the whole interface.'
+    proof: 'CodeSync is a real-time collaborative code editor on the MERN stack with a dual WebSocket architecture: Yjs for conflict-free code sync, Socket.IO for cursors, chat and execution broadcast. Concurrent edits cannot lose data — the same class of algorithm behind Google Docs and Figma.'
   },
   uiux: {
     title: 'UI/UX Design',
-    lede: 'Wireframes through to high-fidelity, prototyped flows that a developer can build from without a meeting.',
+    lede: 'Wireframes through to high-fidelity, prototyped flows — and because I also build, the hand-off is to myself.',
     what: [
       'Low-fidelity flows first, so structure gets argued about before colour does',
       'High-fidelity screens in Figma with real content, not lorem ipsum',
       'Interactive prototypes covering the unhappy paths — loading, empty, error, permission-denied',
-      'Developer hand-off with spacing, states, breakpoints and behaviour documented on the frame'
+      'Information architecture for multi-role products, so each audience lands on its own first screen'
     ],
-    proof: 'Vidyapeeth360 covers admissions, fees, attendance, communication and reporting for four different audiences. The design work was mostly deciding what each role should see first — and what they should never have to see at all.'
+    proof: 'Vidyapeeth360 covers admissions, fees, attendance, communication and reporting for four different audiences. The design work was deciding what each role should see first — and I wrote the schema and API contracts in the same week, so structure and interface were decided together.'
   },
   ai: {
-    title: 'AI Interface Design',
-    lede: 'AI as a design material: how a model shows its working, signals doubt, and hands control back to a person.',
+    title: 'AI Engineering',
+    lede: 'Retrieval, ranking and evaluation — LLM systems that cite when they can and abstain when they cannot.',
     what: [
-      'Designing the confidence surface — when to answer, when to cite, when to abstain',
-      'Explainability in the interface: which factors drove this score, in the user\'s language',
-      'Escalation and handoff moments, so a person is never stuck arguing with a model',
-      'Guardrail states — what the product does when the model is wrong, slow, or unavailable'
+      'RAG pipelines: dense vectors (pgvector, FAISS, Qdrant), BM25, reciprocal-rank fusion, rerankers',
+      'Evaluation harnesses with real benchmarks — top-1, MRR, faithfulness, abstention accuracy',
+      'LLM workflows for intent classification, automated replies and escalation to a human agent',
+      'Constraint solving (OR-Tools CP-SAT) where a deterministic answer beats a generated one'
     ],
-    proof: 'On aayiq the interesting design problem was not the AI reply — it was the handoff. A customer should feel passed to a human, not abandoned by a bot, and the agent picking it up should inherit the full context rather than asking everything again.'
+    proof: 'YatraAI\'s assistant scores 0.903 top-1 and 0.952 MRR on a 34-question benchmark with 1.000 abstention accuracy — it says "I don\'t know" instead of guessing. On aayiq I architected the multi-channel RAG pipeline that answers across WhatsApp, WebChat, Email, SMS and Voice, with automated fallback to a person.'
   },
-  systems: {
-    title: 'Design Systems',
-    lede: 'Tokens, components and documented states, so the tenth screen costs a fraction of the first.',
+  data: {
+    title: 'Data Engineering & ML',
+    lede: 'Schemas, pipelines and models — judged on the metric that survives class imbalance, not the one that flatters.',
     what: [
-      'Colour, type, spacing and radius as tokens with defined semantic roles',
-      'Component libraries with every interactive state built, not just the default',
-      'Accessible contrast and focus behaviour treated as part of the component, not a later audit',
-      'Usage documentation covering when not to use a component, which is the half people skip'
+      'Relational design at scale: a 31-table PostgreSQL schema with Alembic migrations on YatraAI',
+      'Preprocessing pipelines — imputation, encoding, outlier handling, scaling — shared across models',
+      'Model selection on F1 / precision-recall / ROC-AUC, with cost-sensitive learning for rare classes',
+      'Feature engineering for financial and behavioural data; scikit-learn, Pandas, NumPy'
     ],
-    proof: 'This site runs on a token set of about twenty custom properties. Every surface, accent and shadow on it resolves back to those — which is why the case-study pages could be added without touching a single component style.'
+    proof: 'BFSI Risk Intelligence consolidates loan-default, fraud, churn and collection risk. With a 5% fraud class, accuracy would flatter a model that catches nothing — so the platform reports precision, recall and ROC-AUC and the interface refuses to show accuracy at all.'
   },
   dataviz: {
     title: 'Data Visualisation',
@@ -73,20 +73,20 @@ const CAPABILITIES = {
       'Choosing the chart form from the question being asked, not from what looks impressive',
       'Colour used to encode meaning — risk, trend, category — never as decoration',
       'Progressive disclosure: headline metric, then the breakdown, then the raw rows',
-      'Readable in both themes, at real data volumes, with sensible empty and loading states'
+      'Readable at real data volumes, with sensible empty and loading states'
     ],
-    proof: 'The BFSI platform reports precision, recall and ROC-AUC rather than accuracy, because on a 5% fraud class accuracy flatters a useless model. Surfacing the honest metric was a design decision as much as a modelling one.'
+    proof: 'The BFSI explainability panel ranks the factors behind a score as proportional bars, so a credit officer can read the reasoning aloud to an applicant instead of quoting a probability.'
   },
   frontend: {
     title: 'Frontend Development',
-    lede: 'I ship the design rather than handing over a picture of it — which keeps the design honest.',
+    lede: 'React and Next.js product surfaces, and vanilla where a framework would not earn its weight.',
     what: [
+      'React 19 / Next.js with TypeScript; Vite, Zustand, Tailwind, Monaco Editor',
       'Semantic, accessible HTML with keyboard paths that actually work',
-      'Responsive layouts built on modern CSS — grid, container-aware sizing, fluid type',
-      'Performance as a design constraint: transform-only animation, deferred offscreen work',
-      'React / Next.js and TypeScript for product surfaces; vanilla where a framework would not earn its weight'
+      'Performance as a design constraint: transform-only animation, deferred off-screen work',
+      'Responsive layouts on modern CSS — grid, container-aware sizing, fluid type'
     ],
-    proof: 'This portfolio is plain HTML, CSS and JavaScript — no framework, no build step, no dependencies. It holds 60fps through a pinned scroll sequence because the animation budget was designed alongside the visuals, not discovered afterwards.'
+    proof: 'This portfolio is plain HTML, CSS and JavaScript — no framework, no build step — and holds 60fps through a pinned ten-project scroll sequence because the animation budget was designed alongside the visuals.'
   }
 };
 

@@ -3,13 +3,13 @@
 window.PORTFOLIO_KB = {
   name: 'Gupta Prasad Adhikari',
   greeting: "Hi — I'm Gupta's portfolio assistant. I can walk you through his projects, background, skills or how to get in touch. What would you like to know?",
-  chips: ['His projects', 'BFSI Risk platform', 'AI design work', 'Background', 'Contact'],
+  chips: ['His projects', 'CodeSync', 'AI engineering', 'Skills', 'Contact'],
   fallback: "I'm not sure about that one. Try asking about his <strong>projects</strong>, <strong>skills</strong>, <strong>experience</strong>, <strong>education</strong>, or how to <strong>contact</strong> him.",
 
   topics: [
     {
       keys: ['project', 'work', 'portfolio', 'case stud', 'built', 'made'],
-      answer: "Nine case studies: <strong>Vidyapeeth360</strong> (school ERP — website UI, logo, onboarding), <strong>BFSI Risk Intelligence</strong> (lending risk with explainable scoring), <strong>Campus Event AI</strong> (personalised event discovery), <strong>HelpRevX</strong> (brand identity system), <strong>HealthPulse</strong> (fitness app), <strong>Nexus AI</strong> (AI-platform dashboard), <strong>YatraAI</strong> (fair group travel — hackathon winner), <strong>Sleuth</strong> (multi-agent research console) and <strong>aayiq</strong> (omnichannel CX with AI-to-human handoff). Plus four research explorations. Each has a full write-up under <a href='index.html#work'>Work</a>."
+      answer: "Ten case studies: <strong>Vidyapeeth360</strong> (school ERP — website UI, logo, onboarding), <strong>BFSI Risk Intelligence</strong> (lending risk with explainable scoring), <strong>Campus Event AI</strong> (personalised event discovery), <strong>HelpRevX</strong> (brand identity system), <strong>HealthPulse</strong> (fitness app), <strong>Nexus AI</strong> (AI-platform dashboard), <strong>YatraAI</strong> (fair group travel — hackathon winner), <strong>Sleuth</strong> (multi-agent research console), <strong>CodeSync</strong> (real-time collaborative code editor) and <strong>aayiq</strong> (omnichannel CX with AI-to-human handoff). Plus four research explorations. Each has a full write-up under <a href='index.html#work'>Work</a>."
     },
     {
       keys: ['bfsi', 'risk', 'credit', 'fraud', 'lending', 'fintech', 'bank', 'churn', 'collection'],
@@ -48,16 +48,20 @@ window.PORTFOLIO_KB = {
       answer: "<strong>Nexus AI</strong> is a developer dashboard for an AI API platform — usage, models, keys and team — designed hierarchy-first: a grouped sidebar so every persona's task is one click away, KPI cards that count up on login, and key actions that are fast but never accidental. <a href='case-study.html?p=nexus-ai'>Read the case study</a>."
     },
     {
+      keys: ['codesync', 'code editor', 'collaborat', 'crdt', 'yjs', 'socket', 'mern', 'real-time', 'realtime'],
+      answer: "<strong>CodeSync</strong> is a real-time collaborative code editor on the MERN stack — Yjs CRDT for conflict-free code sync (zero data loss under concurrent edits, the same class of algorithm behind Google Docs and Figma) and a second Socket.IO channel for cursor presence, chat and code-execution broadcast, with Monaco as the editor, JWT + Google OAuth, multi-file rooms, version history and JDoodle execution. <a href='https://code-sync-real-time-collaborative-c-two.vercel.app/' target='_blank' rel='noopener'>Open the live demo ↗</a> · <a href='https://github.com/Gupta-027/CodeSync-Real-Time-Collaborative-Code-Editor' target='_blank' rel='noopener'>GitHub</a> · <a href='case-study.html?p=codesync'>Read the case study</a>."
+    },
+    {
       keys: ['ai', 'llm', 'claude', 'rag', 'explain', 'trust', 'model'],
       answer: "Gupta's focus is <strong>AI as a design material</strong> — how a model explains itself, signals uncertainty, and hands control back to a person. That shows up as the explainability panel in BFSI, the abstention path in YatraAI, the handoff design in aayiq, and the agent graph in Sleuth. He builds the LLM workflows as well as designing the interface around them."
     },
     {
       keys: ['skill', 'tool', 'stack', 'figma', 'tech', 'language', 'python', 'react', 'code'],
-      answer: "<strong>Design:</strong> Figma, FigJam, wireframing, prototyping, design systems, developer hand-off.<br><strong>Build:</strong> TypeScript, JavaScript, Python, React/Next.js, FastAPI, NestJS, PostgreSQL, pgvector, Prisma, Redis.<br><strong>AI/ML:</strong> LLMs, RAG, prompt engineering, embeddings, hybrid retrieval, scikit-learn, model evaluation.<br><strong>Other:</strong> Docker, Git, OR-Tools, Power BI, SQL."
+      answer: "<strong>Languages:</strong> C++, C, Python, JavaScript/TypeScript, SQL, HTML/CSS.<br><strong>Software:</strong> React, Next.js, Node, Express, NestJS, FastAPI, Socket.IO, Yjs (CRDT), JWT, Tailwind, Monaco.<br><strong>Data:</strong> PostgreSQL, pgvector, MongoDB, Prisma, Alembic, Redis BullMQ, scikit-learn, Pandas, NumPy.<br><strong>AI:</strong> RAG, FAISS, Qdrant, sentence-transformers, LangChain, hybrid retrieval (BM25 + RRF), evaluation harnesses, OR-Tools.<br><strong>Design:</strong> Figma, FigJam, prototyping, design systems.<br><strong>Tools:</strong> Git, GitHub, Docker, VS Code, Postman."
     },
     {
       keys: ['experience', 'intern', 'helprevx', 'job', 'role', 'company'],
-      answer: "Gupta is an <strong>Applied AI Engineer Intern — Product &amp; UI/UX at HelpRevX</strong> (May 2026 – present). On Vidyapeeth360 he designed the complete website UI from wireframes to shipped screens, created the logos for both Vidyapeeth360 and HelpRevX, and designed the school onboarding flow; on aayiq he designed the AI-to-human handoff. Alongside that: winner of the April cohort hackathon with YatraAI, Secretary of AXIOM (Mathematics Club, 500+ participant events) and President of LEO Club at NIT Rourkela."
+      answer: "Gupta was an <strong>Applied AI Engineer Intern at HelpRevX</strong> (May – Sept 2026). On aayiq he architected a multi-channel RAG pipeline (NestJS, FAISS, sentence-transformers, PostgreSQL, Redis BullMQ) with automated agent fallback across five channels; on Vidyapeeth360 he designed the K-12 ERP end to end — four roles, database schemas, REST APIs, predictive AI insights, the website UI and both product logos. Alongside that: winner of the April cohort hackathon with YatraAI, Secretary of AXIOM (Mathematics Club, 500+ participant events) and President of LEO Club at NIT Rourkela."
     },
     {
       keys: ['education', 'college', 'university', 'nit', 'rourkela', 'degree', 'study', 'cgpa'],
@@ -69,11 +73,11 @@ window.PORTFOLIO_KB = {
     },
     {
       keys: ['contact', 'email', 'reach', 'hire', 'touch', 'linkedin', 'github', 'phone'],
-      answer: "Email <a href='mailto:guptaprasadadhikari@gmail.com'>guptaprasadadhikari@gmail.com</a>, or find him on <a href='https://www.linkedin.com/in/gupta-prasad-adhikari-75779a290/' target='_blank' rel='noopener'>LinkedIn</a>, <a href='https://github.com/Gupta-027' target='_blank' rel='noopener'>GitHub</a> or <a href='https://leetcode.com/u/Gupta_Prasad_Adhikari/' target='_blank' rel='noopener'>LeetCode</a>. There's a downloadable resume in the <a href='index.html#contact'>Contact</a> section. He's looking for product and UX design roles where AI is part of the interface."
+      answer: "Email <a href='mailto:guptaprasadadhikari@gmail.com'>guptaprasadadhikari@gmail.com</a> or call <a href='tel:+916366097912'>+91 63660 97912</a>, or find him on <a href='https://www.linkedin.com/in/gupta-prasad-adhikari-75779a290/' target='_blank' rel='noopener'>LinkedIn</a>, <a href='https://github.com/Gupta-027' target='_blank' rel='noopener'>GitHub</a> or <a href='https://leetcode.com/u/Gupta_Prasad_Adhikari/' target='_blank' rel='noopener'>LeetCode</a>. There's a downloadable resume in the <a href='index.html#contact'>Contact</a> section. He's open to software, AI/data engineering and product design roles."
     },
     {
       keys: ['about', 'who', 'background', 'yourself', 'himself', 'bio'],
-      answer: "Gupta Prasad Adhikari is a UI/UX and product designer from Rourkela, India, studying Industrial Design at NIT Rourkela and working as an Applied AI Engineer Intern at HelpRevX. He designs AI-powered products end to end — research, interface, and the code that ships them."
+      answer: "Gupta Prasad Adhikari is a software engineer, AI &amp; data engineer and UI/UX designer from Rourkela, India — B.Tech Industrial Design Engineering at NIT Rourkela (expected May 2027), Applied AI Engineer Intern at HelpRevX. He builds AI-native products end to end: the data layer, the AI layer, and the interface on top."
     },
     {
       keys: ['process', 'approach', 'method', 'how do'],

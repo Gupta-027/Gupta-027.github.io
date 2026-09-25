@@ -763,7 +763,11 @@ body.cur-on .cur{opacity:1}
   radial-gradient(ellipse 60% 52% at 24% 32%, rgba(245,158,11,.26), transparent 66%),
   radial-gradient(ellipse 56% 48% at 78% 68%, rgba(99,102,241,.26), transparent 68%);
 }
-.mood--9{background:   /* aayiq — electric blue + cyan, from the mark */
+.mood--9{background:   /* CodeSync — orange + indigo */
+  radial-gradient(ellipse 60% 52% at 24% 32%, rgba(249,115,22,.28), transparent 66%),
+  radial-gradient(ellipse 56% 48% at 78% 68%, rgba(99,102,241,.24), transparent 68%);
+}
+.mood--10{background:   /* aayiq — electric blue + cyan, from the mark */
   radial-gradient(ellipse 60% 52% at 24% 32%, rgba(37,99,235,.32), transparent 66%),
   radial-gradient(ellipse 56% 48% at 78% 68%, rgba(34,211,238,.22), transparent 68%);
 }
@@ -1277,7 +1281,11 @@ body.cur-on .cur{opacity:1}
 }
 .contact__s{margin-top:1.25rem;color:var(--text-2);max-width:min(100%,42ch);
   font-size:clamp(1rem,.95rem + .3vw,1.15rem)}
-.contact__cta{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin-top:2.5rem}
+.contact__meta{display:flex;flex-wrap:wrap;gap:.6rem 1.75rem;justify-content:center;margin-top:1.6rem}
+.contact__meta a{display:inline-flex;align-items:center;gap:.5rem;font-size:.95rem;font-weight:500;color:var(--text-2);transition:color var(--t-s)}
+.contact__meta a:hover{color:var(--text)}
+.contact__meta svg{width:17px;height:17px;color:var(--acc-3)}
+.contact__cta{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin-top:2rem}
 .contact__cta .btn--fill:hover{transform:translateY(-2px) scale(1.03)}
 .contact__cta .btn svg{transition:transform var(--t-s)}
 .contact__cta .btn--fill:hover svg{transform:translateX(3px)}

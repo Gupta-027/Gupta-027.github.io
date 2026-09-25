@@ -300,9 +300,90 @@ const CASE_STUDIES = {
   quote: { text: 'Designing the schema and the screens in the same week is what made four different first screens cheap instead of expensive.', cite: 'On designing structure and interface together' }
 },
 
+/* ── 09 ─────────────────────────────────────────────────────────────── */
+'codesync': {
+  num: '09', title: 'CodeSync', kicker: 'Case Study · Real-Time Collaborative Code Editor',
+  tagline: 'Pair program with anyone, anywhere — a shared editor where concurrent edits cannot lose data.',
+  a: '#f97316', b: '#6366f1',
+  role: 'Full-Stack Engineering · Product Design', tools: 'React 19 · Node · Express · Socket.IO · Yjs · Monaco · MongoDB · JWT',
+  timeline: 'Sept 2025 – June 2026', cover: 'assets/covers/codesync.jpg',
+  links: [
+    { label: 'Open live demo ↗', href: 'https://code-sync-real-time-collaborative-c-two.vercel.app/', primary: true },
+    { label: 'View on GitHub ↗', href: 'https://github.com/Gupta-027/CodeSync-Real-Time-Collaborative-Code-Editor' }
+  ],
+
+  overview: 'A browser-based collaborative code editor. Open a room, send the invite code, and everyone types, runs and talks about the same code — live. Built on the MERN stack with Yjs CRDT for conflict-free synchronisation, Monaco as the editor, Socket.IO for everything that is not the document, and JDoodle for execution in Python, JavaScript, C++ and Java.',
+  problem: 'Two people typing in the same file at the same time is the whole product — and the failure mode is silent: last write wins, someone\'s work disappears, nobody notices until it is gone. Naive approaches (locking, operational transforms written by hand) either block collaborators or break under latency. The editor had to guarantee convergence under concurrent edits, keep cursors and chat feeling instant, and still be something a stranger can join with one code and no install.',
+
+  audience: {
+    intro: 'Three moments define the product: a pair session, a mock interview, and teaching someone by editing their code with them.',
+    personas: [
+      { role: 'The pair', context: 'Two developers on a call, editing the same function.', goals: ['Both type, neither waits'], needs: ['Conflict-free merge', 'Live cursors so nobody edits over the other'], painPoints: ['Screen-share is one-way; copy-pasting diffs is worse'] },
+      { role: 'The interviewer', context: 'Runs a coding round and wants to see the candidate think.', goals: ['Watch edits in real time, run the code, discuss in-line'], needs: ['Execution with shared output', 'Chat that persists', 'A room that takes one code to join'], painPoints: ['Candidates fighting the tool instead of the problem'] },
+      { role: 'The mentor', context: 'Fixing a learner\'s bug with them, not for them.', goals: ['Edit together, then hand control back'], needs: ['Version snapshots to roll back a bad idea'], painPoints: ['Restoring an old version and desyncing everyone else'] }
+    ]
+  },
+
+  needs: [
+    { title: 'Zero data loss', text: 'Concurrent edits must converge to the same document on every client — no last-write-wins.' },
+    { title: 'Presence that feels instant', text: 'Cursors, join/leave, typing — on a channel that never waits for the document.' },
+    { title: 'Run it together', text: 'Execute in several languages and broadcast the output to the room.' },
+    { title: 'One code to join', text: 'Auth, rooms and invites that get a stranger editing in under a minute.' }
+  ],
+
+  painPoints: [
+    { problem: 'Concurrent edits lose work', why: 'A plain shared buffer with last-write-wins silently drops one person\'s changes.', implication: 'Yjs CRDT via y-websocket and y-monaco: every client converges to the same state regardless of order or latency — the same class of algorithm behind Google Docs and Figma.' },
+    { problem: 'Presence on the document channel lags the document', why: 'Cursor moves and chat compete with edits on one socket, and the document must never wait.', implication: 'A dual real-time architecture: Yjs owns the document; a separate Socket.IO channel owns cursors, presence, chat and execution broadcast.' },
+    { problem: 'Restoring an old version desyncs the room', why: 'A snapshot restore that only rewrites one client forks the document.', implication: 'Restores are applied through the shared Yjs document, so the rollback synchronises to every collaborator.' },
+    { problem: 'Open rooms are abuse magnets', why: 'Anyone with a code can spam, and a public execution endpoint is a target.', implication: 'JWT and Google OAuth, owner/member permissions, Zod validation, rate limiting, CORS, bcrypt.' }
+  ],
+
+  chains: [
+    { need: 'Edits from many people must merge without loss.', insight: 'Locking blocks people; hand-rolled OT breaks under latency; CRDTs converge by construction.', decision: 'Yjs as the document model, Monaco bound through y-monaco.' },
+    { need: 'Presence must feel instant.', insight: 'Anything sharing the document channel inherits its ordering constraints.', decision: 'Socket.IO as a second channel for cursors, presence, chat and run output.' },
+    { need: 'Rooms must be safe to leave open.', insight: 'Security is cheaper designed in than retrofitted.', decision: 'Validation, rate limits, auth and permissions from the first commit.' }
+  ],
+
+  userFlow: ['Sign in', 'Create or join a room', 'Edit together', 'Run and discuss', 'Snapshot or restore'],
+
+  process: [
+    { h: 'Model the document', p: 'Chose a CRDT over OT after prototyping both; Yjs with y-websocket gave convergence guarantees without a central sequencer.' },
+    { h: 'Split the channels', p: 'Moved everything that is not the document — cursors, presence, chat, run output — onto Socket.IO so the editor never waits on chatter.' },
+    { h: 'Build the room', p: 'Auth (JWT + Google OAuth), invite codes, owner/member roles, multi-file rooms with real-time create/rename/delete.' },
+    { h: 'Harden and ship', p: 'Zod validation, rate limiting, CORS, bcrypt; version history with restore through the shared document; deployed on Vercel with MongoDB Atlas.' }
+  ],
+
+  cardsHeading: 'What it does',
+  cards: [
+    { h: 'Conflict-free editing', p: 'Yjs CRDT — concurrent edits converge, nothing is lost.' },
+    { h: 'Live cursors & presence', p: 'See where collaborators are; instant join and leave.' },
+    { h: 'Run in the room', p: 'Python, JavaScript, C++, Java via JDoodle; output shared with everyone.' },
+    { h: 'Multi-file rooms', p: 'Create, rename and delete files, synchronised live.' },
+    { h: 'Chat', p: 'Persistent history, optimistic sends, unread indicators.' },
+    { h: 'Version history', p: 'Manual and automatic snapshots; restores sync to all collaborators.' }
+  ],
+
+  screensHeading: 'The product, live.',
+  screens: [
+    { src: 'assets/screens/codesync-1.jpg', wide: true, alt: 'CodeSync landing — "Pair program with anyone, anywhere" beside a live shared editor running Python', caption: '<b>The pitch.</b> Open a room, send the code, everyone types and runs the same file — no install, any modern browser.' },
+    { src: 'assets/screens/codesync-2.jpg', alt: 'CodeSync — moments it is made for', caption: '<b>Made for the moments.</b> Pair sessions, interviews, teaching.' },
+    { src: 'assets/screens/codesync-3.jpg', alt: 'CodeSync — features', caption: '<b>Features.</b> Live cursors, execution, chat, version history.' }
+  ],
+
+  stats: [
+    { v: '0', l: 'Edits lost under concurrent typing — CRDT convergence' },
+    { v: '2', l: 'Real-time channels: Yjs for the document, Socket.IO for everything else' },
+    { v: '4', l: 'Languages executed in-room via JDoodle' }
+  ],
+
+  contribution: ['System architecture', 'CRDT document model (Yjs + y-monaco)', 'Socket.IO presence, chat and execution broadcast', 'Auth, rooms and permissions', 'Version history with synchronised restore', 'Security hardening and deployment'],
+  outcome: 'A live, multiplayer code editor where concurrent edits cannot lose data — the collaboration guarantee that makes the rest of the product usable.',
+  quote: { text: 'Collaboration software has one job: never lose anyone\'s work. Everything else is decoration on top of that guarantee.', cite: 'On choosing a CRDT' }
+},
+
 /* ── 04 ─────────────────────────────────────────────────────────────── */
 'aayiq': {
-  num: '09', title: 'aayiq', kicker: 'Case Study · Omnichannel Customer Experience',
+  num: '10', title: 'aayiq', kicker: 'Case Study · Omnichannel Customer Experience',
   tagline: 'The interesting design problem was not the AI reply. It was the moment the AI gives up.',
   a: '#38bdf8', b: '#a855f7',
   role: 'Applied AI Engineering + Interaction Design', tools: 'Claude · NestJS · PostgreSQL · Prisma · Redis',
@@ -870,7 +951,7 @@ const CASE_STUDIES = {
 
 /* Order drives the "next project" link at the foot of each study. */
 const CS_ORDER = ['vidyapeeth360', 'bfsi-risk', 'campus-event-ai', 'helprevx', 'healthpulse', 'nexus-ai',
-                  'yatraai', 'sleuth', 'aayiq',
+                  'yatraai', 'sleuth', 'codesync', 'aayiq',
                   'novaretail', 'rag-policy', 'coca-cola', 'crude-oil'];
 
 
